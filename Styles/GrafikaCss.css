@@ -1,12 +1,31 @@
 #flagowy {
-    background-color: aquamarine;
+    background-color: burlywood;
+    font-family: Calibri;
+
 }
 
 #flagowy h1 {
-    font-size: 40px;
+    font-size: 30px;
+    color: orange;
+}
+
+#flagowy h2 {
+    font-size: 20px;
     color: black;
 }
+
+#flagowy h3 {
+    font-size: 16px;
+    color: red;
+}
+#flagowy p {
+    font-size: 12px;
+    color: black;
+}
+
 .function_title {
     font-size: 21px;
+
     color: crimson;
 }
+
