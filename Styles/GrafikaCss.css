@@ -1,31 +1,53 @@
-#flagowy {
-    background-color: burlywood;
+#main_content {
+    background-color: khaki;
     font-family: Calibri;
 
 }
 
-#flagowy h1 {
+#main_content h1 {
     font-size: 30px;
     color: orange;
 }
 
-#flagowy h2 {
+.description {
+    width: 350px;
+    border-top: 3px solid dimgrey;
+    border-right: 3px solid dimgrey;
+    border-bottom: 3px solid dimgrey;
+    text-align: center;
+}
+
+.obrazy {
+    align-items: center;
+    width: 200px;
+    border-left: 3px solid dimgrey;
+    border-top: 3px solid dimgrey;
+    border-bottom: 3px solid dimgrey;
+}
+.description h2 {
     font-size: 20px;
     color: black;
 }
 
-#flagowy h3 {
+.description h3 {
     font-size: 16px;
     color: red;
 }
-#flagowy p {
+.description p {
     font-size: 12px;
     color: black;
 }
 
+.obrazy {
+
+}
+
+.description {
+
+}
+
 .function_title {
     font-size: 21px;
-
     color: crimson;
 }
 
