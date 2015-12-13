@@ -6,6 +6,15 @@
     align-content: left;
 }
 
+header {
+    font-size: 40px;
+    background-color: aquamarine;
+}
+
+header p {
+    alignment: center;
+}
+
 .function {
     background-color: lightgreen;
     border: 1px solid darkslategrey;
