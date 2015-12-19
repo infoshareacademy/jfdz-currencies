@@ -65,8 +65,28 @@ header p {
     text-decoration: overline;
     float: left;
     padding: 25px;
-
 }
+
+/* To jest sekcja Ola */
+/* Koniec sekcji Ola */
+
+/* To jest sekcja Aga */
+header {
+    font-size: 20px;color: black;
+    background-color: yellowgreen;
+    background-image: url("../Obrazy/nowetło.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 360px;
+    -webkit-opacity: brightness(0.4);
+}
+
+header p {
+    alignment: center;
+    font-size: large;
+    font-color: black;
+}
+
 
 .footer2 {
     font-family: Calibri;
