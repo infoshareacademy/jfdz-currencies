@@ -31,6 +31,7 @@ header p {
     font-size: 16px;
     color: darkslategrey;
 }
+
 .description p {
     font-size: 12px;
     color: black;
@@ -41,23 +42,22 @@ header p {
     color: crimson;
 }
 
-.nawigacja{
- margin-left: 20px;
- width: 300px;
+.nawigacja {
+    margin-left: 20px;
+    width: 300px;
+
 
 }
+
 .nawigacja div {
     display: inline;
-    width: 100px;
-  padding: 10px;
-  margin: 1px;
+    width: 80px;
+    padding: 10px;
+    margin: 0px;
 
-  border: 1px solid blue;
+    border: 1px solid blue;
     background-color: lightgreen;
 }
-
-
-
 
 .footer {
     font-family: Calibri;
@@ -67,6 +67,7 @@ header p {
     padding: 25px;
 
 }
+
 .footer2 {
     font-family: Calibri;
     font-size: 14px;
