@@ -1,10 +1,18 @@
-/* To jest sekcja Marcin */
 #main_content {
     background-color: darkseagreen;
     font-family: Calibri;
     border: 2px solid blue;
     margin: 20px;
     align-content: left;
+}
+
+header {
+    font-size: 40px;
+    background-color: aquamarine;
+}
+
+header p {
+    alignment: center;
 }
 
 .function {
@@ -32,9 +40,7 @@
     font-size: 21px;
     color: crimson;
 }
-/* Koniec sekcji Marcin */
 
-/* To jest sekcja Piotr */
 nav {
     background-color: lightgreen;
 
@@ -49,19 +55,3 @@ nav {
 .menu_table th, td {
     padding: 10px;
 }
-/* Koniec sekcji Piotr */
-
-
-/* To jest sekcja Ola */
-/* Koniec sekcji Ola */
-
-/* To jest sekcja Aga */
-header {
-    font-size: 40px;
-    background-color: aquamarine;
-}
-
-header p {
-    alignment: center;
-}
-/* Koniec sekcji Aga */
