@@ -65,6 +65,7 @@ header p {
     text-decoration: overline;
     float: left;
     padding: 25px;
+}
 
 /* To jest sekcja Ola */
 /* Koniec sekcji Ola */
@@ -84,6 +85,7 @@ header p {
     alignment: center;
     font-size: large;
     font-color: black;
+}
 
 
 .footer2 {
