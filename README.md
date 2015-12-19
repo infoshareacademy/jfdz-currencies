@@ -1,2 +1,0 @@
-# jfdz-currencies
-Mapa Currencies
