@@ -1,10 +1,18 @@
-/* To jest sekcja Marcin */
 #main_content {
     background-color: darkseagreen;
     font-family: Calibri;
     border: 2px solid blue;
     margin: 20px;
     align-content: left;
+}
+
+header {
+    font-size: 40px;
+    background-color: aquamarine;
+}
+
+header p {
+    alignment: center;
 }
 
 .function {
@@ -32,47 +40,34 @@
     font-size: 21px;
     color: crimson;
 }
-/* Koniec sekcji Marcin */
 
-/* To jest sekcja Piotr */
-
-.nawigacja div{
+nav {
     background-color: lightgreen;
-    width: 100px;
-    display: inline;
-    margin: 1px;
+
+}
+
+.menu_table {
+    width: 100%;
+    border: 1px solid black;
+
+
+}
+.menu_table th, td {
     padding: 10px;
-    border: 1px solid blue;
 }
-
-.aktalnosci{
-
-
-
-}
-
-.nbp{
-
+.footer {
+    font-family: Calibri;
+    font-size: 14px;
+    text-decoration: overline;
+    float: left;
+    padding: 25px;
 
 }
-
-.kontakt{
-
+.footer2 {
+    font-family: Calibri;
+    font-size: 14px;
+    text-decoration: overline;
+    float: right;
+    padding: 20px;
 
 }
-/* Koniec sekcji Piotr */
-
-
-/* To jest sekcja Ola */
-/* Koniec sekcji Ola */
-
-/* To jest sekcja Aga */
-header {
-    font-size: 40px;
-    background-color: aquamarine;
-}
-
-header p {
-    alignment: center;
-}
-/* Koniec sekcji Aga */
