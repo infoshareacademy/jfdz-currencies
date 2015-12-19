@@ -35,19 +35,30 @@
 /* Koniec sekcji Marcin */
 
 /* To jest sekcja Piotr */
-nav {
+
+.nawigacja div{
     background-color: lightgreen;
-
-}
-
-.menu_table {
-    width: 100%;
-    border: 1px solid black;
-
-
-}
-.menu_table th, td {
+    width: 100px;
+    display: inline;
+    margin: 1px;
     padding: 10px;
+    border: 1px solid blue;
+}
+
+.aktalnosci{
+
+
+
+}
+
+.nbp{
+
+
+}
+
+.kontakt{
+
+
 }
 /* Koniec sekcji Piotr */
 
