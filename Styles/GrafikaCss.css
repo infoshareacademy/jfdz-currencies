@@ -43,9 +43,9 @@ header p {
 }
 
 .nawigacja {
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     width: 300px;
-
+    display: inline;
 
 }
 
@@ -54,9 +54,9 @@ header p {
     width: 80px;
     padding: 10px;
     margin: 0px;
-
-    border: 1px solid blue;
+    border: 1px solid rgb(0, 0, 255);
     background-color: lightgreen;
+    float: left;
 }
 
 .footer {
