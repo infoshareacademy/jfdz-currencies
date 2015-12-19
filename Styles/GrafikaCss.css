@@ -41,20 +41,23 @@ header p {
     color: crimson;
 }
 
-nav {
+.nawigacja{
+ left: 100px;
+
+
+}
+.nawigacja div {
+    display: inline;
+    width: 100px;
+  padding: 10px;
+  margin: 1px;
+  border: 1px solid blue;
     background-color: lightgreen;
-
 }
 
-.menu_table {
-    width: 100%;
-    border: 1px solid black;
 
 
-}
-.menu_table th, td {
-    padding: 10px;
-}
+
 .footer {
     font-family: Calibri;
     font-size: 14px;
