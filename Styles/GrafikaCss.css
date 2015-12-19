@@ -1,6 +1,6 @@
 #main_content {
     background-color: darkseagreen;
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
     border: 2px solid blue;
     margin: 20px;
     align-content: left;
@@ -16,7 +16,7 @@ header p {
 }
 
 .function {
-    background-color: lightgreen;
+    background-color: beige;
     border: 1px solid darkslategrey;
     margin: 10px;
     align-content: left;
