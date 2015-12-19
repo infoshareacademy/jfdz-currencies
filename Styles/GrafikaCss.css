@@ -42,8 +42,8 @@ header p {
 }
 
 .nawigacja{
- left: 100px;
-
+ margin-left: 20px;
+ width: 300px;
 
 }
 .nawigacja div {
@@ -51,6 +51,7 @@ header p {
     width: 100px;
   padding: 10px;
   margin: 1px;
+
   border: 1px solid blue;
     background-color: lightgreen;
 }
