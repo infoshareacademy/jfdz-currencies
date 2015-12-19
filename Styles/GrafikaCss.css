@@ -55,3 +55,22 @@ nav {
 .menu_table th, td {
     padding: 10px;
 }
+ .footer{
+     font-family: "Courier 10 Pitch";
+     font-size: 14px;
+     text-decoration: overline;
+     padding: 15px;
+     background-color: transparent;
+     text-align: left;
+     float: left;
+
+ }
+ .footer2 {
+     font-family: "Courier 10 Pitch";
+     font-size: 14px;
+     background-color: transparent;
+     padding: 15px;
+     text-align: right ;
+     float: right;
+     text-decoration: overline;
+ }
