@@ -1,0 +1,19 @@
+#main_content {
+    background-color: darkseagreen;
+    font-family: Calibri, sans-serif;
+    border: 2px solid blue;
+    margin: 20px;
+    align-content: left;
+}
+
+.function {
+    background-color: beige;
+    border: 1px solid darkslategrey;
+    margin: 10px;
+    align-content: left;
+}
+
+.description h2 {
+    font-size: 20px;
+    color: black;
+}
