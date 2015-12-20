@@ -1,15 +1,18 @@
 header {
-    font-size: 20px;color: black;
-    background-color: yellowgreen;
+
     background-image: url("../Obrazy/nowetło.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 360px;
+    height: 350px;
     -webkit-opacity: brightness(0.4);
+    border-radius: 20px 20px 20px 20px;
 }
 
 header p {
-    alignment: center;
-    font-size: large;
-    font-color: black;
+    text-align: center;
+    font-style: italic;
+    font-size: 40px;
+    position: relative;
+    color: black;
+    padding-top: 150px;
 }

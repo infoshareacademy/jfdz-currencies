@@ -1,3 +1,18 @@
+#main_content {
+    background-color: darkseagreen;
+    font-family: Calibri, sans-serif;
+    border: 2px solid blue;
+    margin: 20px;
+    align-content: left;
+
+}
+
+.content {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Impact, Charcoal, sans-serif;
+}
 
 
 
@@ -55,13 +70,7 @@
 
 }
 
-.footer {
-    font-family: Calibri;
-    font-size: 14px;
-    text-decoration: overline;
-    float: left;
-    padding: 25px;
-}
+
 
 /* To jest sekcja Ola */
 /* Koniec sekcji Ola */
@@ -70,11 +79,3 @@
 
 
 
-.footer2 {
-    font-family: Calibri;
-    font-size: 14px;
-    text-decoration: overline;
-    float: right;
-    padding: 20px;
-
-}
