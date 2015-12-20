@@ -17,36 +17,11 @@ header {
     background-color: aquamarine;
 }
 
-header p {
-    alignment: center;
-}
 
-.function {
-    background-color: beige;
-    border: 1px solid darkslategrey;
-    margin: 10px;
-    align-content: left;
-}
 
-.description h2 {
-    font-size: 20px;
-    color: black;
-}
 
-.description h3 {
-    font-size: 16px;
-    color: darkslategrey;
-}
 
-.description p {
-    font-size: 12px;
-    color: black;
-}
 
-.function_title {
-    font-size: 21px;
-    color: crimson;
-}
 
 .nawigacja {
     /*margin-left: 20px;*/
@@ -103,20 +78,6 @@ header p {
 /* Koniec sekcji Ola */
 
 /* To jest sekcja Aga */
-header {
-    font-size: 20px;color: black;
-    background-color: yellowgreen;
-    background-image: url("../Obrazy/nowetło.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 360px;
-    -webkit-opacity: brightness(0.4);
-}
 
-header p {
-    alignment: center;
-    font-size: large;
-    font-color: black;
-}
 
 
