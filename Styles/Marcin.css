@@ -18,6 +18,10 @@
     color: black;
 }
 
+.description h2:hover {
+    color: yellow;
+}
+
 .description h3 {
     font-size: 16px;
     color: darkslategrey;
@@ -35,4 +39,8 @@
 
 .obrazy img {
     border-radius: 20px;
+}
+
+.obrazy img:hover {
+    border-radius: 50%;
 }
