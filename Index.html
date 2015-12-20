@@ -7,7 +7,8 @@
     <link href="Styles/GrafikaCss.css" type="text/css" rel="stylesheet">
     <link href="Styles/Marcin.css" type="text/css" rel="stylesheet">
     <link href="Styles/Agnieszka.css" type="text/css" rel="stylesheet">
-    <link rel="Shortcut icon" href="Obrazy/money.png" />
+    <link href="Styles/Piotr.css" type="text/css" rel="stylesheet">
+    <link rel="Shortcut icon" href="Obrazy/money.png"/>
 
 </head>
 <body>
@@ -16,19 +17,34 @@
     <p>Puls walut. Reagujemy na każdą zmianę!!!</p>
 </header>
 <main>
-   <!-- <div id="menu">   -->
-   <div class="nawigacja">
+    <!-- <div id="menu">   -->
+    <div class="nawigacja">
         <!-- Piotr tutaj mieszasz Ty-->
-       <div class="aktulnosci">Aktualności</div>
-       <div class="nbp"><a href="http://www.nbp.pl/home.aspx?c=/ascx/archa.ascx" target="_blank">Strona NBP</a></div>
-       <div class="kontakt">Kontakt</div>
-       <div class="cl"></div>
+        <div class="aktulnosci">Aktualności</div>
+        <div class="nbp"><a href="http://www.nbp.pl/home.aspx?c=/ascx/archa.ascx" target="_blank">Strona NBP</a></div>
+        <div class="kontakt">
+            <label onclick="document.getElementById('call-to-action').style.display='block'"> Kontakt</label>
+        </div>
+        <div class="cl"></div>
     </div>
+
+    <div id="call-to-action">
+        <form>
+            <label>Imie i nazwisko</label>
+            <input name="name" placeholder="Jan kowalski">
+            <label>Email</label>
+            <input name="email" type="email" placeholder="biuro@79level.pl">
+            <label>Wiadomość</label>
+            <textarea name="message" placeholder="Napisz tu wiadomość"></textarea>
+            <input id="submit" name="submit" type="submit" value="Wyślij">
+        </form>
+    </div>
+    <div class="cl"></div>
     <!--  </div> -->
 
-      <div id="main_content"> <!-- Marcin tutaj mieszasz Ty-->
-          <div></div>
-          <table>
+    <div id="main_content"> <!-- Marcin tutaj mieszasz Ty-->
+        <div></div>
+        <table>
             <tr>
                 <td>
                     <div class="function">
@@ -39,7 +55,9 @@
                                 </td>
                                 <td class="description">
                                     <h2 class="function_title">Kalkulator</h2>
+
                                     <h3><b>Szybkie</b> przeliczanie walut</h3>
+
                                     <p>Przy pomocy naszego kalkulatora wyliczysz swoje możliwości</p>
                                     <ul>
                                         <li>PLN ==> USD</li>
@@ -61,7 +79,9 @@
                                 </td>
                                 <td class="description">
                                     <h2 class="function_title">Średnie kursy NBP</h2>
+
                                     <h3>Kurs z <b>ostatnich 30 dni</b></h3>
+
                                     <p>Szybka weryfikacja średniego kursu waluty za ostatnie 30 dni</p>
                                     <ul>
                                         <li>&dollar;</li>
@@ -86,8 +106,12 @@
                                 </td>
                                 <td class="description">
                                     <h2 class="function_title">Lokalizator</h2>
+
                                     <h3>Znajdź najbliższy <b>Kantor</b> lub <b>o/Banku</b></h3>
-                                    <p>Jeśli jesteś w nowym mieście, nowej części miasta lub innym nieznanym miejscu a chciałbyś wymienić pieniądze, nasz pomocnik szybko wskaże Tobie najbliższe miejsce na mapie gdzie możesz to zrobić</p>
+
+                                    <p>Jeśli jesteś w nowym mieście, nowej części miasta lub innym nieznanym miejscu a
+                                        chciałbyś wymienić pieniądze, nasz pomocnik szybko wskaże Tobie najbliższe
+                                        miejsce na mapie gdzie możesz to zrobić</p>
                                 </td>
                             </tr>
                         </table>
@@ -102,8 +126,12 @@
                                 </td>
                                 <td class="description">
                                     <h2 class="function_title">Strona NBP</h2>
+
                                     <h3>Zawsze możesz <b>zajrzeć</b> na stronę Narodowego Banku Polskiego</h3>
-                                    <p>W przypadku gdybyś nie był pewny lub cokolwiek budziłoby Twoje wątpliwości możesz przejść na stronę NPB i tam sprawdzić aktualne kursy walut niezależne od lokalnych warunków</p>
+
+                                    <p>W przypadku gdybyś nie był pewny lub cokolwiek budziłoby Twoje wątpliwości możesz
+                                        przejść na stronę NPB i tam sprawdzić aktualne kursy walut niezależne od
+                                        lokalnych warunków</p>
                                 </td>
                             </tr>
                         </table>
@@ -111,24 +139,15 @@
                 </td>
             </tr>
         </table>
-        <!--
-        <table>
-            <tr id="call-to-action">
-                <td>
-                    <h2>A to Będzie okienko Call-To-Action</h2>
-                </td>
-            </tr>
-        </table>
-        -->
     </div>
 </main>
 
 <div class="footer">
     Posted by: Mapa Team All Rights Reserved
 </div>
-    <div class="footer2">Contact information: <a href="mailto:MAPA@example.com">
-        MAPA@example.com</a></p>
+<div class="footer2">Contact information: <a href="mailto:MAPA@example.com">
+    MAPA@example.com</a></p>
     <!-- Ola tutaj mieszasz Ty-->
-    </div>
+</div>
 </body>
 </html>
