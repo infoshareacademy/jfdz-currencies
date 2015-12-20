@@ -17,3 +17,18 @@
     font-size: 20px;
     color: black;
 }
+
+.description h3 {
+    font-size: 16px;
+    color: darkslategrey;
+}
+
+.description p {
+    font-size: 12px;
+    color: black;
+}
+
+.function_title {
+    font-size: 21px;
+    color: crimson;
+}
