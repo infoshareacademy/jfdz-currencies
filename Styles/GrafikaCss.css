@@ -1,23 +1,27 @@
+#main_content {
+    background-color: darkseagreen;
+    font-family: Calibri, sans-serif;
+    border: 2px solid blue;
+    margin: 20px;
+    align-content: left;
 
-
-
-
-
-
-.description h3 {
-    font-size: 16px;
-    color: darkslategrey;
 }
 
-.description p {
-    font-size: 12px;
-    color: black;
+.content {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    font-size: 40px;
+    background-color: aquamarine;
 }
 
-.function_title {
-    font-size: 21px;
-    color: crimson;
-}
+
+
+
+
+
 
 .nawigacja {
     /*margin-left: 20px;*/
@@ -68,13 +72,7 @@
 
 }
 
-.footer {
-    font-family: Calibri;
-    font-size: 14px;
-    text-decoration: overline;
-    float: left;
-    padding: 25px;
-}
+
 
 /* To jest sekcja Ola */
 /* Koniec sekcji Ola */
@@ -83,11 +81,3 @@
 
 
 
-.footer2 {
-    font-family: Calibri;
-    font-size: 14px;
-    text-decoration: overline;
-    float: right;
-    padding: 20px;
-
-}
