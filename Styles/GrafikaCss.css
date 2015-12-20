@@ -44,19 +44,51 @@ header p {
 
 .nawigacja {
     /*margin-left: 20px;*/
-    width: 300px;
-    display: inline;
-
+    /*width: 330px;*/
+    /*display: inline;*/
+    /*float: left;*/
 }
 
-.nawigacja div {
-    display: inline;
-    width: 80px;
-    padding: 10px;
-    margin: 0px;
-    border: 1px solid rgb(0, 0, 255);
+/*.nawigacja div {*/
+    /*!*display: inline;*!*/
+    /*width: 80px;*/
+    /*padding: 10px;*/
+    /*margin: 0px;*/
+    /*border: 1px solid rgb(0, 0, 255);*/
+    /*background-color: lightgreen;*/
+    /*float: left;*/
+/*}*/
+
+.aktulnosci{
+    float:left;
+    margin-left: 20px;
+    margin-top: 5px;
+    padding: 5px;
+    border: 2px solid rgb(0, 0, 255);
+    background-color: lightgreen
+}
+
+.nbp{
+    float:left;
+    margin-left: 1px;
+    margin-top: 5px;
+    padding: 5px;
+    border: 2px solid rgb(0, 0, 255);
+    background-color: lightgreen
+}
+
+.kontakt{
+    float:left;
+    margin-left: 1px;
+    margin-top: 5px;
+    border: 2px solid rgb(0, 0, 255);
     background-color: lightgreen;
-    float: left;
+    padding: 5px;
+}
+
+.cl{
+ clear:left;
+
 }
 
 .footer {
