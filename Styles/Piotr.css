@@ -1,12 +1,112 @@
-#call-to-action{
-    display: none;
-    float: left;
-    margin: 50px;
-    with: 360px
-
-}
 
 #firstname{
   float:left;
 
 }
+
+
+.nawigacja {
+    /*float: right;*/
+    position: absolute;
+    top: 320px;
+
+
+}
+
+.menu_par{
+    font-size:12px;
+    text-decoration: underline;
+    color:blue;
+}
+
+
+.nawigacja div{
+    float:left;
+    border-radius: 5px;
+
+}
+
+.home{
+
+    margin-left: 20px;
+    margin-top: 5px;
+    background-color: lightgreen;
+    padding: 5px;
+    border: 2px solid rgb(0, 0, 255);
+}
+
+.nbp{
+
+    margin-left: 1px;
+    margin-top: 5px;
+    background-color: lightgreen;
+    padding: 5px;
+    border: 2px solid rgb(0, 0, 255);
+}
+
+.kontakt{
+
+    margin-left: 1px;
+    margin-top: 5px;
+    background-color: lightgreen;
+    padding: 5px;
+    border: 2px solid rgb(0, 0, 255);
+
+
+}
+
+
+
+.cl{
+    clear:both;
+
+}
+
+#call-to-action{
+    display: none;
+    float: left;
+    margin: 50px;
+    with: 100%;
+
+}
+
+
+.DaneKontaktowe{
+ float: left;
+ width:400px;
+ border:2px solid black;
+
+}
+
+.formularz{
+    float: right;
+    width:260px ;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    /*margin-top: 20px;*/
+}
+
+.forma label{
+
+ display: block;
+ margin-bottom: 5px;
+ font-weight: bold;
+ text-transform: uppercase;
+ font-size: 12px;
+ color: #555555;
+}
+.formularz textarea, .formularz input{
+ padding: 5px;
+ border-radius: 3px;
+ border: 1px solid #ccc;
+ margin-bottom: 25px;
+ width: 245px;
+}
+
+
+
+
+
