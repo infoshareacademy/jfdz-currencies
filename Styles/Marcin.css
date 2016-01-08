@@ -1,46 +1,20 @@
 #main_content {
-    background-color: darkseagreen;
-    font-family: Calibri, sans-serif;
-    border: 2px solid blue;
-    margin: 20px;
-    align-content: left;
+    background-color: black;
+    color: white;
 }
 
 .function {
-    background-color: beige;
-    border: 1px solid darkslategrey;
-    margin: 10px;
-    align-content: left;
+    align-content: center;
+    width: 48%;
+    display: inline-block;
 }
 
-.description h2 {
-    font-size: 20px;
-    color: black;
-}
+.left {float: left;}
 
-.description h2:hover {
-    color: yellow;
-}
+.right {float: right;}
 
-.description h3 {
-    font-size: 16px;
-    color: darkslategrey;
-}
+.clear {clear: both;}
 
-.description p {
-    font-size: 12px;
-    color: black;
-}
-
-.function_title {
-    font-size: 21px;
-    color: crimson;
-}
-
-.obrazy img {
-    border-radius: 20px;
-}
-
-.obrazy img:hover {
-    border-radius: 50%;
+.function img:hover {
+    border-radius: 10%;
 }
