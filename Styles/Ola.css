@@ -6,11 +6,14 @@
     padding-bottom: 50px;
     font-style: italic;
 
-
-
-
 }
 
+a {
+    color: #ffffff;
+}
 
+a:hover {
+    color: red;
 
+}
 
