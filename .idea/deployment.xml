@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Ola">
+  <component name="PublishConfigData" serverName="agnieszkatest">
     <serverData>
-      <paths name="Ola">
+      <paths name="agnieszka">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Ola produkcyjne">
+      <paths name="agnieszkatest">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
