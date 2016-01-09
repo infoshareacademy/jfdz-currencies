@@ -25,27 +25,31 @@
 }
 
 .menu_par {
-    font-size: 12px;
-    text-decoration: underline;
-    background-color: black;
+
+    /*background-color: black;*/
 }
 
 .bhome{
-  width:100px;
+    width:100px;
+    height: 50px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     background-color: black;
     color: white;
+    font-size: 12px;
+    text-decoration: underline;
 }
 
 .bhome:hover {
-    background-color: black; /* Green */
+    background-color: #555555; /* Green */
     color: red;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-
+.menu_par:hover {
+    background-color: #555555;
+}
 
 
 .cl {
@@ -157,5 +161,9 @@
     background-size: cover;
 }
 
+.poz_onas a{
+   color: black;
+
+}
 
 

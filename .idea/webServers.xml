@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7ac7fe8c-3049-4477-bebc-8fd80917b44e" name="Test" url="http://ftp.infoshareaca.nazwa.pl">
+        <fileTransfer host="ftp.infoshareaca.nazwa.pl" port="21" username="infoshareaca_jfdz-mapa-test">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="7314ac58-7f0b-4d17-beca-cca8d6f3d237" name="Produkcja" url="http://ftp.infoshareaca.nazwa.pl">
+        <fileTransfer host="ftp.infoshareaca.nazwa.pl" port="21" password="dfecdf9adfd8df99dfdcdf99dfd8df8b" username="infoshareaca_jfdz-mapa">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
