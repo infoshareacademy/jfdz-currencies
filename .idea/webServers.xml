@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="53521e29-ab5e-4aca-897e-19a56ef8b9db" name="Ola" url="http://ftp.infoshareaca.nazwa.pl">
+        <fileTransfer host="ftp.infoshareaca.nazwa.pl" port="21" username="infoshareaca_jfdz-mapa-test">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="ef09d364-3d82-4881-84ac-4d8acdc78f9f" name="Ola produkcyjne" url="http://ftp.infoshareaca.nazwa.pl">
+        <fileTransfer host="ftp.infoshareaca.nazwa.pl" port="21" username="infoshareaca_jfdz-mapa">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
