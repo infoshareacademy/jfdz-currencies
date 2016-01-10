@@ -1,6 +1,9 @@
 #main_content {
     text-transform: uppercase;
     letter-spacing: 0.2em;
+    background-image: url('../Obrazy/buildings.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .function {
@@ -29,7 +32,12 @@
     background-repeat: no-repeat;
     background-position: center;
     margin: 30px;
-    border: 5px solid darkgreen;
+    border: 3px solid #555555;
+    border-radius: 10px;
+}
+
+.zdjecia:hover {
+    opacity: 0.2;
 }
 
 .calculator {
