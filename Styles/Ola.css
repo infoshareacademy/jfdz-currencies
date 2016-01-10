@@ -1,5 +1,5 @@
 .footer {
-    background-color: black;
+    background-color: gray;
     color: white;
     text-align: center;
     padding-top: 50px;
@@ -9,15 +9,18 @@
 }
 
 a {
-    color: #ffffff;
+    color: white;
 }
-
 a:hover {
     color: red;
 
 }
 
 .up{
-    background-color: black;
+    background-color: white;
     text-align: center;
+    color: black;
+}
+.gora {
+    color: black;
 }
