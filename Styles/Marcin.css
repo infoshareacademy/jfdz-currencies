@@ -1,7 +1,6 @@
 #main_content {
-    background-color: black;
-    color: white;
-    font-family: Calibri, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 
 .function {
@@ -14,8 +13,6 @@
     display: inline-block;
     align-items: center;
     width: 33%;
-
-
 }
 
 .left {float: left;}
@@ -28,3 +25,4 @@
     border: 10px solid white;
     border-radius: 10%;
 }
+

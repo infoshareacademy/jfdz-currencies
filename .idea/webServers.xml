@@ -2,15 +2,15 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="0b548a6c-a9da-4eb9-a95e-6bb175dea768" name="agnieszkatest" url="">
-        <fileTransfer host="ftp.infoshareaca.nazwa.pl" port="21" username="infoshareaca_jfdz-mapa-test">
+      <webServer id="e7c3381f-395c-4c2b-bc41-bbe4592f76ea" name="mapa" url="">
+        <fileTransfer host="ftp.infoshareaca.nazwa.pl" port="21" username="infoshareaca_jfdz-mapa">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
-      <webServer id="7035d1a8-dd87-4e90-b5c6-ae04d493a942" name="agnieszka" url="http://ftp.infoshareaca.nazwa.pl">
-        <fileTransfer host="ftp.infoshareaca.nazwa.pl" port="21" username="infoshareaca_jfdz-mapa">
+      <webServer id="5fc221a1-7cc2-40ab-a547-2d15b701a285" name="mapa-test" url="">
+        <fileTransfer host="ftp.infoshareaca.nazwa.pl" port="21" username="infoshareaca_jfdz-mapa-test">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

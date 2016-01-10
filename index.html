@@ -4,7 +4,7 @@
     <!-- Ola tutaj mieszasz Ty-->
     <meta charset="UTF-8">
     <a name="gora"></a>
-        <title>Kalkulator walutowy</title>
+    <title>Kalkulator walutowy</title>
     <link href="Styles/GrafikaCss.css" type="text/css" rel="stylesheet">
     <link href="Styles/Marcin.css" type="text/css" rel="stylesheet">
     <link href="Styles/Agnieszka.css" type="text/css" rel="stylesheet">
@@ -14,62 +14,38 @@
 
 </head>
 <body>
-<div class="content">
-    <div class="nawigacja">
-        <!-- Piotr tutaj mieszasz Ty-->
-        <div class="home">
-            <label class="bhome"><a href="Index.html">Home</a></label>
-        </div>
-        <div class="kontakt">
-            <label class="bhome" onclick=MenuOnClick(1)>Kontakt</label>
-        </div>
-        <div class="monas">
-            <label class="bhome" onclick=MenuOnClick(2)>O nas</label>
-        </div>
-        <div class="cl"></div>
-    </div>
-
-    <img class="logo" src="Obrazy/logo.jpg" alt="logo" align="left" > <br>
-
-
-</div>
-<header class="content clear">
-
-    <p>Kalkulator walutowy</p>
-
-
+<header class="content">
     <!-- Agnieszka tutaj mieszasz Ty-->
-
-
+    <p>Puls walut- reagujemy na każdą zmianę!</p>
 
 
 
 </header>
 <main class="content">
 
-    <!--<div class="nawigacja">-->
-        <!--&lt;!&ndash; Piotr tutaj mieszasz Ty&ndash;&gt;-->
-        <!--<div class="home">-->
-            <!--<button class="bhome">-->
-                <!--<a href="Index.html">Home</a></button>-->
-      <!--</div>-->
+    <div class="nawigacja">
+        <!-- Piotr tutaj mieszasz Ty-->
+        <div class="home">
+            <button class="bhome">
+                <p class="menu_par"><a href="index.html">Home</a></p></button>
+        </div>
 
-        <!--<div class="nbp">-->
-            <!--<button class="bhome"><a href="http://www.nbp.pl/home.aspx?c=/ascx/archa.ascx"-->
-                                                         <!--target="_blank">Strona-->
-                <!--NBP</a></button>-->
-        <!--</div>-->
+        <div class="nbp">
+            <button class="bhome"><p class="menu_par"><a href="http://www.nbp.pl/home.aspx?c=/ascx/archa.ascx"
+                                                         target="_blank">Strona
+                NBP</a></p></button>
+        </div>
 
-        <!--<div class="kontakt">-->
-            <!--<button class="bhome" onclick=MenuOnClick(1)>-->
-                <!--Kontakt</button>-->
-        <!--</div>-->
-        <!--<div class="monas">-->
-            <!--<button class="bhome" onclick=MenuOnClick(2)>-->
-                <!--O nas</button>-->
-        <!--</div>-->
-        <!--<div class="cl"></div>-->
-    <!--</div>-->
+        <div class="kontakt">
+            <button class="bhome" onclick=MenuOnClick(1)>
+                <p class="menu_par">Kontakt</p></button>
+        </div>
+        <div class="monas">
+            <button class="bhome" onclick=MenuOnClick(2)>
+                <p class="menu_par">O nas</p></button>
+        </div>
+        <div class="cl"></div>
+    </div>
 
 
     <div id="call-to-action">
@@ -122,10 +98,10 @@
     <div class="cl"></div>
     <!--  </div> -->
 
-    <div id="main_content content"> <!-- Marcin tutaj mieszasz Ty-->
+    <div id="main_content"> <!-- Marcin tutaj mieszasz Ty-->
         <div class="function left">
             <figure>
-                <img src="Obrazy/kalkulator.jpg" width="300"/>
+                <img src="Obrazy/kalkulator.jpg"/>
                 <figcaption>Kalkulator</figcaption>
             </figure>
             <div>
@@ -138,12 +114,11 @@
                     <li>Inne waluty</li>
                 </ul>
             </div>
-
         </div>
 
         <div class="function right">
             <figure>
-                <img src="Obrazy/wykres.jpg" width="300"/>
+                <img src="Obrazy/wykres.jpg"/>
                 <figcaption>Średnie kursy NBP</figcaption>
             </figure>
             <h3>Kurs z <b>ostatnich 30 dni</b></h3>
@@ -158,7 +133,7 @@
         <div class="clear"></div>
         <div class="function left">
             <figure>
-                <img src="Obrazy/mapa.jpg" width="300"/>
+                <img src="Obrazy/mapa.jpg"/>
                 <figcaption>Lokalizator</figcaption>
             </figure>
             <h3>Znajdź najbliższy <b>Kantor</b> lub <b>o/Banku</b></h3>
@@ -169,7 +144,7 @@
 
         <div class="function right">
             <figure>
-                <img src="Obrazy/nbp.jpg" width="300"/>
+                <img src="Obrazy/nbp.jpg"/>
                 <figcaption>Strona NBP</figcaption>
             </figure>
 
@@ -197,7 +172,7 @@
         </div>
     </div>
     <div class="up">
-    <a href="#gora">Do gory strony</a>
+    <a href class="gora">Do gory strony</a>
     </div>
 </main>
 

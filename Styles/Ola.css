@@ -8,21 +8,19 @@
 
 }
 
-
+a {
+    color: white;
+}
 a:hover {
     color: red;
 
 }
 
-.up {
+.up{
     background-color: white;
     text-align: center;
-}
-
-.blackFont {
     color: black;
 }
-
-footer a {
-    color: white;
+.gora {
+    color: black;
 }
