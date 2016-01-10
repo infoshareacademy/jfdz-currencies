@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="e7c3381f-395c-4c2b-bc41-bbe4592f76ea" name="mapa" url="http://ftp.infoshareaca.nazwa.pl">
+      <webServer id="e7c3381f-395c-4c2b-bc41-bbe4592f76ea" name="mapa" url="">
         <fileTransfer host="ftp.infoshareaca.nazwa.pl" port="21" username="infoshareaca_jfdz-mapa">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
