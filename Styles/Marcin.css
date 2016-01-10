@@ -9,11 +9,8 @@
     display: inline-block;
 }
 
-.media div {
-    display: inline-block;
-    align-items: center;
-    width: 33%;
-}
+
+
 
 .left {float: left;}
 
