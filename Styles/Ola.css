@@ -6,6 +6,7 @@
     padding-bottom: 50px;
     font-style: italic;
 
+
 }
 
 a {
@@ -20,7 +21,14 @@ a:hover {
     background-color: white;
     text-align: center;
     color: black;
+    margin-top: 80px;
 }
 .gora {
     color: black;
+}
+.media {
+
+    float: right;
+
+
 }
