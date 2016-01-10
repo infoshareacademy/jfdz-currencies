@@ -23,3 +23,25 @@
     border-radius: 10%;
 }
 
+.zdjecia {
+    width: 300px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.calculator {
+    background-image: url('../Obrazy/kalkulator.jpg');
+}
+
+.wykres {
+    background-image: url('../Obrazy/wykres.jpg');
+}
+
+.mapa {
+    background-image: url('../Obrazy/mapa.jpg');
+}
+
+.nbp {
+    background-image: url('../Obrazy/nbp.jpg');
+}
