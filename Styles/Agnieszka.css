@@ -1,6 +1,5 @@
 header {
-
-    background-image: url("../Obrazy/nowetło.jpg");
+background-image: url("../Obrazy/nowetło.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 350px;
@@ -15,4 +14,13 @@ header p {
     position: relative;
     color: black;
     padding-top: 150px;
+}
+
+.logo{
+
+     float: none;
+
+ }
+.zdjecie{
+    width: 1100px;
 }
