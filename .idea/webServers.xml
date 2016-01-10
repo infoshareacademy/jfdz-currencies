@@ -9,7 +9,7 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
-      <webServer id="5fc221a1-7cc2-40ab-a547-2d15b701a285" name="mapa-test" url="http://ftp.infoshareaca.nazwa.pl">
+      <webServer id="5fc221a1-7cc2-40ab-a547-2d15b701a285" name="mapa-test" url="">
         <fileTransfer host="ftp.infoshareaca.nazwa.pl" port="21" username="infoshareaca_jfdz-mapa-test">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
