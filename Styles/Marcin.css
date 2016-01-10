@@ -24,10 +24,12 @@
 }
 
 .zdjecia {
-    width: 300px;
+    width: 290px;
     height: 200px;
     background-repeat: no-repeat;
     background-position: center;
+    margin: 30px;
+    border: 5px solid darkgreen;
 }
 
 .calculator {
