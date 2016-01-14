@@ -1,19 +1,12 @@
 #main_content {
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 0.2em;
-    background-image: url('../Obrazy/tlo.jpg');
-    background-position: center;
-
-}
-
-.function {
-    align-content: center;
-    width: 48%;
+    /*background-image: url('../Obrazy/Marcin/tlo.jpg');*/
+    /*background-position: center;*/
     display: inline-block;
+
 }
-
-
-
 
 .left {float: left;}
 
@@ -21,38 +14,46 @@
 
 .clear {clear: both;}
 
-.function img:hover {
-    border: 10px solid white;
-    border-radius: 10%;
-}
-
 .zdjecia {
-    width: 290px;
+    width: 400px;
     height: 200px;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: black;
     margin: 30px;
     border: 3px solid #555555;
     border-radius: 10px;
     background-size: cover;
+    text-align: center;
+    display: inline-block;
+}
+
+.dodatki img {
+    width: 64px;
+    height: 64px;
 }
 
 .zdjecia:hover {
-    opacity: 0.4;
+    opacity: 0.5;
+    color: white;
 }
 
 .calculator {
-    background-image: url('../Obrazy/kalk.jpg');
+    background-image: url('../Obrazy/Marcin/kalk.jpg');
 }
 
 .wykres {
-    background-image: url('../Obrazy/wykres.jpg');
+    background-image: url('../Obrazy/Marcin/wykres.jpg');
 }
 
 .mapa {
-    background-image: url('../Obrazy/gps.jpg');
+    background-image: url('../Obrazy/Marcin/gps.jpg');
 }
 
 .nbp {
-    background-image: url('../Obrazy/nbp.jpg');
+    background-image: url('../Obrazy/Marcin/nbp.jpg');
+}
+
+.dodatki {
+
 }
