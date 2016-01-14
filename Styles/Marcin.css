@@ -1,9 +1,9 @@
 #main_content {
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    background-image: url('../Obrazy/buildings.jpg');
+    background-image: url('../Obrazy/tlo.jpg');
     background-position: center;
-    background-size: cover;
+
 }
 
 .function {
@@ -34,14 +34,15 @@
     margin: 30px;
     border: 3px solid #555555;
     border-radius: 10px;
+    background-size: cover;
 }
 
 .zdjecia:hover {
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 .calculator {
-    background-image: url('../Obrazy/kalkulator.jpg');
+    background-image: url('../Obrazy/kalk.jpg');
 }
 
 .wykres {
@@ -49,7 +50,7 @@
 }
 
 .mapa {
-    background-image: url('../Obrazy/mapa.jpg');
+    background-image: url('../Obrazy/gps.jpg');
 }
 
 .nbp {
