@@ -32,17 +32,22 @@ a:hover {
 }
 
 
-header {
+.slajder {
     background-image: url("../Obrazy/tlo.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 1000px;
-    -webkit-opacity: brightness(0.4);
-    border-radius: 20px 20px 20px 20px;
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+    animation-name:ola ;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
-
-
+@keyframes ola {
+    33%{background-image: url("../Obrazy/tlo.jpg"); }
+    66%{background-image: url("../Obrazy/logo2.jpg");}
+    99%{background-image: url("../Obrazy/logo3.jpg");}
+}
 
 
 
