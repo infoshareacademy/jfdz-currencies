@@ -1,59 +1,78 @@
 #main_content {
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: 0.2em;
-    /*background-image: url('../Obrazy/Marcin/tlo.jpg');*/
-    /*background-position: center;*/
-    display: inline-block;
-
+    letter-spacing: 0.1em;
 }
 
+#main_content .bloki {
+    display: inline-block;
+    vertical-align: middle;
+    height: 500px;
+}
+.dodatki {
+    width: 240px;
+}
+.dodatki img {
+    width: 64px;
+    height: 64px;
+    padding: 20px;
+    border-bottom: 2px solid grey;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.dodatki img:hover {
+    background-color: #feff20;
+    border-bottom: 2px solid black;
+}
+
+.funkcje {
+    width: 850px;
+}
+
+.funkcje div {
+    width: 400px;
+    height: 200px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+}
+
+.funkcje span {
+    color: white;
+    background-color: aqua;
+    font-size: 17px;
+    font-style: oblique;
+}
+
+.funkcje div:hover {
+    opacity: 0.2;
+}
+
+#calc {
+    background-image: url("../Obrazy/Marcin/kalk.jpg");
+}
+
+#wykres {
+    background-image: url("../Obrazy/Marcin/wykres.jpg");
+}
+
+#gps {
+    background-image: url("../Obrazy/Marcin/gps.jpg");
+}
+
+#nbp {
+    background-image: url("../Obrazy/Marcin/nbp.jpg");
+}
 .left {float: left;}
 
 .right {float: right;}
 
 .clear {clear: both;}
-
-.zdjecia {
-    width: 400px;
-    height: 200px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: black;
-    margin: 30px;
-    border: 3px solid #555555;
-    border-radius: 10px;
-    background-size: cover;
-    text-align: center;
-    display: inline-block;
-}
-
-.dodatki img {
-    width: 64px;
-    height: 64px;
-}
-
-.zdjecia:hover {
-    opacity: 0.5;
-    color: white;
-}
-
-.calculator {
-    background-image: url('../Obrazy/Marcin/kalk.jpg');
-}
-
-.wykres {
-    background-image: url('../Obrazy/Marcin/wykres.jpg');
-}
-
-.mapa {
-    background-image: url('../Obrazy/Marcin/gps.jpg');
-}
-
-.nbp {
-    background-image: url('../Obrazy/Marcin/nbp.jpg');
-}
-
-.dodatki {
-
-}
