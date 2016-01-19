@@ -1,11 +1,11 @@
-header {
-background-image: url("../Obrazy/nowetło.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 350px;
-    -webkit-opacity: brightness(0.4);
-    border-radius: 20px 20px 20px 20px;
-}
+/*header {*/
+/*background-image: url("../Obrazy/tlo.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*height: 1000px;*/
+    /*-webkit-opacity: brightness(0.4);*/
+    /*border-radius: 20px 20px 20px 20px;*/
+/*}*/
 
 header p {
     text-align: center;
