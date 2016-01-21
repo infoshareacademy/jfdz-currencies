@@ -1,16 +1,14 @@
 #main_content {
     text-transform: uppercase;
-    text-align: center;
     letter-spacing: 0.1em;
 }
 
 #main_content .bloki {
-    display: inline-block;
     vertical-align: middle;
-    height: 500px;
+    height: 550px;
 }
 .dodatki {
-    width: 240px;
+    width: 220px;
 }
 .dodatki img {
     width: 64px;
@@ -19,58 +17,64 @@
     border-bottom: 2px solid grey;
     margin-bottom: 5px;
     margin-top: 5px;
-    border-radius: 10px;
+}
+.dodatki img:hover {
+    background-color: black;
+}
+.dodatki figcaption {
+    font-size: 12px;
+    letter-spacing: 0em;
+    width: 102px;
+    text-align: center;
+}
+.dodatki figure {
+    width: 102px;
+    float: left;
+    margin: 0px;
+}
+.dodatki a {
+    color: black;
+    text-decoration: none;
+}
+.funkcja figure {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 
-.dodatki img:hover {
-    background-color: #feff20;
-    border-bottom: 2px solid black;
+.funkcja img {
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    padding: 0px;
+}
+
+.funkcja figcaption {
+    background-image: url("../Obrazy/Marcin/money1.png");
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.funkcja a {
+    color: black;
+    text-decoration: none;
+}
+
+.funkcja {
+    width: 420px;
 }
 
 .funkcje {
-    width: 850px;
+    width: 860px;
 }
 
-.funkcje div {
-    width: 400px;
-    height: 200px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 30px;
+.funkcje figure:hover {
+    opacity: 0.7;
 }
 
-.funkcje span {
-    color: white;
-    background-color: aqua;
-    font-size: 17px;
-    font-style: oblique;
-}
-
-.funkcje div:hover {
-    opacity: 0.2;
-}
-
-#calc {
-    background-image: url("../Obrazy/Marcin/kalk.jpg");
-}
-
-#wykres {
-    background-image: url("../Obrazy/Marcin/wykres.jpg");
-}
-
-#gps {
-    background-image: url("../Obrazy/Marcin/gps.jpg");
-}
-
-#nbp {
-    background-image: url("../Obrazy/Marcin/nbp.jpg");
-}
 .left {float: left;}
 
 .right {float: right;}
