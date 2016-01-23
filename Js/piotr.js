@@ -23,3 +23,67 @@ function MenuOnClick(p1) {
 
     }
 }
+
+
+
+function CheckEmail(Adres)
+
+{
+
+    var TestEmail = /^(.[A-Za-z0-9\-]*\w)+@+([A-Za-z0-9\-]*\w)+(\.[A-Za-z]*\w)+$/;
+
+    var Wynik = Adres.match(TestEmail);
+
+
+    if (Wynik == null)
+
+    {
+        alert("Proszę wpisać poprawny adres e-mail!");
+
+        return false;
+
+    }
+
+    return true;
+
+}
+
+
+
+function ValidateFrom(form){
+    var next = true;
+    //Walidacja imienia i nazwiska
+    if(form['name'].value.length <= 0){
+        alert('Imię i nazwisko nie mogą być puste!');
+        next = false;
+    }
+
+    //Walidacja emaila
+    if (next)
+    {
+        var TestEmail = /^(.[A-Za-z0-9\-]*\w)+@+([A-Za-z0-9\-]*\w)+(\.[A-Za-z]*\w)+$/;
+
+        var Wynik = form['email'].value.match(TestEmail);
+        if (Wynik == null)
+
+        {
+            alert("Proszę wpisać poprawny adres e-mail!");
+
+            next = false;
+
+        }
+
+    }
+    //Walidacja numeru telefonu
+    if (next) {
+         var Testphone = /^\d{3}-?\d{3}-?\d{3}$/;
+         var wynik1=form['phone'].value.match(Testphone);
+        if (wynik1 == null) {
+            alert("Proszę wpisać poprawny numer telefonu!");
+            next = false;
+        }
+
+    }
+
+   return next;
+}
