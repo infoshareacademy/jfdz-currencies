@@ -8,8 +8,13 @@
     height: 550px;
 }
 .dodatki {
-    width: 220px;
+    width: 240px;
 }
+
+.funkcja a {
+    display: block;
+}
+
 .dodatki img {
     width: 64px;
     height: 64px;
@@ -30,7 +35,7 @@
 .dodatki figure {
     width: 102px;
     float: left;
-    margin: 0px;
+    margin: 5px;
 }
 .dodatki a {
     color: black;
