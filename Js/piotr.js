@@ -85,5 +85,13 @@ function ValidateFrom(form){
 
     }
 
+    if (next){
+        if(form['message'].value.length <= 0){
+            alert('Podaj wiadomość!');
+            next = false;
+        }
+
+    }
+
    return next;
 }
