@@ -100,15 +100,6 @@
     padding: 0px;
 }
 
-.dodatki figure {
-    position: relative;
-}
-
-.dodatki figure figcaption {
-    position: absolute;
-    bottom: 2px;
-}
-
 .funkcja a {
     color: black;
     text-decoration: none;
