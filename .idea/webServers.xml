@@ -10,7 +10,7 @@
         </fileTransfer>
       </webServer>
       <webServer id="5fc221a1-7cc2-40ab-a547-2d15b701a285" name="mapa-test" url="">
-        <fileTransfer host="ftp.infoshareaca.nazwa.pl" port="21" username="infoshareaca_jfdz-mapa-test">
+        <fileTransfer host="ftp.infoshareaca.nazwa.pl" port="21" password="dfecdf9adfd8df99dfdcdf99dfd8df8b" username="infoshareaca_jfdz-mapa-test">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

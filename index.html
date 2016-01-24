@@ -60,7 +60,7 @@
             <p>Zapraszam do kontaktu. Szybka i fachowa odpowiedź.</p>
         </div>
         <div class="formularz">
-            <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma">
+            <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma"  onsubmit="return ValidateFrom(this) >
                 <label for="firstname">Imię i nazwisko</label>
                 <input id="firstname" name="name" placeholder="Jan kowalski">
                 <label for="femail">Email</label>
@@ -69,8 +69,8 @@
                 <input id="fphone" name="phone" type="phone" placeholder="999-999-999">
                 <label for="fmessage">Wiadomość</label>
                 <textarea id="fmessage" name="message" placeholder="Napisz tu wiadomość"></textarea>
-                <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
-                <input id="submit" name="submit" type="submit" value="Wyślij">
+                <input type="hidden" name="receiver" value="pperetko@gmail.com">  <!--wojciech.makurat@infoshareacademy.com-->
+                <input id="submit" name="submit" type="submit" value="Wyślij" onclick="return  ValidateFrom(document.forms[0])">
             </form>
         </div>
     </div>
@@ -151,34 +151,55 @@
         </div>
 
         <div class="bloki funkcje right">
+
             <div class="funkcja right">
-                <figure>
-                    <a href="https://cinkciarz.pl/kantor/kalkulator-walutowy"/>
-                    <img src="Obrazy/Marcin/kalk.jpg" alt="Kalkulator"/>
-                    <figcaption>Kalkulator</figcaption>
-                </figure>
+                <a class="funkcjaLink" href="https://cinkciarz.pl/kantor/kalkulator-walutowy"/>
+                    <div class="opis">
+                        <p class="tresc tresc1">Kalkulator</p>
+                        <p class="tresc tresc2">Szybkie przeliczanie możliwości zakupu</p>
+                    </div>
+                    <figure>
+                        <img src="Obrazy/Marcin/kalk.jpg" alt="Kalkulator"/>
+                    </figure>
+                </a>
             </div>
+
             <div class="funkcja right">
-                <figure>
-                    <a href="http://www.bankier.pl/waluty"/>
-                    <img src="Obrazy/Marcin/wykres.jpg" alt="Kalkulator"/>
-                    <figcaption>Średnie kursy</figcaption>
-                </figure>
+                <a class="funkcjaLink" href="http://www.bankier.pl/waluty">
+                    <div class="opis">
+                        <p class="tresc tresc1">Średnie kursy</p>
+                        <p class="tresc tresc2">Sprawdź średni kurs za ostatnie 30 dni</p>
+                    </div>
+                    <figure>
+                        <img src="Obrazy/Marcin/wykres.jpg" alt="Wykres"/>
+                    </figure>
+                </a>
             </div>
+
             <div class="funkcja right">
-                <figure>
-                    <a href="https://www.google.pl/maps"/>
-                    <img src="Obrazy/Marcin/gps.jpg" alt="Kalkulator"/>
-                    <figcaption>Lokalizator</figcaption>
-                </figure>
+                <a class="funkcjaLink" href="https://www.google.pl/maps">
+                    <div class="opis">
+                        <p class="tresc tresc1">Lokalizator</p>
+                        <p class="tresc tresc2">Pomożemy znaleźć najbliższy kantor lub O/Banku</p>
+                    </div>
+                    <figure>
+                        <img src="Obrazy/Marcin/gps.jpg" alt="Lokalizator"/>
+                    </figure>
+                </a>
             </div>
+
             <div class="funkcja right">
-                <figure>
-                    <a href="http://www.nbp.pl/"/>
-                    <img src="Obrazy/Marcin/nbp.jpg" alt="Kalkulator"/>
-                    <figcaption>Narodowy Bank Polski</figcaption>
-                </figure>
+                <a class="funkcjaLink" href="http://www.nbp.pl"/>
+                    <div class="opis">
+                        <p class="tresc tresc1">Narodowy Bank Polski</p>
+                        <p class="tresc tresc2">Zawsze możesz odnieść się do danych z Narodowego Banku Polskiego</p>
+                    </div>
+                    <figure>
+                        <img src="Obrazy/Marcin/nbp.jpg" alt="NBP"/>
+                    </figure>
+                </a>
             </div>
+
         </div>
 
         <div class="clear"></div>
