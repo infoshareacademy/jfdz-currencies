@@ -1,6 +1,7 @@
 #main_content {
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    z-index: 5;
 }
 
 #main_content .bloki {
@@ -39,6 +40,7 @@
 .tresc {
     color: white;
     opacity: 0;
+    font-size: 17px;
 }
 
 .tresc1{
