@@ -4,14 +4,25 @@
     margin-right: auto;
     margin-top: 0px;
     font-family: 'Roboto_Thin', sans-serif;
-    background-color: white;
     color: black;
     background-color: transparent;
+    padding-top: 70px;
 
 }
 
+.naglowek-strony {
+    position: fixed;
+    width: 100%;
 
 
+
+
+}
+
+.naglowek-strony .content {
+    background-color: white;
+    z-index: 1000px;
+}
 
 
 
