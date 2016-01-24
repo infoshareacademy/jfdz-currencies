@@ -21,6 +21,7 @@
 
 .naglowek-strony .content {
     background-color: white;
+    z-index: 1000px;
 }
 
 
