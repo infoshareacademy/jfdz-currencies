@@ -8,7 +8,7 @@
     height: 550px;
 }
 .dodatki {
-    width: 220px;
+    width: 240px;
 }
 .dodatki img {
     width: 64px;
@@ -19,7 +19,7 @@
     margin-top: 5px;
 }
 .dodatki img:hover {
-    background-color: black;
+    background-color: #555555;
 }
 .dodatki figcaption {
     font-size: 12px;
@@ -30,8 +30,40 @@
 .dodatki figure {
     width: 102px;
     float: left;
-    margin: 0px;
+    margin: 5px;
 }
+.funkcjaLink {
+    position: relative;
+}
+
+.test2 {
+    color: black;
+    opacity: 0;
+}
+
+.funkcjaLink:hover .test {
+    background-color: rgba(0, 255, 0, 0.7);
+}
+
+.funkcjaLink:hover .test2 {
+    opacity: 1;
+}
+
+.test {
+    background-color: rgba(0, 255, 0, 0);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+}
+
+.funkcja a {
+    display: block;
+}
+
+
+
 .dodatki a {
     color: black;
     text-decoration: none;

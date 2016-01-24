@@ -60,7 +60,7 @@
             <p>Zapraszam do kontaktu. Szybka i fachowa odpowiedź.</p>
         </div>
         <div class="formularz">
-            <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma">
+            <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma"  onsubmit="return ValidateFrom(this) >
                 <label for="firstname">Imię i nazwisko</label>
                 <input id="firstname" name="name" placeholder="Jan kowalski">
                 <label for="femail">Email</label>
@@ -69,8 +69,8 @@
                 <input id="fphone" name="phone" type="phone" placeholder="999-999-999">
                 <label for="fmessage">Wiadomość</label>
                 <textarea id="fmessage" name="message" placeholder="Napisz tu wiadomość"></textarea>
-                <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
-                <input id="submit" name="submit" type="submit" value="Wyślij">
+                <input type="hidden" name="receiver" value="pperetko@gmail.com">  <!--wojciech.makurat@infoshareacademy.com-->
+                <input id="submit" name="submit" type="submit" value="Wyślij" onclick="return  ValidateFrom(document.forms[0])">
             </form>
         </div>
     </div>
@@ -158,24 +158,31 @@
                     <figcaption>Kalkulator</figcaption>
                 </figure>
             </div>
+
             <div class="funkcja right">
-                <figure>
-                    <a href="http://www.bankier.pl/waluty"/>
-                    <img src="Obrazy/Marcin/wykres.jpg" alt="Kalkulator"/>
-                    <figcaption>Średnie kursy</figcaption>
-                </figure>
+                <a class="funkcjaLink" href="http://www.bankier.pl/waluty">
+                    <div class="test">
+                        <p class="test2">tekst</p>
+
+                    </div>
+                    <figure>
+                        <img src="Obrazy/Marcin/wykres.jpg" alt="Srednie"/>
+                        <figcaption>Średnie kursy</figcaption>
+                    </figure>
+                </a>
             </div>
+
             <div class="funkcja right">
                 <figure>
                     <a href="https://www.google.pl/maps"/>
-                    <img src="Obrazy/Marcin/gps.jpg" alt="Kalkulator"/>
+                    <img src="Obrazy/Marcin/gps.jpg" alt="Lokalizator"/>
                     <figcaption>Lokalizator</figcaption>
                 </figure>
             </div>
             <div class="funkcja right">
                 <figure>
                     <a href="http://www.nbp.pl/"/>
-                    <img src="Obrazy/Marcin/nbp.jpg" alt="Kalkulator"/>
+                    <img src="Obrazy/Marcin/nbp.jpg" alt="NBP"/>
                     <figcaption>Narodowy Bank Polski</figcaption>
                 </figure>
             </div>
