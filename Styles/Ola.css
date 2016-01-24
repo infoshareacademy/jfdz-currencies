@@ -1,5 +1,5 @@
 .footer {
-    background-color: skyblue;
+    background-image: url("../Obrazy/dark.png");
     color: white;
     text-align: center;
     padding-top: 50px;
@@ -17,12 +17,8 @@ a:hover {
 
 }
 
-.up{
-    background-color: white;
-    text-align: center;
-    color: black;
-    margin-top: 80px;
-}
+
+
 
 
 .gora{

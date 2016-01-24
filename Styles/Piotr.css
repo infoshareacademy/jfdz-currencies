@@ -11,19 +11,27 @@
 .nawigacja div {
     float: left;
     border-radius: 5px;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 10px;
+    margin-top: 60px;
 }
+
+/*}Styles/Piotr.css:12*/
 
 .home {
     margin-left: 20px;
     border-radius: 5px;
 }
 
+.bhome{
+    color: steelblue;
+
+
+}
 
 .bhome a{
-  color: black;
+  color: steelblue;
     text-decoration: none;
+
 }
 
 .bhome:hover{
