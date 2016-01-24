@@ -5,7 +5,7 @@
 
 #main_content .bloki {
     vertical-align: middle;
-    height: 550px;
+    height: 600px;
 }
 .dodatki {
     width: 240px;
@@ -19,7 +19,7 @@
     margin-top: 5px;
 }
 .dodatki img:hover {
-    background-color: #555555;
+    background-color: #cccccc;
 }
 .dodatki figcaption {
     font-size: 12px;
@@ -36,21 +36,41 @@
     position: relative;
 }
 
-.test2 {
-    color: black;
+.tresc {
+    color: white;
     opacity: 0;
 }
 
-.funkcjaLink:hover .test {
-    background-color: rgba(0, 255, 0, 0.7);
+.tresc1{
+    position: absolute;
+    top: 25%;
 }
 
-.funkcjaLink:hover .test2 {
+.tresc2 {
+    position: absolute;
+    top: 40%;
+}
+
+
+.funkcjaLink:hover .opis {
+    background-color: darkslategrey;
+    opacity: 0.7;
+    transition: opacity 1s;
+}
+
+.funkcjaLink:hover .tresc {
+    position: absolute;
+    left: 10px;
+    right: 10px;
     opacity: 1;
+    transition: opacity 1s;
+    font-weight: bold;
+    text-align: center;
 }
 
-.test {
-    background-color: rgba(0, 255, 0, 0);
+.opis {
+    background-color: #555555;
+    opacity: 0;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -61,8 +81,6 @@
 .funkcja a {
     display: block;
 }
-
-
 
 .dodatki a {
     color: black;
@@ -82,14 +100,6 @@
     padding: 0px;
 }
 
-.funkcja figcaption {
-    background-image: url("../Obrazy/Marcin/money1.png");
-    padding-left: 30px;
-    background-repeat: no-repeat;
-    margin-bottom: 20px;
-    margin-left: 10px;
-}
-
 .funkcja a {
     color: black;
     text-decoration: none;
@@ -104,7 +114,7 @@
 }
 
 .funkcje figure:hover {
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .left {float: left;}
