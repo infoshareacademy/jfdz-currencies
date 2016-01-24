@@ -11,6 +11,32 @@
     width: 240px;
 }
 
+.funkcjaLink {
+    position: relative;
+}
+
+.test2 {
+    color: black;
+    opacity: 0;
+}
+
+.funkcjaLink:hover .test {
+    background-color: rgba(0, 255, 0, 0.7);
+}
+
+.funkcjaLink:hover .test2 {
+    opacity: 1;
+}
+
+.test {
+    background-color: rgba(0, 255, 0, 0);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+}
+
 .funkcja a {
     display: block;
 }
