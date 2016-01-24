@@ -10,7 +10,28 @@
 .dodatki {
     width: 240px;
 }
-
+.dodatki img {
+    width: 64px;
+    height: 64px;
+    padding: 20px;
+    border-bottom: 2px solid grey;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.dodatki img:hover {
+    background-color: #555555;
+}
+.dodatki figcaption {
+    font-size: 12px;
+    letter-spacing: 0em;
+    width: 102px;
+    text-align: center;
+}
+.dodatki figure {
+    width: 102px;
+    float: left;
+    margin: 5px;
+}
 .funkcjaLink {
     position: relative;
 }
@@ -41,28 +62,8 @@
     display: block;
 }
 
-.dodatki img {
-    width: 64px;
-    height: 64px;
-    padding: 20px;
-    border-bottom: 2px solid grey;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-.dodatki img:hover {
-    background-color: black;
-}
-.dodatki figcaption {
-    font-size: 12px;
-    letter-spacing: 0em;
-    width: 102px;
-    text-align: center;
-}
-.dodatki figure {
-    width: 102px;
-    float: left;
-    margin: 5px;
-}
+
+
 .dodatki a {
     color: black;
     text-decoration: none;
