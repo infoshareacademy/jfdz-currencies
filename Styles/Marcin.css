@@ -1,65 +1,51 @@
-#main_content {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    z-index: 5;
-}
-
-#main_content .bloki {
-    vertical-align: middle;
-    height: 600px;
-}
 .dodatki {
-    width: 240px;
+    width: 100%;
+    position: relative;
 }
 .dodatki img {
     width: 64px;
     height: 64px;
-    padding: 20px;
     border-bottom: 2px solid grey;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    padding: 10px 20px 10px 20px;
+    margin: 0px 16px 0px 16px;
 }
 .dodatki img:hover {
-    background-color: #cccccc;
+    background-color: #777;
 }
 .dodatki figcaption {
     font-size: 12px;
-    letter-spacing: 0em;
-    width: 102px;
     text-align: center;
 }
-.dodatki figure {
-    width: 102px;
-    float: left;
-    margin: 5px;
-}
+
 .funkcjaLink {
     position: relative;
 }
-
+.funkcje {
+    width: 100%;
+    position: relative;
+}
 .tresc {
     color: white;
     opacity: 0;
-    font-size: 17px;
 }
-
 .tresc1{
     position: absolute;
-    top: 25%;
+    top: 40%;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff584c;
 }
-
 .tresc2 {
     position: absolute;
-    top: 40%;
+    top: 55%;
+    font-size: 14px;
+    color: pink;
 }
-
-
 .funkcjaLink:hover .opis {
-    background-color: darkslategrey;
-    opacity: 0.7;
+    background-color: #777;
+    opacity: 0.9;
     transition: opacity 1s;
 }
-
 .funkcjaLink:hover .tresc {
     position: absolute;
     left: 10px;
@@ -69,58 +55,36 @@
     font-weight: bold;
     text-align: center;
 }
-
 .opis {
-    background-color: #555555;
     opacity: 0;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left:0;
-    right: 0;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
 }
-
 .funkcja a {
     display: block;
 }
-
 .dodatki a {
     color: black;
     text-decoration: none;
 }
-.funkcja figure {
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
 
 .funkcja img {
-    width: 400px;
-    height: 200px;
-    margin: 10px;
-    padding: 0px;
+    width: 530px;
+    height: 230px;
+    background-size: contain;
+    padding: 10px;
 }
-
 .funkcja a {
     color: black;
     text-decoration: none;
 }
-
 .funkcja {
-    width: 420px;
+    width: 550px;
 }
-
-.funkcje {
-    width: 860px;
-}
-
 .funkcje figure:hover {
     opacity: 1;
 }
 
-.left {float: left;}
-
-.right {float: right;}
-
-.clear {clear: both;}
