@@ -58,10 +58,10 @@
 .opis {
     opacity: 0;
     position: absolute;
-    top: 1px;
-    bottom: 1px;
-    left: 1px;
-    right: 1px;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
 }
 .funkcja a {
     display: block;
@@ -72,10 +72,10 @@
 }
 
 .funkcja img {
-    width: 530px;
+    width: 550px;
     height: 230px;
     background-size: contain;
-    padding: 10px;
+    /*padding: 10px;*/
 }
 .funkcja a {
     color: black;
