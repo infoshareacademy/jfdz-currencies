@@ -39,5 +39,13 @@ footer a:hover {
     100%{background-image: url("../Obrazy/logo3.jpg");}
 }
 
+.pokrywka {
+    height: 300px;
+    width: 1100px;
+    position: relative;
+    background-color: #777;
+    opacity: 0.5;
+}
+
 
 
