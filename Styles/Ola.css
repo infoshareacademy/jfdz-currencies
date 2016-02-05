@@ -46,6 +46,20 @@ footer a:hover {
     background-color: #777;
     opacity: 0.5;
 }
+.namiary {
+    width: 333px;
+    text-align: center;
+    display: inline-block;
+    padding-top: 5px;
+    margin-top: 5px;
+    vertical-align: top;
+}
+.namiary img {
+    width: 32px;
+    height: 32px;
+}
+
+
 
 
 
