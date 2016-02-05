@@ -66,19 +66,36 @@ header .NaviField {
 }
 .poz_onas a {
     color: black;
-    text-decoration: none;
 }
 #onas h1{
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#onas p{
+    font-size: 12px;
+    padding: 10px;
 }
 .poz_onas {
     display: inline-block;
     width: 271px;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .poz_onas .zdjecie {
     width: 100px;
     height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 2px solid #777;
+    border-radius: 50%;
+    padding: 15px;
+}
+.opisOsoby {
+    background-color: beige;
+    margin-left: 2px;
+    margin-right: 2px;
 }
