@@ -9,15 +9,19 @@
 footer a {
     color: white;
 }
+
 footer a:hover {
     color: red;
 }
-.gora{
+
+.gora {
     color: black;
 }
-.media{
+
+.media {
     margin-top: 20px;
 }
+
 .slajder {
     background-image: url("../Obrazy/tlo.jpg");
     background-repeat: no-repeat;
@@ -32,11 +36,20 @@ footer a:hover {
     margin-right: auto;
 
 }
+
 @keyframes ola {
-    25%{background-image: url("../Obrazy/tlo.jpg"); }
-    50%{background-image: url("../Obrazy/nowetło.jpg");}
-    75%{background-image: url("../Obrazy/logo3.jpg");}
-    100%{background-image: url("../Obrazy/logo3.jpg");}
+    25% {
+        background-image: url("../Obrazy/tlo.jpg");
+    }
+    50% {
+        background-image: url("../Obrazy/nowetło.jpg");
+    }
+    75% {
+        background-image: url("../Obrazy/logo3.jpg");
+    }
+    100% {
+        background-image: url("../Obrazy/logo3.jpg");
+    }
 }
 
 .pokrywka {
@@ -46,6 +59,7 @@ footer a:hover {
     background-color: #777;
     opacity: 0.5;
 }
+
 .namiary {
     width: 333px;
     text-align: center;
@@ -54,6 +68,7 @@ footer a:hover {
     margin-top: 5px;
     vertical-align: top;
 }
+
 .namiary img {
     width: 32px;
     height: 32px;
