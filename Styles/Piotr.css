@@ -1,62 +1,44 @@
-
-.nawigacja {
-
-    border-bottom: 1px;
-
-
-
-
-
-
+header .NaviField {
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 40px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 .nawigacja div {
-    float: right;
+    position: relative;
     border-radius: 5px;
     padding: 10px;
-    margin-top: 95px;
     display: block;
     font-size: 20px;
 }
-
-/*}Styles/Piotr.css:12*/
-
 .home {
     margin-left: 20px;
     border-radius: 5px;
 }
-
-.bhome{
-    color: steelblue;
-
-
-}
-
-.bhome a{
-  color: steelblue;
+.NaviField a{
     text-decoration: none;
-
+    color: black;
 }
-
 .bhome:hover{
- color: red;
-
+    color: red;
 }
 
 
 #call-to-action {
     display: none;
     float: left;
-    margin: 50px;
-    with: 100%;
-
+    width: 100%;
 }
-
 .DaneKontaktowe {
     float: left;
     width: 400px;
-    /*border:2px solid black;*/
 }
-
 .formularz {
     float: right;
     width: 260px;
@@ -65,11 +47,8 @@
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 20px;
-    /*margin-top: 20px;*/
 }
-
 .forma label {
-
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
@@ -77,7 +56,6 @@
     font-size: 12px;
     color: #555555;
 }
-
 .formularz textarea, .formularz input {
     padding: 5px;
     border-radius: 3px;
@@ -85,71 +63,41 @@
     margin-bottom: 25px;
     width: 245px;
 }
-
 #onas {
     display: none;
-    margin-left: 20px;
-    margin-right: 20px;
-    /*border: 2px solid rgb(0, 0, 255);*/
 }
-
-.agnieszka {
-    top: 0px;
-    float: left;
-    width: 400px;
+.poz_onas a {
+    color: black;
 }
-
-.ola {
-    float: right;
-    top: 0px;
-
-}
-
-.marcin {
-    float: left;
-
-
-}
-
-.piotr {
-    float: right;
-
-
-}
-
 #onas h1{
- text-align: center;
-
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-
-.poz_onas {
-    margin: 10px;
-    width: 486px;
+#onas p{
+    font-size: 12px;
     padding: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-    border: 2px solid #ccc;
-
 }
-
-.poz_onas p {
-    float: left;
-    margin-left: 10px;
-
+.poz_onas {
+    display: inline-block;
+    width: 271px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-
 .poz_onas .zdjecie {
-    float: left;
-    width: 50px;
-    height: 50px;
-    /*background-image: url("../Obrazy/user.png");*/
+    width: 100px;
+    height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 2px solid #777;
+    border-radius: 50%;
+    padding: 15px;
 }
-
-.poz_onas a{
-   color: black;
-
+.opisOsoby {
+    background-color: beige;
+    margin-left: 2px;
+    margin-right: 2px;
 }
-
-

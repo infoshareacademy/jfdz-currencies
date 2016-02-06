@@ -2,41 +2,29 @@
     background-image: url("../Obrazy/dark.png");
     color: white;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-
-
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-a {
+footer a {
     color: white;
 }
-a:hover {
+footer a:hover {
     color: red;
-
 }
-
-
-
-
-
 .gora{
     color: black;
 }
-
 .media{
     margin-top: 20px;
 }
-
-
 .slajder {
     background-image: url("../Obrazy/tlo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 400px;
-    animation-name:ola ;
+    height: 300px;
+    animation-name: ola;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     width: 1100px;
@@ -44,12 +32,35 @@ a:hover {
     margin-right: auto;
 
 }
-
 @keyframes ola {
-    33%{background-image: url("../Obrazy/tlo.jpg"); }
-    66%{background-image: url("../Obrazy/nowetło.jpg");}
-    99%{background-image: url("../Obrazy/logo3.jpg");}
-    0%{background-image: url("../Obrazy/logo3.jpg");}
+    25%{background-image: url("../Obrazy/tlo.jpg"); }
+    50%{background-image: url("../Obrazy/nowetło.jpg");}
+    75%{background-image: url("../Obrazy/logo3.jpg");}
+    100%{background-image: url("../Obrazy/logo3.jpg");}
 }
+
+.pokrywka {
+    height: 300px;
+    width: 1100px;
+    position: relative;
+    background-color: #777;
+    opacity: 0.5;
+}
+.namiary {
+    width: 333px;
+    text-align: center;
+    display: inline-block;
+    padding-top: 5px;
+    margin-top: 5px;
+    vertical-align: top;
+}
+.namiary img {
+    width: 32px;
+    height: 32px;
+}
+
+
+
+
 
 
