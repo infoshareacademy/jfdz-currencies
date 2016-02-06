@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
-<link rel="icon" type="image/gif" href="favicon.gif" />
+<link rel="icon" type="image/gif" href="favicon.gif"/>
 <head>
     <meta charset="UTF-8">
     <title>Kalkulator walutowy</title>
@@ -19,249 +19,278 @@
 </head>
 
 <body>
-    <header class="content">
-        <div class="naglowekStrony">
-            <div class="logo left">
-                <img class="logo" src="Obrazy/Logo.png" alt="logo" align="left"/>
-            </div>
-            <div class="nazwa left">
-                <div>kalkulator walutowy</div>
-            </div>
-
-            <ul>
-                <li class="NaviField right">
-                    <label class="bhome" onclick=MenuOnClick(1)>Kontakt</label>
-                </li>
-                <li class="NaviField right">
-                    <label class="bhome" onclick=MenuOnClick(2)>O nas</label>
-                </li>
-                <li class="NaviField right">
-                    <a href="index.html">Produkty</a>
-                </li>
-                <li class="NaviField right">
-                    <a href="index.html">Menu</a>
-                </li>
-            </ul>
+<header class="content">
+    <div class="naglowekStrony">
+        <div class="logo left">
+            <img class="logo" src="Obrazy/Logo.png" alt="logo" align="left"/>
         </div>
-        <div class="podklad"></div>
-
-        <p>Puls walut<br>Reagujemy na każdą zmianę!!!</p>
-        <div class="slajder left"></div>
-        <div class="pokrywka"></div>
-
-    </header>
-
-    <main class="tresc-strony content">
-
-        <div id="call-to-action">
-            <div class="DaneKontaktowe">
-
-
-            </div>
-            <div class="formularz">
-                <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma"  onsubmit="return ValidateFrom(this)">
-                    <label for="femail">Email</label>
-                    <input id="femail" name="email" type="email" placeholder="biuro@79level.pl">
-                    <label for="fphone">Nr telefonu</label>
-                    <input id="fphone" name="phone" type="phone" placeholder="999-999-999" >
-                    <input type="hidden" name="receiver" value="pperetko@gmail.com">  <!--wojciech.makurat@infoshareacademy.com-->
-                    <input id="submit" name="submit" type="submit" value="Wyślij" onclick="return  ValidateFrom(document.forms[0])">
-                </form>
-            </div>
+        <div class="nazwa left">
+            <div>kalkulator walutowy</div>
         </div>
 
+        <ul>
+            <li class="NaviField right">
+                <label class="bhome" onclick=MenuOnClick(1)>Kontakt</label>
+            </li>
+            <li class="NaviField right">
+                <label class="bhome" onclick=MenuOnClick(2)>O nas</label>
+            </li>
+            <li class="NaviField right">
+                <a href="index.html">Produkty</a>
+            </li>
+            <li class="NaviField right">
+                <a href="index.html">Menu</a>
+            </li>
+        </ul>
+    </div>
+    <div class="podklad"></div>
+
+    <p>Puls walut<br>Reagujemy na każdą zmianę!!!</p>
+
+    <div class="slajder left"></div>
+    <div class="pokrywka"></div>
+
+</header>
+
+<main class="tresc-strony content">
+
+    <div id="call-to-action">
+        <div class="DaneKontaktowe">
+
+
+        </div>
+        <div class="formularz">
+            <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma"
+                  onsubmit="return ValidateFrom(this)">
+                <label for="femail">Email</label>
+                <input id="femail" name="email" type="email" placeholder="biuro@79level.pl">
+                <label for="fphone">Nr telefonu</label>
+                <input id="fphone" name="phone" type="phone" placeholder="999-999-999">
+                <input type="hidden" name="receiver" value="pperetko@gmail.com">
+                <!--wojciech.makurat@infoshareacademy.com-->
+                <input id="submit" name="submit" type="submit" value="Wyślij"
+                       onclick="return  ValidateFrom(document.forms[0])">
+            </form>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="main_content">
+
+        <div class="bloki funkcje left">
+
+            <div class="funkcja left">
+                <a class="funkcjaLink" href=""/>
+
+                <div class="opis">
+                    <p class="tresc tresc1">Kalkulator</p>
+
+                    <p class="tresc tresc2">Szybkie przeliczanie możliwości zakupu</p>
+                </div>
+                <figure>
+                    <img src="Obrazy/Marcin/kalk.jpg" alt="Kalkulator"/>
+                </figure>
+                </a>
+            </div>
+
+            <div class="funkcja left">
+                <a class="funkcjaLink" href=""/>
+
+                <div class="opis">
+                    <p class="tresc tresc1">Średnie kursy</p>
+
+                    <p class="tresc tresc2">Sprawdź średni kurs za ostatnie 30 dni</p>
+                </div>
+                <figure>
+                    <img src="Obrazy/Marcin/wykres.jpg" alt="Wykres"/>
+                </figure>
+                </a>
+            </div>
+
+            <div class="funkcja left">
+                <a class="funkcjaLink" href=""/>
+
+                <div class="opis">
+                    <p class="tresc tresc1">Lokalizator</p>
+
+                    <p class="tresc tresc2">Pomożemy znaleźć najbliższy kantor lub O/Banku</p>
+                </div>
+                <figure>
+                    <img src="Obrazy/Marcin/gps.jpg" alt="Lokalizator"/>
+                </figure>
+                </a>
+            </div>
+
+            <div class="funkcja left">
+                <a class="funkcjaLink" href=""/>
+
+                <div class="opis">
+                    <p class="tresc tresc1">Narodowy Bank Polski</p>
+
+                    <p class="tresc tresc2">Zawsze możesz odnieść się do danych z Narodowego Banku Polskiego</p>
+                </div>
+                <figure>
+                    <img src="Obrazy/Marcin/nbp.jpg" alt="NBP"/>
+                </figure>
+                </a>
+            </div>
+
+        </div>
+        <div class="bloki dodatki left">
+            <div class="left">
+                <figure class="left">
+                    <a href=""/>
+                    <img src="Obrazy/Marcin/komunikaty.png"/>
+                    <figcaption>Komunikaty</figcaption>
+                    </a>
+                </figure>
+                <figure class="left">
+                    <a href=""/>
+                    <img src="Obrazy/Marcin/alarm.png"/>
+                    <figcaption>Z ostatniej chwili</figcaption>
+                    </a>
+                </figure>
+                <figure class="left">
+                    <a href=""/>
+                    <img src="Obrazy/Marcin/mobilne.png"/>
+                    <figcaption>Aplikacja mobilna</figcaption>
+                    </a>
+                </figure>
+                <figure class="left">
+                    <a href=""/>
+                    <img src="Obrazy/Marcin/regulamin.png"/>
+                    <figcaption>Regulamin</figcaption>
+                    </a>
+                </figure>
+            </div>
+            <div class="right">
+                <figure class="left">
+                    <a href=""/>
+                    <img src="Obrazy/Marcin/SMS.png"/>
+                    <figcaption>Powiadomienia SMS</figcaption>
+                    </a>
+                </figure>
+                <figure class="left">
+                    <a href=""/>
+                    <img src="Obrazy/Marcin/szukaj.png"/>
+                    <figcaption>Szukaj</figcaption>
+                    </a>
+                </figure>
+                <figure class="left">
+                    <a href=""/>
+                    <img src="Obrazy/Marcin/zlecenia.png"/>
+                    <figcaption>Zlecenia stałe</figcaption>
+                    </a>
+                </figure>
+                <figure class="left">
+                    <a href=""/>
+                    <img src="Obrazy/Marcin/znajomi.png"/>
+                    <figcaption>Znajomi</figcaption>
+                    </a>
+                </figure>
+            </div>
+
+
+        </div>
         <div class="clear"></div>
 
-        <div id="main_content">
+    </div>
+    <div id="onas">
+        <h1>MAPA TEAM</h1>
 
-            <div class="bloki funkcje left">
+        <div class="poz_onas left">
+            <img class="zdjecie" src="Obrazy/fa01.png"/>
 
-                <div class="funkcja left">
-                    <a class="funkcjaLink" href=""/>
-                        <div class="opis">
-                            <p class="tresc tresc1">Kalkulator</p>
-                            <p class="tresc tresc2">Szybkie przeliczanie możliwości zakupu</p>
-                        </div>
-                        <figure>
-                            <img src="Obrazy/Marcin/kalk.jpg" alt="Kalkulator"/>
-                        </figure>
-                    </a>
-                </div>
+            <div class="opisOsoby">
+                <h1>Agnieszka</h1>
+                <a href="akwolek@gmail.com">akwolek@gmail.com</a>
 
-                <div class="funkcja left">
-                    <a class="funkcjaLink" href=""/>
-                        <div class="opis">
-                            <p class="tresc tresc1">Średnie kursy</p>
-                            <p class="tresc tresc2">Sprawdź średni kurs za ostatnie 30 dni</p>
-                        </div>
-                        <figure>
-                            <img src="Obrazy/Marcin/wykres.jpg" alt="Wykres"/>
-                        </figure>
-                    </a>
-                </div>
-
-                <div class="funkcja left">
-                    <a class="funkcjaLink" href=""/>
-                        <div class="opis">
-                            <p class="tresc tresc1">Lokalizator</p>
-                            <p class="tresc tresc2">Pomożemy znaleźć najbliższy kantor lub O/Banku</p>
-                        </div>
-                        <figure>
-                            <img src="Obrazy/Marcin/gps.jpg" alt="Lokalizator"/>
-                        </figure>
-                    </a>
-                </div>
-
-                <div class="funkcja left">
-                    <a class="funkcjaLink" href=""/>
-                        <div class="opis">
-                            <p class="tresc tresc1">Narodowy Bank Polski</p>
-                            <p class="tresc tresc2">Zawsze możesz odnieść się do danych z Narodowego Banku Polskiego</p>
-                        </div>
-                        <figure>
-                            <img src="Obrazy/Marcin/nbp.jpg" alt="NBP"/>
-                        </figure>
-                    </a>
-                </div>
-
-            </div>
-            <div class="bloki dodatki left">
-                <div class="left">
-                    <figure class="left">
-                        <a href=""/>
-                        <img src="Obrazy/Marcin/komunikaty.png"/>
-                        <figcaption>Komunikaty</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="left">
-                        <a href=""/>
-                        <img src="Obrazy/Marcin/alarm.png"/>
-                        <figcaption>Z ostatniej chwili</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="left">
-                        <a href=""/>
-                        <img src="Obrazy/Marcin/mobilne.png"/>
-                        <figcaption>Aplikacja mobilna</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="left">
-                        <a href=""/>
-                        <img src="Obrazy/Marcin/regulamin.png"/>
-                        <figcaption>Regulamin</figcaption>
-                        </a>
-                    </figure>
-                </div>
-                <div class="right">
-                    <figure class="left">
-                        <a href=""/>
-                        <img src="Obrazy/Marcin/SMS.png"/>
-                        <figcaption>Powiadomienia SMS</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="left">
-                        <a href=""/>
-                        <img src="Obrazy/Marcin/szukaj.png"/>
-                        <figcaption>Szukaj</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="left">
-                        <a href=""/>
-                        <img src="Obrazy/Marcin/zlecenia.png"/>
-                        <figcaption>Zlecenia stałe</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="left">
-                        <a href=""/>
-                        <img src="Obrazy/Marcin/znajomi.png"/>
-                        <figcaption>Znajomi</figcaption>
-                        </a>
-                    </figure>
-                </div>
-
-
-            </div>
-            <div class="clear"></div>
-
-        </div>
-        <div id="onas">
-            <h1>MAPA TEAM</h1>
-
-            <div class="poz_onas left">
-                <img class="zdjecie" src="Obrazy/fa01.png"/>
-                <div class="opisOsoby">
-                    <h1>Agnieszka</h1>
-                    <a href="akwolek@gmail.com">akwolek@gmail.com</a>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas neque sed porttitor sagittis. Pellentesque quis risus dolor."</p>
-                </div>
-            </div>
-            <div class="poz_onas left">
-                <img class="zdjecie" src="Obrazy/fe03.png"/>
-                <div class="opisOsoby">
-                    <h1>Aleksandra</h1>
-                    <a href="aleksandra-gorna@o2.pl">aleksandra-gorna@o2.pl</a>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas neque sed porttitor sagittis. Pellentesque quis risus dolor."</p>
-                </div>
-            </div>
-            <div class="poz_onas right">
-                <img class="zdjecie" src="Obrazy/c01.png"/>
-                <div class="opisOsoby">
-                    <h1>Piotr</h1>
-                    <a href="pperetko@gmail.com">pperetko@gmail.com</a>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas neque sed porttitor sagittis. Pellentesque quis risus dolor."</p>
-                </div>
-            </div>
-            <div class="poz_onas right">
-                <img class="zdjecie" src="Obrazy/e02.png"/>
-                <div class="opisOsoby">
-                    <h1>Marcin</h1>
-                    <a href="markrolikowski@gmail.com">markrolikowski@gmail.com</a>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas neque sed porttitor sagittis. Pellentesque quis risus dolor."</p>
-                </div>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas neque sed porttitor sagittis.
+                    Pellentesque quis risus dolor."</p>
             </div>
         </div>
-        <div class="clear"></div>
-        <div class="up">
+        <div class="poz_onas left">
+            <img class="zdjecie" src="Obrazy/fe03.png"/>
 
-        </div>
-    </main>
+            <div class="opisOsoby">
+                <h1>Aleksandra</h1>
+                <a href="aleksandra-gorna@o2.pl">aleksandra-gorna@o2.pl</a>
 
-    <footer class="footer content">
-        <div class="clear"></div>
-        <div class="kontakt">
-            <div class="namiary">
-                <img src="Obrazy/Marcin/mobilne.png"/>
-                <div class="desc">
-                    <a>123-456-789</a>
-                </div>
-            </div>
-            <div class="namiary">
-                <img src="Obrazy/Marcin/namiary-gps.png"/>
-                <div class="desc">
-                    <a>Al. Grunwaldzka 472; <br>80-309 Gdańsk</a>
-                </div>
-            </div>
-            <div class="namiary">
-                <img src="Obrazy/Marcin/SMS.png"/>
-                <div class="desc">
-                    <a>adres@adres.com</a>
-                </div>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas neque sed porttitor sagittis.
+                    Pellentesque quis risus dolor."</p>
             </div>
         </div>
+        <div class="poz_onas right">
+            <img class="zdjecie" src="Obrazy/c01.png"/>
 
-        <div class="media">
-            <a href="https://pl-pl.facebook.com" target="_blank"><img title="facebook" src="Obrazy/facebook.png" alt="Facebook"></a>
-            <a href="https://twitter.com" target="_blank"><img title="twitter" src="Obrazy/twitter.png" alt="Twitter"></a>
-            <a href="https://www.instagram.com" target="_blank"><img title="instagram" src="Obrazy/instagram.png" alt="Instagram"></a>
+            <div class="opisOsoby">
+                <h1>Piotr</h1>
+                <a href="pperetko@gmail.com">pperetko@gmail.com</a>
+
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas neque sed porttitor sagittis.
+                    Pellentesque quis risus dolor."</p>
+            </div>
         </div>
-        <br>
-        <a>&copy; MAPA 2015</a>
-    </footer>
+        <div class="poz_onas right">
+            <img class="zdjecie" src="Obrazy/e02.png"/>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow32.js"></script>
-    <noscript>Not seeing a <a href="http://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more
-        info.
-    </noscript>
+            <div class="opisOsoby">
+                <h1>Marcin</h1>
+                <a href="markrolikowski@gmail.com">markrolikowski@gmail.com</a>
+
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas neque sed porttitor sagittis.
+                    Pellentesque quis risus dolor."</p>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="up">
+
+    </div>
+</main>
+
+<footer class="footer content">
+    <div class="clear"></div>
+    <div class="kontakt">
+        <div class="namiary">
+            <img src="Obrazy/Marcin/mobilne.png"/>
+
+            <div class="desc">
+                <a>123-456-789</a>
+            </div>
+        </div>
+        <div class="namiary">
+            <img src="Obrazy/Marcin/namiary-gps.png"/>
+
+            <div class="desc">
+                <a>Al. Grunwaldzka 472; <br>80-309 Gdańsk</a>
+            </div>
+        </div>
+        <div class="namiary">
+            <img src="Obrazy/Marcin/SMS.png"/>
+
+            <div class="desc">
+                <a>adres@adres.com</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="media">
+        <a href="https://pl-pl.facebook.com" target="_blank"><img title="facebook" src="Obrazy/facebook.png"
+                                                                  alt="Facebook"></a>
+        <a href="https://twitter.com" target="_blank"><img title="twitter" src="Obrazy/twitter.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com" target="_blank"><img title="instagram" src="Obrazy/instagram.png"
+                                                                 alt="Instagram"></a>
+    </div>
+    <br>
+    <a>&copy; MAPA 2015</a>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow32.js"></script>
+<noscript>Not seeing a <a href="http://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more
+    info.
+</noscript>
 </body>
 </html>
