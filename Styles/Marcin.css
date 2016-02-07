@@ -1,22 +1,31 @@
 .dodatki {
-    width: 100%;
-    position: relative;
+
 }
-.dodatki img {
-    width: 64px;
-    height: 64px;
-    border-bottom: 2px solid grey;
-    padding: 10px 20px 10px 20px;
-    margin: 0px 16px 0px 16px;
-}
-.dodatki img:hover {
-    background-color: #777;
-    border-radius: 30%;
-}
-.dodatki figcaption {
-    font-size: 12px;
+
+.dodatki a {
+    float: left;
+    color: black;
+    width: 137px;
+    height: 57px;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-color: #ff584c;
+    text-decoration: none;
+    display: inline-block;
     text-align: center;
+    padding-top: 80px;
+    background-position: center center;
+    transition: background-size 1s linear;
 }
+
+.dodatki a:hover {
+    background-size: 100px 100px;
+}
+
+.dodatek-komunikat {background-image: url('../Obrazy/Marcin/komunikaty.png');}
+.dodatek-z-ostatniej-chwili {background-image: url('../Obrazy/Marcin/alarm.png');}
+
+
 .bloki {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -69,10 +78,7 @@
 .funkcja a {
     display: block;
 }
-.dodatki a {
-    color: black;
-    text-decoration: none;
-}
+
 
 .funkcja img {
     width: 550px;
