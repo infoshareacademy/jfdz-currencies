@@ -2,8 +2,12 @@
     position: fixed;
     width: 1100px;
     height: 100px;
-    background-color: white;
-    border-bottom: 2px solid #777;
+    background-color: black;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: 3px solid #777;
     -webkit-box-shadow: 0px 3px 3px 0px #777;
     z-index: 500;
 }
@@ -11,8 +15,7 @@
     padding: 14px;
 }
 .naglowekStrony .nazwa {
-    font-size: 20px;
-    font-weight: bold;
+
     height: 100px;
 }
 .podklad {
@@ -21,7 +24,7 @@
 }
 .nazwa div {
     padding-top: 40px;
-    text-transform: uppercase;
+
     letter-spacing: 2px;
 }
 header p {

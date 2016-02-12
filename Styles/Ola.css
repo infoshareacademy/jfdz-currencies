@@ -1,65 +1,51 @@
 .footer {
-    background-image: url("../Obrazy/dark.png");
-    color: white;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
-footer a {
-    color: white;
-}
-
 footer a:hover {
     color: red;
 }
-
 .gora {
     color: black;
 }
-
 .media {
     margin-top: 20px;
 }
-
 .slajder {
-    background-image: url("../Obrazy/tlo.jpg");
+    background-image: url("../Obrazy/Zajawka/Kalkulator-niebieski.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 300px;
+    height: 500px;
     animation-name: ola;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     width: 1100px;
     margin-left: auto;
     margin-right: auto;
-
 }
-
 @keyframes ola {
     25% {
-        background-image: url("../Obrazy/tlo.jpg");
+        background-image: url("../Obrazy/Zajawka/Ludzie.jpg");
     }
     50% {
-        background-image: url("../Obrazy/nowetło.jpg");
+        background-image: url("../Obrazy/Zajawka/Lokalizator.jpg");
     }
     75% {
-        background-image: url("../Obrazy/logo3.jpg");
+        background-image: url("../Obrazy/Zajawka/Srednia.jpg");
     }
     100% {
-        background-image: url("../Obrazy/logo3.jpg");
+        background-image: url("../Obrazy/Zajawka/Kalkulator-niebieski.jpg");
     }
 }
-
-.pokrywka {
-    height: 300px;
-    width: 1100px;
-    position: relative;
-    background-color: #777;
-    opacity: 0.5;
+.kontakt {
+    background-color: white;
 }
-
+.stopka {
+    background-color: black;
+    color: white;
+}
 .namiary {
     width: 333px;
     text-align: center;
@@ -68,7 +54,6 @@ footer a:hover {
     margin-top: 5px;
     vertical-align: top;
 }
-
 .namiary img {
     width: 32px;
     height: 32px;

@@ -1,7 +1,3 @@
-.dodatki {
-
-}
-
 .dodatki a {
     float: left;
     color: black;
@@ -16,14 +12,16 @@
     padding-top: 80px;
     background-position: center center;
     transition: background-size 1s linear;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .dodatki a:hover {
     background-size: 100px 100px;
 }
 
-.dodatek-komunikat {background-image: url('../Obrazy/Marcin/komunikaty.png');}
-.dodatek-z-ostatniej-chwili {background-image: url('../Obrazy/Marcin/alarm.png');}
+.dodatek-komunikat {background-image: url('../Obrazy/Dodatki/komunikaty.png');}
+.dodatek-z-ostatniej-chwili {background-image: url('../Obrazy/Dodatki/alarm.png');}
 
 
 .bloki {
