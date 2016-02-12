@@ -1,43 +1,88 @@
 .dodatki a {
     float: left;
     color: black;
-    width: 137px;
-    height: 57px;
+    width: 150px;
+    height: 50px;
     background-repeat: no-repeat;
     background-size: 50px 50px;
-    background-color: #ff584c;
     text-decoration: none;
     display: inline-block;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 100px;
     background-position: center center;
     transition: background-size 1s linear;
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
 .dodatki a:hover {
-    background-size: 100px 100px;
+    background-size: 75px 75px;
 }
-
 .dodatek-komunikat {background-image: url('../Obrazy/Dodatki/komunikaty.png');}
 .dodatek-z-ostatniej-chwili {background-image: url('../Obrazy/Dodatki/alarm.png');}
-
-
+.dodatek-aplikacja-mobilna {background-image: url('../Obrazy/Dodatki/mobilne.png');}
+.dodatek-regulamin {background-image: url('../Obrazy/Dodatki/regulamin.png');}
+.dodatek-powiadomienieSMS {background-image: url('../Obrazy/Dodatki/SMS.png');}
+.dodatek-szukaj {background-image: url('../Obrazy/Dodatki/szukaj.png');}
+.dodatek-zlecenia-stale {background-image: url('../Obrazy/Dodatki/zlecenia.png');}
+.dodatek-znajomi {background-image: url('../Obrazy/Dodatki/znajomi.png');}
+.funkcje {
+    width: 100%;
+}
 .bloki {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.funkcjaLink {
-    position: relative;
+.funkcja {
+    width: 300px;
+    height: 300px;
+    text-align: center;
 }
-.funkcje {
-    width: 100%;
+.zdjecie {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     position: relative;
+    top: 50px;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
 }
+.tlo-funkcji {
+    background-color: rgba(255,0,0,0);
+    border-radius: 50%;
+    transition: background-color 1s linear;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+
+}
+.tlo-funkcji:hover {
+    background-color: rgba(255,0,0,0.5);
+}
+
+.tlo-funkcji p {padding-top: 80px;}
+.kalkulator a {background-image: url('../Obrazy/Funkcje/kalk.jpg');}
+
+
 .tresc {
     opacity: 0;
+}.funkcjaLink:hover .opis {
+     background-color: #777;
+     opacity: 0.9;
+     transition: opacity 1s;
+ }
+.funkcjaLink:hover .tresc {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-weight: bold;
+    text-align: center;
 }
+
 .tresc1{
     position: absolute;
     top: 40%;
@@ -51,20 +96,8 @@
     font-size: 14px;
     color: pink;
 }
-.funkcjaLink:hover .opis {
-    background-color: #777;
-    opacity: 0.9;
-    transition: opacity 1s;
-}
-.funkcjaLink:hover .tresc {
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    opacity: 1;
-    transition: opacity 1s;
-    font-weight: bold;
-    text-align: center;
-}
+
+
 .opis {
     opacity: 0;
     position: absolute;
@@ -78,18 +111,12 @@
 }
 
 
-.funkcja img {
-    width: 550px;
-    height: 230px;
-    background-size: contain;
-}
+
 .funkcja a {
     color: black;
     text-decoration: none;
 }
-.funkcja {
-    width: 550px;
-}
+
 .funkcje figure:hover {
     opacity: 1;
 }

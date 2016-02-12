@@ -11,7 +11,7 @@
     <link href="Styles/Marcin.css" type="text/css" rel="stylesheet">
     <link href="Styles/Piotr.css" type="text/css" rel="stylesheet">
     <link href="Styles/Ola.css" type="text/css" rel="stylesheet">
-    <a name="gora"></a>
+    <a id="gora"></a>
     <script src="http//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="Js/piotr.js" language=javascript type="text/javascript"></script>
     <script src="Js/Ola.js" language=javascript type="text/javascript"></script>
@@ -72,110 +72,73 @@
 
     <div id="main_content">
 
-        <div class="bloki funkcje left">
+        <div class="bloki funkcje">
 
-            <div class="funkcja left">
-                <a class="funkcjaLink" href="">
-
-                <div class="opis">
-                    <p class="tresc tresc1">Kalkulator</p>
-
-                    <p class="tresc tresc2">Szybkie przeliczanie możliwości zakupu</p>
-                </div>
-                <figure>
-                    <img src="Obrazy/Funkcje/kalk.jpg" alt="Kalkulator"/>
-                </figure>
+            <div class="funkcja kalkulator left">
+                <a class="zdjecie">
+                    <div class="tlo-funkcji">
+                        <p class="nazwa-funkcji">Kalkulator</p>
+                    </div>
                 </a>
+                <p class="opis-funkcji">Szybkie przeliczanie możliwości zakupu</p>
             </div>
 
-            <div class="funkcja left">
-                <a class="funkcjaLink" href="">
+            <!--<div class="funkcja left">-->
+                <!--<a class="funkcjaLink" href="">-->
 
-                <div class="opis">
-                    <p class="tresc tresc1">Średnie kursy</p>
+                <!--<div class="opis">-->
+                    <!--<p class="tresc tresc1">Średnie kursy</p>-->
 
-                    <p class="tresc tresc2">Sprawdź średni kurs za ostatnie 30 dni</p>
-                </div>
-                <figure>
-                    <img src="Obrazy/Funkcje/wykres.jpg" alt="Wykres"/>
-                </figure>
-                </a>
-            </div>
+                    <!--<p class="tresc tresc2">Sprawdź średni kurs za ostatnie 30 dni</p>-->
+                <!--</div>-->
+                <!--<figure>-->
+                    <!--<img src="Obrazy/Funkcje/wykres.jpg" alt="Wykres"/>-->
+                <!--</figure>-->
+                <!--</a>-->
+            <!--</div>-->
 
-            <div class="funkcja left">
-                <a class="funkcjaLink" href="">
+            <!--<div class="funkcja left">-->
+                <!--<a class="funkcjaLink" href="">-->
 
-                <div class="opis">
-                    <p class="tresc tresc1">Lokalizator</p>
+                <!--<div class="opis">-->
+                    <!--<p class="tresc tresc1">Lokalizator</p>-->
 
-                    <p class="tresc tresc2">Pomożemy znaleźć najbliższy kantor lub O/Banku</p>
-                </div>
-                <figure>
-                    <img src="Obrazy/Funkcje/gps.jpg" alt="Lokalizator"/>
-                </figure>
-                </a>
-            </div>
+                    <!--<p class="tresc tresc2">Pomożemy znaleźć najbliższy kantor lub O/Banku</p>-->
+                <!--</div>-->
+                <!--<figure>-->
+                    <!--<img src="Obrazy/Funkcje/gps.jpg" alt="Lokalizator"/>-->
+                <!--</figure>-->
+                <!--</a>-->
+            <!--</div>-->
 
-            <div class="funkcja left">
-                <a class="funkcjaLink" href="">
+            <!--<div class="funkcja left">-->
+                <!--<a class="funkcjaLink" href="">-->
 
-                <div class="opis">
-                    <p class="tresc tresc1">Narodowy Bank Polski</p>
+                <!--<div class="opis">-->
+                    <!--<p class="tresc tresc1">Narodowy Bank Polski</p>-->
 
-                    <p class="tresc tresc2">Zawsze możesz odnieść się do danych z Narodowego Banku Polskiego</p>
-                </div>
-                <figure>
-                    <img src="Obrazy/Funkcje/nbp.jpg" alt="NBP"/>
-                </figure>
-                </a>
-            </div>
+                    <!--<p class="tresc tresc2">Zawsze możesz odnieść się do danych z Narodowego Banku Polskiego</p>-->
+                <!--</div>-->
+                <!--<figure>-->
+                    <!--<img src="Obrazy/Funkcje/nbp.jpg" alt="NBP"/>-->
+                <!--</figure>-->
+                <!--</a>-->
+            <!--</div>-->
 
             <div class="clear"></div>
 
         </div>
 
         <div class="bloki dodatki">
-            <a class="dodatek-komunikat" href=""/>
-                Komunikaty
-            </a>
-
-            <a class="dodatek-z-ostatniej-chwili" href=""/>
-                Z ostatniej chwili
-            </a>
-
-            <a href=""/>
-                <!--<img src="Obrazy/Marcin/mobilne.png"/>-->
-                Aplikacja mobilna
-            </a>
-
-            <a href=""/>
-                <!--<img src="Obrazy/Marcin/regulamin.png"/>-->
-                Regulamin
-            </a>
-
-
-            <a href=""/>
-                <!--<img src="Obrazy/Marcin/SMS.png"/>-->
-                Powiadomienia SMS
-            </a>
-
-            <a href=""/>
-                <!--<img src="Obrazy/Marcin/szukaj.png"/>-->
-                Szukaj
-            </a>
-
-            <a href=""/>
-                <!--<img src="Obrazy/Marcin/zlecenia.png"/>-->
-                Zlecenia stałe
-            </a>
-
-            <a href=""/>
-                <!--<img src="Obrazy/Marcin/znajomi.png"/>-->
-                Znajomi
-            </a>
-
+            <a class="dodatek-komunikat"/>Komunikaty</a>
+            <a class="dodatek-z-ostatniej-chwili" href=""/>Z ostatniej chwili</a>
+            <a class="dodatek-aplikacja-mobilna"/>Aplikacja mobilna</a>
+            <a class="dodatek-regulamin"/>Regulamin</a>
+            <a class="dodatek-powiadomienieSMS"/>Powiadomienia SMS</a>
+            <a class="dodatek-szukaj"/>Szukaj</a>
+            <a class="dodatek-zlecenia-stale"/>Zlecenia stałe</a>
+            <a class="dodatek-znajomi"/>Znajomi</a>
             <div class="clear"></div>
-
         </div>
 
     </div>
@@ -227,7 +190,9 @@
         </div>
         <div class="clear"></div>
     </div>
-    <div class="up"></div>
+    <div class="dogory">
+        <p><a href="#gora">Go Up</a></p>
+    </div>
 
 </main>
 
