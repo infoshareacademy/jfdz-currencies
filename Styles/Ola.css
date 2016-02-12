@@ -1,7 +1,5 @@
 .footer {
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 footer a:hover {
     color: red;
@@ -42,9 +40,16 @@ footer a:hover {
 .kontakt {
     background-color: white;
 }
+.up {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}
 .stopka {
     background-color: black;
     color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 .namiary {
     width: 333px;
