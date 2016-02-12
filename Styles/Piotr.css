@@ -40,9 +40,10 @@ header .NaviField {
     width: 400px;
 }
 .formularz {
-    float: right;
+    float: none;
     width: 260px;
     margin: 0 auto;
+    margin-top: 10px;
     background-color: #fff;
     border: 2px solid #ccc;
     border-radius: 10px;
@@ -100,4 +101,18 @@ header .NaviField {
     background-color: beige;
     margin-left: 2px;
     margin-right: 2px;
+}
+
+.wyslij{
+  position: absolute;
+  top: 350px;
+  left: 35%;
+}
+
+.bwyslij{
+    height: 40px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: #ff584c;
+    font-size: 16px;
 }
