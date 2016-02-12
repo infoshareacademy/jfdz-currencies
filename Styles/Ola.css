@@ -39,6 +39,8 @@ footer a:hover {
 }
 .kontakt {
     background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .up {
     width: 200px;
