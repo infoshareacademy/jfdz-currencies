@@ -69,15 +69,7 @@ header .NaviField {
 
 }
 
-.jestesBootem{
-   padding: 5px;
-   background-image: url("../Obrazy/boty.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-   height: 30px;
-   width: 300px;
-}
+
 
 #onas {
     display: none;
