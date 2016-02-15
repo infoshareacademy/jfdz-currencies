@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Kalkulator walutowy</title>
-        <link href="Styles/resetcss.css" type="text/css" rel="stylesheet">
+    <link href="Styles/resetcss.css" type="text/css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href="Styles/GrafikaCss.css" type="text/css" rel="stylesheet">
     <link href="Styles/Agnieszka.css" type="text/css" rel="stylesheet">
     <link href="Styles/Marcin.css" type="text/css" rel="stylesheet">
     <link href="Styles/Piotr.css" type="text/css" rel="stylesheet">
     <link href="Styles/Ola.css" type="text/css" rel="stylesheet">
-    <a id="gora"></a>
     <script src="http//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="Js/piotr.js" language=javascript type="text/javascript"></script>
-    <script src="Js/Ola.js" language=javascript type="text/javascript"></script>
+    <!--<script src="Js/Ola.js" language=javascript type="text/javascript"></script>-->
 </head>
 
 <body>
+<a id="gora"></a>
 <header class="content">
     <div class="naglowekStrony">
         <div class="logo left">
@@ -43,8 +43,10 @@
         </ul>
     </div>
     <div class="podklad"></div>
-    <p>Puls walut<br>Reagujemy na zmiany!</p>
-    <div class="slajder left"></div>
+    <!--<div><p>Puls walut<br>Reagujemy na zmiany!</p></div>-->
+    <div class="slajder left">
+        <div class="szarfa">Puls walut<br>Reagujemy na zmiany!</div>
+    </div>
 </header>
 
 <main class="tresc-strony content">
@@ -109,14 +111,30 @@
         </div>
 
         <div class="bloki dodatki">
-            <a class="dodatek-komunikat"/>Komunikaty</a>
-            <a class="dodatek-z-ostatniej-chwili" href=""/>Z ostatniej chwili</a>
-            <a class="dodatek-aplikacja-mobilna"/>Aplikacja mobilna</a>
-            <a class="dodatek-regulamin"/>Regulamin</a>
-            <a class="dodatek-powiadomienieSMS"/>Powiadomienia SMS</a>
-            <a class="dodatek-szukaj"/>Szukaj</a>
-            <a class="dodatek-zlecenia-stale"/>Zlecenia stałe</a>
-            <a class="dodatek-znajomi"/>Znajomi</a>
+            <a class="dodatek-komunikat">
+                <p>Komunikaty</p>
+            </a>
+            <a class="dodatek-z-ostatniej-chwili">
+                <p>Z ostatniej chwili</p>
+            </a>
+            <a class="dodatek-aplikacja-mobilna">
+                <p> Aplikacja mobilna</p>
+            </a>
+            <a class="dodatek-regulamin">
+                <p>Regulamin</p>
+            </a>
+            <a class="dodatek-powiadomienieSMS">
+                <p>Powiadomienia SMS</p>
+            </a>
+            <a class="dodatek-szukaj">
+                <p>Szukaj</p>
+            </a>
+            <a class="dodatek-zlecenia-stale">
+                <p>Zlecenia stałe</p>
+            </a>
+            <a class="dodatek-znajomi">
+                <p>Znajomi</p>
+            </a>
             <div class="clear"></div>
         </div>
 
