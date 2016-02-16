@@ -35,10 +35,8 @@ header .NaviField {
     float: left;
     width: 100%;
 }
-
 .formularz {
     width: 310px;
-    /*margin: 0 auto;*/
     margin-left:  40%;
     margin-top: 10px;
     background-color: #fff;
@@ -59,10 +57,32 @@ header .NaviField {
     padding: 5px;
     border-radius: 3px;
     border: 1px solid black;
-    margin-bottom: 25px;
     margin-left: 10px;
     width: 275px;
+    margin-bottom: 10px;
 }
+
+.formularz #submit{
+    width: 287px;
+    background-color: #777777;
+}
+
+@keyframes example {
+    0% {background-color: #777777;}
+    100% {background-color: #ff584c;}
+}
+
+.animation-button{
+    animation-name: example;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+
 #onas {
     display: none;
 }

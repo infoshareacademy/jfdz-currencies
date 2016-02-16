@@ -58,7 +58,7 @@
 
     <div id="call-to-action">
 
-        <div class="formularz">
+        <div class="formularz" onmouseover="onmouseoverboot()">
             <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma"
                   onsubmit="return ValidateFrom(this)">
                 <label for="femail">Email</label>
@@ -70,11 +70,12 @@
                 <!--wojciech.makurat@infoshareacademy.com-->
                 <input id="submit" name="submit" type="submit" value="Wyślij" disabled="disabled"
                        onclick="return  ValidateFrom(document.forms[0])">
-                <div class="jestesBootem"></div>
+
 
             </form>
         </div>
     </div>
+
 
     <div class="clear"></div>
 
