@@ -57,10 +57,7 @@
 <main class="tresc-strony content">
 
     <div id="call-to-action">
-        <div class="DaneKontaktowe">
 
-
-        </div>
         <div class="formularz">
             <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma"
                   onsubmit="return ValidateFrom(this)">
@@ -69,9 +66,12 @@
                 <label for="fphone">Nr telefonu</label>
                 <input id="fphone" name="phone" type="text" placeholder="999-999-999">
                 <input type="hidden" name="receiver" value="pperetko@gmail.com">
+
                 <!--wojciech.makurat@infoshareacademy.com-->
-                <input id="submit" name="submit" type="submit" value="Wyślij"
+                <input id="submit" name="submit" type="submit" value="Wyślij" disabled="disabled"
                        onclick="return  ValidateFrom(document.forms[0])">
+                <div class="jestesBootem"></div>
+
             </form>
         </div>
     </div>
