@@ -121,3 +121,17 @@ header .NaviField {
     margin-left: 2px;
     margin-right: 2px;
 }
+
+.wyslij{
+  position: absolute;
+  top: 350px;
+  left: 35%;
+}
+
+.bwyslij{
+    height: 40px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: #ff584c;
+    font-size: 16px;
+}
