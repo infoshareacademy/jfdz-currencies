@@ -29,7 +29,7 @@
 
         <ul>
             <li class="NaviField right">
-                <label class="bhome" onclick="MenuOnClick(1)">Kontakt</label>
+                <label class="bhome" >Kontakt</label>
             </li>
             <li class="NaviField right">
                 <label class="bhome" onclick="MenuOnClick(2)">O nas</label>
@@ -42,21 +42,23 @@
             </li>
         </ul>
     </div>
+
     <div class="podklad"></div>
     <!--<div><p>Puls walut<br>Reagujemy na zmiany!</p></div>-->
     <div class="slajder left">
         <div class="szarfa">Puls walut<br>Reagujemy na zmiany!</div>
     </div>
+    <div class="wyslij clear">
+        <button class="bwyslij" onclick="MenuOnClick(1)">Dowiedz się więcej</button>
+    </div>
+
 </header>
 
 <main class="tresc-strony content">
 
     <div id="call-to-action">
-        <div class="DaneKontaktowe">
 
-
-        </div>
-        <div class="formularz">
+        <div class="formularz" onmouseover="onmouseoverboot()">
             <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma"
                   onsubmit="return ValidateFrom(this)">
                 <label for="femail">Email</label>
@@ -66,9 +68,12 @@
                 <input type="hidden" name="receiver" value="pperetko@gmail.com">
                 <input id="submit" name="submit" type="submit" value="Wyślij"
                        onclick="return  ValidateFrom(document.forms[0])">
+
+
             </form>
         </div>
     </div>
+
 
     <div class="clear"></div>
 
