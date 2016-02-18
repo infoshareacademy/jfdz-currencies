@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="pl">
-<link rel="icon" type="image/gif" href="favicon.gif"/>
+<link rel="icon" type="image/gif" href="Obrazy/favicon.gif"/>
 <head>
     <meta charset="UTF-8">
     <title>Kalkulator walutowy</title>
-        <link href="Styles/resetcss.css" type="text/css" rel="stylesheet">
+    <link href="Styles/resetcss.css" type="text/css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href="Styles/GrafikaCss.css" type="text/css" rel="stylesheet">
     <link href="Styles/Agnieszka.css" type="text/css" rel="stylesheet">
     <link href="Styles/Marcin.css" type="text/css" rel="stylesheet">
     <link href="Styles/Piotr.css" type="text/css" rel="stylesheet">
     <link href="Styles/Ola.css" type="text/css" rel="stylesheet">
-    <a name="gora"></a>
     <script src="http//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="Js/piotr.js" language=javascript type="text/javascript"></script>
-    <script src="Js/Ola.js" language=javascript type="text/javascript"></script>
+    <!--<script src="Js/Ola.js" language=javascript type="text/javascript"></script>-->
 </head>
 
 <body>
+<a id="gora"></a>
 <header class="content">
     <div class="naglowekStrony">
         <div class="logo left">
-            <img class="logo" src="Obrazy/Logo.png" alt="logo" align="left"/>
+            <img class="logo" src="Obrazy/logoKalkulator.png" alt="logo" align="left"/>
         </div>
         <div class="nazwa left">
             <div>kalkulator walutowy</div>
@@ -45,11 +45,11 @@
     </div>
 
     <div class="podklad"></div>
-     <p>Puls walut<br>Reagujemy </p>
-     <div class="slajder left"></div>
-    <div class="pokrywka"></div>
+    <!--<div><p>Puls walut<br>Reagujemy na zmiany!</p></div>-->
+    <div class="slajder left">
+        <div class="szarfa">Puls walut<br>Reagujemy na zmiany!</div>
+    </div>
     <div class="wyslij clear">
-
         <button class="bwyslij" onclick="MenuOnClick(1)">Dowiedz się więcej</button>
     </div>
 
@@ -67,9 +67,7 @@
                 <label for="fphone">Nr telefonu</label>
                 <input id="fphone" name="phone" type="text" placeholder="999-999-999">
                 <input type="hidden" name="receiver" value="pperetko@gmail.com">
-
-                <!--wojciech.makurat@infoshareacademy.com-->
-                <input id="submit" name="submit" type="submit" value="Wyślij" disabled="disabled"
+                <input id="submit" name="submit" type="submit" value="Wyślij"
                        onclick="return  ValidateFrom(document.forms[0])">
 
 
@@ -82,110 +80,68 @@
 
     <div id="main_content">
 
-        <div class="bloki funkcje left">
-
-            <div class="funkcja left">
-                <a class="funkcjaLink" href="">
-
-                <div class="opis">
-                    <p class="tresc tresc1">Kalkulator</p>
-
-                    <p class="tresc tresc2">Szybkie przeliczanie możliwości zakupu</p>
-                </div>
-                <figure>
-                    <img src="Obrazy/Marcin/kalk.jpg" alt="Kalkulator"/>
-                </figure>
+        <div class="bloki funkcje">
+            <div class="funkcja kalkulator left">
+                <a class="zdjecie">
+                    <div class="tlo-funkcji">
+                        <p class="nazwa-funkcji">Kalkulator walut</p>
+                    </div>
                 </a>
+                <p class="opis-funkcji">Kalkulator walutowy oparty na aktualnym średnim kursie walut obcych publikowanych przez Narodowy Bank Polski</p>
             </div>
-
-            <div class="funkcja left">
-                <a class="funkcjaLink" href="">
-
-                <div class="opis">
-                    <p class="tresc tresc1">Średnie kursy</p>
-
-                    <p class="tresc tresc2">Sprawdź średni kurs za ostatnie 30 dni</p>
-                </div>
-                <figure>
-                    <img src="Obrazy/Marcin/wykres.jpg" alt="Wykres"/>
-                </figure>
+            <div class="funkcja srednia left">
+                <a class="zdjecie">
+                    <div class="tlo-funkcji">
+                        <p class="nazwa-funkcji">Średnie kursy walut</p>
+                    </div>
                 </a>
+                <p class="opis-funkcji">Sprawdź aktualne średnie kursy walut za ostatnie 30 dni oraz zobacz jak dany kurs się zmieniał.</p>
             </div>
-
-            <div class="funkcja left">
-                <a class="funkcjaLink" href="">
-
-                <div class="opis">
-                    <p class="tresc tresc1">Lokalizator</p>
-
-                    <p class="tresc tresc2">Pomożemy znaleźć najbliższy kantor lub O/Banku</p>
-                </div>
-                <figure>
-                    <img src="Obrazy/Marcin/gps.jpg" alt="Lokalizator"/>
-                </figure>
+            <div class="funkcja lokalizator left">
+                <a class="zdjecie">
+                    <div class="tlo-funkcji">
+                        <p class="nazwa-funkcji">Lokalizator punktów wymiany walut</p>
+                    </div>
                 </a>
+                <p class="opis-funkcji">Znajdź najbliższy kantor lub Placówkę Banku, w której możesz dokonać wymiany waluty.</p>
             </div>
-
-            <div class="funkcja left">
-                <a class="funkcjaLink" href="">
-
-                <div class="opis">
-                    <p class="tresc tresc1">Narodowy Bank Polski</p>
-
-                    <p class="tresc tresc2">Zawsze możesz odnieść się do danych z Narodowego Banku Polskiego</p>
-                </div>
-                <figure>
-                    <img src="Obrazy/Marcin/nbp.jpg" alt="NBP"/>
-                </figure>
+            <div class="funkcja nbp left">
+                <a class="zdjecie">
+                    <div class="tlo-funkcji">
+                        <p class="nazwa-funkcji">Narodowy Bank Polski</p>
+                    </div>
                 </a>
+                <p class="opis-funkcji">Jeżeli interesują Ciebie bardziej ogólne informacje dotyczące polityki pienieżnej zapraszamy na strony NBP.</p>
             </div>
-
             <div class="clear"></div>
-
         </div>
 
         <div class="bloki dodatki">
-            <a class="dodatek-komunikat" href=""/>
-                Komunikaty
+            <a class="dodatek-komunikat">
+                <p>Komunikaty</p>
             </a>
-
-            <a class="dodatek-z-ostatniej-chwili" href=""/>
-                Z ostatniej chwili
+            <a class="dodatek-z-ostatniej-chwili">
+                <p>Z ostatniej chwili</p>
             </a>
-
-            <a href=""/>
-                <!--<img src="Obrazy/Marcin/mobilne.png"/>-->
-                Aplikacja mobilna
+            <a class="dodatek-aplikacja-mobilna">
+                <p> Aplikacja mobilna</p>
             </a>
-
-            <a href=""/>
-                <!--<img src="Obrazy/Marcin/regulamin.png"/>-->
-                Regulamin
+            <a class="dodatek-regulamin">
+                <p>Regulamin</p>
             </a>
-
-
-            <a href=""/>
-                <!--<img src="Obrazy/Marcin/SMS.png"/>-->
-                Powiadomienia SMS
+            <a class="dodatek-powiadomienieSMS">
+                <p>Powiadomienia SMS</p>
             </a>
-
-            <a href=""/>
-                <!--<img src="Obrazy/Marcin/szukaj.png"/>-->
-                Szukaj
+            <a class="dodatek-szukaj">
+                <p>Szukaj</p>
             </a>
-
-            <a href=""/>
-                <!--<img src="Obrazy/Marcin/zlecenia.png"/>-->
-                Zlecenia stałe
+            <a class="dodatek-zlecenia-stale">
+                <p>Zlecenia stałe</p>
             </a>
-
-            <a href=""/>
-                <!--<img src="Obrazy/Marcin/znajomi.png"/>-->
-                Znajomi
+            <a class="dodatek-znajomi">
+                <p>Znajomi</p>
             </a>
-
             <div class="clear"></div>
-
         </div>
 
     </div>
@@ -193,7 +149,7 @@
         <h1>MAPA TEAM</h1>
 
         <div class="poz_onas left">
-            <img class="zdjecie" src="Obrazy/fa01.png"/>
+            <img class="zdjecie" src="Obrazy/Kontakt/fa01.png"/>
 
             <div class="opisOsoby">
                 <h1>Agnieszka</h1>
@@ -204,7 +160,7 @@
             </div>
         </div>
         <div class="poz_onas left">
-            <img class="zdjecie" src="Obrazy/fe03.png"/>
+            <img class="zdjecie" src="Obrazy/Kontakt/fe03.png"/>
 
             <div class="opisOsoby">
                 <h1>Aleksandra</h1>
@@ -215,7 +171,7 @@
             </div>
         </div>
         <div class="poz_onas right">
-            <img class="zdjecie" src="Obrazy/c01.png"/>
+            <img class="zdjecie" src="Obrazy/Kontakt/c01.png"/>
 
             <div class="opisOsoby">
                 <h1>Piotr</h1>
@@ -226,58 +182,60 @@
             </div>
         </div>
         <div class="poz_onas right">
-            <img class="zdjecie" src="Obrazy/e02.png"/>
+            <img class="zdjecie" src="Obrazy/Kontakt/e02.png"/>
 
             <div class="opisOsoby">
                 <h1>Marcin</h1>
                 <a href="markrolikowski@gmail.com">markrolikowski@gmail.com</a>
 
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas neque sed porttitor sagittis.
-                    Pellentesque quis risus dolor."</p>
+                <p>"Absolwent Politechniki Warszawskiej. Większość doświadczenia zawodowego to negocjacje. Hobby: gra w tenisa ziemnego"</p>
             </div>
         </div>
+        <div class="clear"></div>
     </div>
-    <div class="clear"></div>
-    <div class="up">
+    <div class="dogory">
+        <p><a href="#gora">Go Up</a></p>
+    </div>
 
-    </div>
 </main>
 
 <footer class="footer content">
-    <div class="clear"></div>
     <div class="kontakt">
+        <div>
+            <img class="logo" src="Obrazy/logoKalkulator.png" alt="logo"/>
+        </div>
         <div class="namiary">
-            <img src="Obrazy/Marcin/mobilne.png"/>
-
+            <img src="Obrazy/Dodatki/mobilne.png"/>
             <div class="desc">
                 <a>123-456-789</a>
             </div>
         </div>
         <div class="namiary">
-            <img src="Obrazy/Marcin/namiary-gps.png"/>
-
+            <img src="Obrazy/Dodatki/gps.png"/>
             <div class="desc">
                 <a>Al. Grunwaldzka 472; <br>80-309 Gdańsk</a>
             </div>
         </div>
         <div class="namiary">
-            <img src="Obrazy/Marcin/SMS.png"/>
-
+            <img src="Obrazy/Dodatki/SMS.png"/>
             <div class="desc">
                 <a>adres@adres.com</a>
             </div>
         </div>
     </div>
 
-    <div class="media">
-        <a href="https://pl-pl.facebook.com" target="_blank"><img title="facebook" src="Obrazy/facebook.png"
-                                                                  alt="Facebook"></a>
-        <a href="https://twitter.com" target="_blank"><img title="twitter" src="Obrazy/twitter.png" alt="Twitter"></a>
-        <a href="https://www.instagram.com" target="_blank"><img title="instagram" src="Obrazy/instagram.png"
-                                                                 alt="Instagram"></a>
+    <div class="stopka">
+        <div class="media">
+            <a href="https://pl-pl.facebook.com" target="_blank"><img title="facebook" src="Obrazy/SocialMedia/facebook.png"
+                                                                      alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img title="twitter" src="Obrazy/SocialMedia/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com" target="_blank"><img title="instagram" src="Obrazy/SocialMedia/instagram.png"
+                                                                     alt="Instagram"></a>
+        </div>
+
+        <br>
+        <a>&copy; InfoShare Academy // MAPA Team 2015</a>
     </div>
-    <br>
-    <a>&copy; MAPA 2015</a>
 </footer>
 
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
