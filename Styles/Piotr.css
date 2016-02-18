@@ -1,4 +1,5 @@
 header .NaviField {
+    color: white;
     text-transform: uppercase;
     text-decoration: none;
     text-align: left;
@@ -22,10 +23,10 @@ header .NaviField {
     border-radius: 5px;
 }
 .NaviField a{
+    color: white;
     text-decoration: none;
-    color: black;
 }
-.bhome:hover{
+.bhome:hover, .NaviField a:hover {
     color: red;
 }
 
@@ -102,7 +103,7 @@ header .NaviField {
 }
 .poz_onas {
     display: inline-block;
-    width: 271px;
+    width: 300px;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
