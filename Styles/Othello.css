@@ -1,0 +1,12 @@
+.empty {
+    background-size: 80px 80px;
+    background-image: url('../Obrazy/Othello/Monety.png');
+}
+.dolar {
+    background-size: 80px 80px;
+    background-image: url('../Obrazy/Othello/Dollar.png');
+}
+.euro {
+    background-size: 80px 80px;
+    background-image: url('../Obrazy/Othello/Euro.png');
+}

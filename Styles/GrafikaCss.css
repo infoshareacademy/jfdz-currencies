@@ -19,6 +19,19 @@ body {
 
 .clear {clear: both;}
 
+#game {
+    display: none;
+    width: 640px;
+    height: 640px;
+}
+#game div {
+    width: 80px;
+    height: 80px;
+    float: left;
+    display: inline-block;
+    text-align: center;
+}
+
 
 
 

@@ -11,9 +11,10 @@
     <link href="Styles/Marcin.css" type="text/css" rel="stylesheet">
     <link href="Styles/Piotr.css" type="text/css" rel="stylesheet">
     <link href="Styles/Ola.css" type="text/css" rel="stylesheet">
+    <link href="Styles/Othello.css" type="text/css" rel="stylesheet">
     <script src="http//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="Js/piotr.js" language=javascript type="text/javascript"></script>
-    <!--<script src="Js/Ola.js" language=javascript type="text/javascript"></script>-->
+    <script src="Js/othello.js"></script>
 </head>
 
 <body>
@@ -44,7 +45,6 @@
     </div>
 
     <div class="podklad"></div>
-    <!--<div><p>Puls walut<br>Reagujemy na zmiany!</p></div>-->
     <div class="slajder left">
         <div class="szarfa">Puls walut<br>Reagujemy na zmiany!</div>
     </div>
@@ -53,6 +53,10 @@
     </div>
 
 </header>
+
+<div id="game">
+
+</div>
 
 <main class="tresc-strony content">
 
@@ -66,15 +70,10 @@
                 <label for="fphone">Nr telefonu</label>
                 <input id="fphone" name="phone" type="text" placeholder="999-999-999">
                 <input type="hidden" name="receiver" value="pperetko@gmail.com">
-                <input id="submit" name="submit" type="submit" value="Wyślij"
-                       onclick="return  ValidateFrom(document.forms[0])">
-
-
+                <input id="submit" name="submit" type="submit" value="Wyślij" onclick="return  ValidateFrom(document.forms[0])">
             </form>
         </div>
     </div>
-
-
     <div class="clear"></div>
 
     <div id="main_content">
@@ -200,9 +199,7 @@
 
 <footer class="footer content">
     <div class="kontakt">
-        <div>
-            <img class="logo" src="Obrazy/logoKalkulator.png" alt="logo"/>
-        </div>
+        <h1>Kontakt</h1>
         <div class="namiary">
             <img src="Obrazy/Dodatki/mobilne.png"/>
             <div class="desc">
@@ -233,7 +230,7 @@
         </div>
 
         <br>
-        <a>&copy; InfoShare Academy // MAPA Team 2015</a>
+        <a href="#game" onclick="setupGame(8)">&copy; InfoShare Academy // MAPA Team 2015</a>
     </div>
 </footer>
 
