@@ -1,92 +1,98 @@
-.dodatki {
-    width: 100%;
-    position: relative;
-}
-.dodatki img {
-    width: 64px;
-    height: 64px;
-    border-bottom: 2px solid grey;
-    padding: 10px 20px 10px 20px;
-    margin: 0px 16px 0px 16px;
-}
-.dodatki img:hover {
-    background-color: #777;
-    border-radius: 30%;
-}
-.dodatki figcaption {
-    font-size: 12px;
-    text-align: center;
-}
 .bloki {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
-.funkcjaLink {
+.szarfa {
     position: relative;
-}
-.funkcje {
-    width: 100%;
-    position: relative;
-}
-.tresc {
-    opacity: 0;
-}
-.tresc1{
-    position: absolute;
-    top: 40%;
-    font-size: 20px;
-    font-weight: 700;
-    color: #ff584c;
-}
-.tresc2 {
-    position: absolute;
-    top: 55%;
-    font-size: 14px;
-    color: pink;
-}
-.funkcjaLink:hover .opis {
-    background-color: #777;
-    opacity: 0.9;
-    transition: opacity 1s;
-}
-.funkcjaLink:hover .tresc {
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    opacity: 1;
-    transition: opacity 1s;
-    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    background-color: rgba(204,204,204,0.6);
+    -webkit-box-shadow: 0px 0px 50px 50px rgba(204,204,204,0.6);
+    height: 300px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: 0.3em;
 }
-.opis {
+.funkcje {width: 100%;}
+.funkcja {
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.funkcja a {display: block;}
+.funkcja p {
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 25px;
+    font-weight: lighter;
+}
+.zdjecie {
+    width: 250px;
+    height: 250px;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    background-size: contain;
+    top: 25px;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+}
+.tlo-funkcji {
+    background-color: rgba(119,119,119,0);
+    border-radius: 50%;
     opacity: 0;
+    transition: background-color 1s linear, opacity 1s linear;
     position: absolute;
     top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
-}
-.funkcja a {
-    display: block;
-}
-.dodatki a {
-    color: black;
-    text-decoration: none;
-}
 
-.funkcja img {
-    width: 550px;
-    height: 230px;
-    background-size: contain;
 }
-.funkcja a {
-    color: black;
-    text-decoration: none;
-}
-.funkcja {
-    width: 550px;
-}
-.funkcje figure:hover {
+.tlo-funkcji:hover {
+    background-color: rgba(119,119,119,0.8);
     opacity: 1;
 }
+.tlo-funkcji p {padding-top: 100px;}
+.kalkulator a {background-image: url('../Obrazy/Funkcje/KalkulatroSM.jpg');}
+.srednia a {background-image: url('../Obrazy/Funkcje/SredniaSM.jpg');}
+.lokalizator a {background-image: url('../Obrazy/Funkcje/LokalizatorSM.jpg');}
+.nbp a {background-image: url('../Obrazy/Funkcje/LudzieSM.jpg');}
 
+.dodatki a {
+    float: left;
+    color: black;
+    width: 150px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    background-position: center center;
+    transition: background-size 1s linear;
+}
+.dodatki a:hover {
+    background-size: 60px 60px;
+}
+.dodatki p {
+    padding-top: 80px;
+    font-weight: lighter;
+    font-style: italic;
+}
+.dodatek-komunikat {background-image: url('../Obrazy/Dodatki/komunikaty.png');}
+.dodatek-z-ostatniej-chwili {background-image: url('../Obrazy/Dodatki/alarm.png');}
+.dodatek-aplikacja-mobilna {background-image: url('../Obrazy/Dodatki/mobilne.png');}
+.dodatek-regulamin {background-image: url('../Obrazy/Dodatki/regulamin.png');}
+.dodatek-powiadomienieSMS {background-image: url('../Obrazy/Dodatki/SMS.png');}
+.dodatek-szukaj {background-image: url('../Obrazy/Dodatki/szukaj.png');}
+.dodatek-zlecenia-stale {background-image: url('../Obrazy/Dodatki/zlecenia.png');}
+.dodatek-znajomi {background-image: url('../Obrazy/Dodatki/znajomi.png');}
