@@ -11,9 +11,10 @@
     <link href="Styles/Marcin.css" type="text/css" rel="stylesheet">
     <link href="Styles/Piotr.css" type="text/css" rel="stylesheet">
     <link href="Styles/Ola.css" type="text/css" rel="stylesheet">
+    <link href="Styles/Othello.css" type="text/css" rel="stylesheet">
     <script src="http//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="Js/piotr.js" language=javascript type="text/javascript"></script>
-    <!--<script src="Js/Ola.js" language=javascript type="text/javascript"></script>-->
+    <script src="Js/othello.js"></script>
 </head>
 
 <body>
@@ -54,6 +55,10 @@
 
 </header>
 
+<div id="game">
+
+</div>
+
 <main class="tresc-strony content">
 
     <div id="call-to-action">
@@ -66,20 +71,16 @@
                 <label for="fphone">Nr telefonu</label>
                 <input id="fphone" name="phone" type="text" placeholder="999-999-999">
                 <input type="hidden" name="receiver" value="pperetko@gmail.com">
-                <input id="submit" name="submit" type="submit" value="Wyślij"
-                       onclick="return  ValidateFrom(document.forms[0])">
-
-
+                <input id="submit" name="submit" type="submit" value="Wyślij" onclick="return  ValidateFrom(document.forms[0])">
             </form>
         </div>
     </div>
-
-
     <div class="clear"></div>
 
     <div id="main_content">
 
         <div class="bloki funkcje">
+
             <div class="funkcja kalkulator left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
@@ -88,6 +89,7 @@
                 </a>
                 <p class="opis-funkcji">Kalkulator walutowy oparty na aktualnym średnim kursie walut obcych publikowanych przez Narodowy Bank Polski</p>
             </div>
+
             <div class="funkcja srednia left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
@@ -96,6 +98,7 @@
                 </a>
                 <p class="opis-funkcji">Sprawdź aktualne średnie kursy walut za ostatnie 30 dni oraz zobacz jak dany kurs się zmieniał.</p>
             </div>
+
             <div class="funkcja lokalizator left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
@@ -104,6 +107,7 @@
                 </a>
                 <p class="opis-funkcji">Znajdź najbliższy kantor lub Placówkę Banku, w której możesz dokonać wymiany waluty.</p>
             </div>
+
             <div class="funkcja nbp left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
@@ -112,35 +116,47 @@
                 </a>
                 <p class="opis-funkcji">Jeżeli interesują Ciebie bardziej ogólne informacje dotyczące polityki pienieżnej zapraszamy na strony NBP.</p>
             </div>
+
             <div class="clear"></div>
+
         </div>
 
         <div class="bloki dodatki">
+
             <a class="dodatek-komunikat">
                 <p>Komunikaty</p>
             </a>
+
             <a class="dodatek-z-ostatniej-chwili">
                 <p>Z ostatniej chwili</p>
             </a>
+
             <a class="dodatek-aplikacja-mobilna">
                 <p> Aplikacja mobilna</p>
             </a>
+
             <a class="dodatek-regulamin">
                 <p>Regulamin</p>
             </a>
+
             <a class="dodatek-powiadomienieSMS">
                 <p>Powiadomienia SMS</p>
             </a>
+
             <a class="dodatek-szukaj">
                 <p>Szukaj</p>
             </a>
+
             <a class="dodatek-zlecenia-stale">
                 <p>Zlecenia stałe</p>
             </a>
+
             <a class="dodatek-znajomi">
                 <p>Znajomi</p>
             </a>
+
             <div class="clear"></div>
+
         </div>
 
     </div>
@@ -200,9 +216,7 @@
 
 <footer class="footer content">
     <div class="kontakt">
-        <div>
-            <img class="logo" src="Obrazy/logoKalkulator.png" alt="logo"/>
-        </div>
+        <h1>Kontakt</h1>
         <div class="namiary">
             <img src="Obrazy/Dodatki/mobilne.png"/>
             <div class="desc">
@@ -233,7 +247,7 @@
         </div>
 
         <br>
-        <a>&copy; InfoShare Academy // MAPA Team 2015</a>
+        <a href="#game" onclick="setupGame(8)">&copy; InfoShare Academy // MAPA Team 2015</a>
     </div>
 </footer>
 
