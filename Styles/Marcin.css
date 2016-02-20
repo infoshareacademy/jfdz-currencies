@@ -2,6 +2,7 @@
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
 .szarfa {
     position: relative;
     margin-top: 150px;
@@ -17,7 +18,9 @@
     font-weight: 900;
     letter-spacing: 0.3em;
 }
+
 .funkcje {width: 100%;}
+
 .funkcja {
     width: 300px;
     height: 400px;
@@ -25,7 +28,9 @@
     font-size: 18px;
     font-weight: 600;
 }
+
 .funkcja a {display: block;}
+
 .funkcja p {
     padding-top: 50px;
     padding-left: 10px;
@@ -33,6 +38,7 @@
     padding-bottom: 25px;
     font-weight: lighter;
 }
+
 .zdjecie {
     width: 250px;
     height: 250px;
@@ -45,6 +51,7 @@
     left: 25px;
     right: 25px;
 }
+
 .tlo-funkcji {
     background-color: rgba(119,119,119,0);
     border-radius: 50%;
@@ -55,16 +62,21 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-
 }
+
 .tlo-funkcji:hover {
     background-color: rgba(119,119,119,0.8);
     opacity: 1;
 }
+
 .tlo-funkcji p {padding-top: 100px;}
+
 .kalkulator a {background-image: url('../Obrazy/Funkcje/KalkulatroSM.jpg');}
+
 .srednia a {background-image: url('../Obrazy/Funkcje/SredniaSM.jpg');}
+
 .lokalizator a {background-image: url('../Obrazy/Funkcje/LokalizatorSM.jpg');}
+
 .nbp a {background-image: url('../Obrazy/Funkcje/LudzieSM.jpg');}
 
 .dodatki a {
