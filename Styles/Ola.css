@@ -42,6 +42,13 @@ footer a:hover {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+.kontakt h1 {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 .up {
     width: 200px;
     height: 200px;
