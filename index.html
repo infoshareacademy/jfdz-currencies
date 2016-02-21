@@ -70,7 +70,8 @@
                 <label for="fphone">Nr telefonu</label>
                 <input id="fphone" name="phone" type="text" placeholder="999-999-999">
                 <input type="hidden" name="receiver" value="pperetko@gmail.com">
-                <input id="submit" name="submit" type="submit" value="Wyślij" onclick="return  ValidateFrom(document.forms[0])">
+                <input id="submit" name="submit" type="submit" value="Wyślij"
+                       onclick="return  ValidateFrom(document.forms[0])">
             </form>
         </div>
     </div>
@@ -78,14 +79,16 @@
 
     <div id="main_content">
 
-        <div id="products" class="bloki funkcje">
+        <div id="products" class="hideme bloki funkcje">
             <div class="funkcja kalkulator left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
                         <p class="nazwa-funkcji">Kalkulator walut</p>
                     </div>
                 </a>
-                <p class="opis-funkcji">Kalkulator walutowy oparty na aktualnym średnim kursie walut obcych publikowanych przez Narodowy Bank Polski</p>
+
+                <p class="opis-funkcji">Kalkulator walutowy oparty na aktualnym średnim kursie walut obcych
+                    publikowanych przez Narodowy Bank Polski</p>
             </div>
 
             <div class="funkcja srednia left">
@@ -94,7 +97,9 @@
                         <p class="nazwa-funkcji">Średnie kursy walut</p>
                     </div>
                 </a>
-                <p class="opis-funkcji">Sprawdź aktualne średnie kursy walut za ostatnie 30 dni oraz zobacz jak dany kurs się zmieniał.</p>
+
+                <p class="opis-funkcji">Sprawdź aktualne średnie kursy walut za ostatnie 30 dni oraz zobacz jak dany
+                    kurs się zmieniał.</p>
             </div>
 
             <div class="funkcja lokalizator left">
@@ -103,7 +108,9 @@
                         <p class="nazwa-funkcji">Lokalizator punktów wymiany walut</p>
                     </div>
                 </a>
-                <p class="opis-funkcji">Znajdź najbliższy kantor lub Placówkę Banku, w której możesz dokonać wymiany waluty.</p>
+
+                <p class="opis-funkcji">Znajdź najbliższy kantor lub Placówkę Banku, w której możesz dokonać wymiany
+                    waluty.</p>
             </div>
 
             <div class="funkcja nbp left">
@@ -112,14 +119,16 @@
                         <p class="nazwa-funkcji">Narodowy Bank Polski</p>
                     </div>
                 </a>
-                <p class="opis-funkcji">Jeżeli interesują Ciebie bardziej ogólne informacje dotyczące polityki pienieżnej zapraszamy na strony NBP.</p>
+
+                <p class="opis-funkcji">Jeżeli interesują Ciebie bardziej ogólne informacje dotyczące polityki
+                    pienieżnej zapraszamy na strony NBP.</p>
             </div>
 
             <div class="clear"></div>
 
         </div>
 
-        <div class="bloki dodatki">
+        <div class="hideme bloki dodatki">
 
             <a class="dodatek-komunikat">
                 <p>Komunikaty</p>
@@ -158,6 +167,7 @@
         </div>
 
     </div>
+    <div class="Hideme">
     <div id="about">
         <h1>MAPA TEAM</h1>
 
@@ -201,9 +211,11 @@
                 <h1>Marcin</h1>
                 <a href="markrolikowski@gmail.com">markrolikowski@gmail.com</a>
 
-                <p>"Absolwent Politechniki Warszawskiej. Większość doświadczenia zawodowego to negocjacje. Hobby: gra w tenisa ziemnego"</p>
+                <p>"Absolwent Politechniki Warszawskiej. Większość doświadczenia zawodowego to negocjacje. Hobby: gra w
+                    tenisa ziemnego"</p>
             </div>
         </div>
+    </div>
         <div class="clear"></div>
     </div>
     <div class="dogory">
@@ -213,40 +225,30 @@
 </main>
 
 <footer id="contact" class="footer content">
-    <div class="kontakt">
-        <h1>Kontakt</h1>
-        <div class="namiary">
-            <img src="Obrazy/Dodatki/mobilne.png"/>
-            <div class="desc">
-                <a>123-456-789</a>
-            </div>
-        </div>
-        <div class="namiary">
-            <img src="Obrazy/Dodatki/gps.png"/>
-            <div class="desc">
-                <a>Al. Grunwaldzka 472; <br>80-309 Gdańsk</a>
-            </div>
-        </div>
-        <div class="namiary">
-            <img src="Obrazy/Dodatki/SMS.png"/>
-            <div class="desc">
-                <a>adres@adres.com</a>
-            </div>
-        </div>
-    </div>
+
 
     <div class="stopka">
-        <div class="media">
-            <a href="https://pl-pl.facebook.com" target="_blank"><img title="facebook" src="Obrazy/SocialMedia/facebook.png"
-                                                                      alt="Facebook"></a>
-            <a href="https://twitter.com" target="_blank"><img title="twitter" src="Obrazy/SocialMedia/twitter.png" alt="Twitter"></a>
-            <a href="https://www.instagram.com" target="_blank"><img title="instagram" src="Obrazy/SocialMedia/instagram.png"
-                                                                     alt="Instagram"></a>
-        </div>
 
-        <br>
+        <a href="https://pl-pl.facebook.com"
+           target="_blank"><img title="facebook"
+                 src="Obrazy/SocialMedia/facebook.png"
+                 alt="Facebook"></a>
+        <a href="https://twitter.com"
+           target="_blank"><img title="twitter"
+                 src="Obrazy/SocialMedia/twitter.png"
+                 alt="Twitter"></a>
+        <a href="https://www.instagram.com"
+           target="_blank"><img title="instagram"
+                 src="Obrazy/SocialMedia/instagram.png"
+                 alt="Instagram"></a>
+        <br> <br><br><br><br>
         <a href="#game" onclick="setupGame(8)">&copy; InfoShare Academy // MAPA Team 2015</a>
+
     </div>
+
+
+
+
 </footer>
 
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
