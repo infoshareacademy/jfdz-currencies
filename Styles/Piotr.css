@@ -123,10 +123,9 @@ header .NaviField {
     margin-right: 2px;
 }
 
-.wyslij{
-    position: absolute;
-    bottom: 100px;
-    left: 475px;
+.wyslij {
+    margin-top: 50px;
+    text-align: center;
 }
 
 .bwyslij {
