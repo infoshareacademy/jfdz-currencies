@@ -11,15 +11,14 @@
     <link href="Styles/Marcin.css" type="text/css" rel="stylesheet">
     <link href="Styles/Piotr.css" type="text/css" rel="stylesheet">
     <link href="Styles/Ola.css" type="text/css" rel="stylesheet">
-    <link href="Styles/Othello.css" type="text/css" rel="stylesheet">
-    <script src="http//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="Js/piotr.js" language=javascript type="text/javascript"></script>
     <script src="Js/othello.js"></script>
+    <script src="Js/Ola.js" language=javascript type="text/javascript"></script>
 </head>
 
 <body>
-<a id="gora"></a>
-<header class="content">
+<header id="menu" class="content">
     <div class="naglowekStrony">
         <div class="logo left">
             <img class="logo" src="Obrazy/logoKalkulator.png" alt="logo" align="left"/>
@@ -30,16 +29,16 @@
 
         <ul>
             <li class="NaviField right">
-                <label class="bhome" >Kontakt</label>
+                <a class="bhome" href="#contact">Kontakt</a>
             </li>
             <li class="NaviField right">
-                <label class="bhome" onclick="MenuOnClick(2)">O nas</label>
+                <a class="bhome" href="#about" onclick="MenuOnClick(2)">O nas</a>
             </li>
             <li class="NaviField right">
-                <a href="index.html">Produkty</a>
+                <a href="#products">Produkty</a>
             </li>
             <li class="NaviField right">
-                <a href="index.html">Menu</a>
+                <a href="#menu" class="active">Menu</a>
             </li>
         </ul>
     </div>
@@ -79,8 +78,7 @@
 
     <div id="main_content">
 
-        <div class="bloki funkcje">
-
+        <div id="products" class="bloki funkcje">
             <div class="funkcja kalkulator left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
@@ -160,7 +158,7 @@
         </div>
 
     </div>
-    <div id="onas">
+    <div id="about">
         <h1>MAPA TEAM</h1>
 
         <div class="poz_onas left">
@@ -214,7 +212,7 @@
 
 </main>
 
-<footer class="footer content">
+<footer id="contact" class="footer content">
     <div class="kontakt">
         <h1>Kontakt</h1>
         <div class="namiary">
