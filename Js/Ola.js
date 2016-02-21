@@ -1,30 +1,18 @@
-
-
-$(document).ready(function(){
-    $(window).scroll(function(){
-
-        var wysokoscDokumentu= $(document).height();
-        var scrollOkna = window.scrollY;
-        var offsetElementu= $('#gooo').offset();
-        var aktualnaWysokoscDokumentu= document.documentElement.clientHeight;
-
-        console.log('aktualna wysokośc viewportu'+ aktualnaWysokoscDokumentu);
-        console.log('wysokosc dokumentu:' + wysokoscDokumentu);
-        console.log('scroll dokumentu:'+ scrollOkna);
-        console.log('offset elementu:', offsetElementu.top);
-        console.log('-------------------');
-
-        var naszeZdjecie= aktualnaWysokoscDokumentu + scrollOkna;
-        console.log(naszeZdjecie);
-
-        if(naszeZdjecie>= 410) {
-
-
-        }
-
-
-    })
-})
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    function onScroll(event) {
+        var scrollPos = $(document).scrollTop();
+        $('#menu .NaviField a').each(function () {
+                var currLink = $(this);
+                var refElement = $(currLink.attr("href"));
+                if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                    $('#menu .NaviField a').removeClass("active");
+                    currLink.addClass("active");
+                }
+            }
+        )
+    }
+});
 
 
 

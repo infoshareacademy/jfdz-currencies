@@ -52,6 +52,7 @@ footer a:hover {
     color: white;
     padding-top: 20px;
     padding-bottom: 10px;
+    height: 1000px;
 }
 .namiary {
     width: 333px;
@@ -67,7 +68,9 @@ footer a:hover {
 }
 
 
-
+.active {
+    border-bottom: 1px solid #fff;
+}
 
 
 
