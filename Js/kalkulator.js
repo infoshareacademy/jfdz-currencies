@@ -6,7 +6,6 @@ var button = document.getElementById('przelicz');
 button.onclick = function() {
     var zlotowki = document.getElementById('zlotowki').value;
     var kurs = document.getElementById('kurs').value;
-    debugger;
     var dolary = zlotowki/kurs;
     document.getElementById('dolary').value = dolary;
 }
