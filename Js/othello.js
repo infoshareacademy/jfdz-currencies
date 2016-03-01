@@ -5,45 +5,70 @@
 var size = 8;
 var result = false;
 var plansza = [
-    ['B', 'e', 'e', 'B', 'e', 'e', 'e', 'e'],
-    ['B', 'e', 'e', 'B', 'e', 'e', 'e', 'e'],
-    ['B', 'e', 'e', 'B', 'e', 'e', 'e', 'e'],
-    ['A', 'B', 'B', 'e', 'B', 'B', 'B', 'B'],
-    ['B', 'e', 'e', 'B', 'e', 'e', 'e', 'e'],
-    ['B', 'e', 'e', 'B', 'e', 'e', 'e', 'e'],
-    ['B', 'e', 'e', 'B', 'e', 'e', 'e', 'e'],
-    ['B', 'e', 'e', 'e', 'e', 'e', 'e', 'e'],
+    ['B', 'e', 'e', 'A', 'e', 'e', 'B', 'e'],
+    ['e', 'A', 'e', 'B', 'e', 'B', 'e', 'e'],
+    ['e', 'e', 'B', 'B', 'B', 'e', 'e', 'e'],
+    ['B', 'B', 'B', 'e', 'B', 'B', 'B', 'B'],
+    ['e', 'e', 'B', 'B', 'B', 'e', 'e', 'e'],
+    ['e', 'B', 'e', 'B', 'e', 'B', 'e', 'e'],
+    ['A', 'e', 'e', 'B', 'e', 'e', 'B', 'e'],
+    ['e', 'e', 'e', 'B', 'e', 'e', 'e', 'B'],
 ];
 
 function play(r,c) {
-    if (checkAvail(r, c)) {
-        if (northDirection(r,c)) {
-            result = true;
-        } else {
-            if (eastDirection(r,c)) {
-                result = true;
-            } else {
-                if (southDirection(r,c)) {
-                    result = true;
-                } else {
-                    westDirection(r,c);
-                }
-            }
-        }
-    } else {
-        result = false;
+    checkField(r,c);
+    if (result) {
+        replaceMarks(r,c);
     }
     return plansza;
 }
 
+function checkField(row, column) {
+    if (checkAvail(row, column)) {
+        checkDirections(row, column);
+    } else {
+        result = false;
+    }
+    return result;
+}
 function checkAvail(wierszCA, kolumnaCA) {
     if (plansza[wierszCA][kolumnaCA] === 'e') {
         result = true;
     } else {
         result = false;
-        //console.log('Nie możesz postawić pionka bo pole nie jest puste');
     }
     return result;
+}
+function checkDirections(r, c) {
+    if (northDirection(r,c)) {
+        result = true;
+    } else {
+        if (northEastDirection(r,c)) {
+            result = true;
+        } else {
+            if (eastDirection(r,c)) {
+                result = true;
+            } else {
+                if (southEastDirection(r,c)) {
+                    result = true;
+                } else {
+                    if (southDirection(r,c)) {
+                        result = true;
+                    } else {
+                        if (southWestDirection(r,c)) {
+                            result = true;
+                        } else {
+                            if (westDirection(r,c)) {
+                                result = true;
+                            } else {
+                                northWestDirection(r,c);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 function northDirection(wierszCN, kolumnaCN) {
@@ -54,19 +79,21 @@ function northDirection(wierszCN, kolumnaCN) {
         checkRopeN(wierszCN, kolumnaCN);
     } else {
         result = false
-        console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
+        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
     }
     return result;
 }
-function southDirection(wierszCN, kolumnaCN) {
-    wierszCN++;
+function northEastDirection(wierszCN, kolumnaCN) {
+    wierszCN--;
+    kolumnaCN++;
     if (plansza[wierszCN][kolumnaCN] === 'B') {
         result = true;
-        wierszCN++;
-        checkRopeS(wierszCN, kolumnaCN);
+        wierszCN--;
+        kolumnaCN++;
+        checkRopeNE(wierszCN, kolumnaCN);
     } else {
-        result = false;
-        console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
+        result = false
+        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
     }
     return result;
 }
@@ -78,7 +105,47 @@ function eastDirection(wierszCN, kolumnaCN) {
         checkRopeE(wierszCN, kolumnaCN);
     } else {
         result = false;
-        console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
+        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
+    }
+    return result;
+}
+function southEastDirection(wierszCN, kolumnaCN) {
+    wierszCN++;
+    kolumnaCN++;
+    if (plansza[wierszCN][kolumnaCN] === 'B') {
+        result = true;
+        wierszCN++;
+        kolumnaCN++;
+        checkRopeSE(wierszCN, kolumnaCN);
+    } else {
+        result = false;
+        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
+    }
+    return result;
+}
+function southDirection(wierszCN, kolumnaCN) {
+    wierszCN++;
+    if (plansza[wierszCN][kolumnaCN] === 'B') {
+        result = true;
+        wierszCN++;
+        checkRopeS(wierszCN, kolumnaCN);
+    } else {
+        result = false;
+        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
+    }
+    return result;
+}
+function southWestDirection(wierszCN, kolumnaCN) {
+    wierszCN++;
+    kolumnaCN--;
+    if (plansza[wierszCN][kolumnaCN] === 'B') {
+        result = true;
+        wierszCN++;
+        kolumnaCN--;
+        checkRopeSW(wierszCN, kolumnaCN);
+    } else {
+        result = false;
+        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
     }
     return result;
 }
@@ -90,7 +157,21 @@ function westDirection(wierszCN, kolumnaCN) {
         checkRopeW(wierszCN, kolumnaCN);
     } else {
         result = false;
-        console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
+        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
+    }
+    return result;
+}
+function northWestDirection(wierszCN, kolumnaCN) {
+    wierszCN--;
+    kolumnaCN--;
+    if (plansza[wierszCN][kolumnaCN] === 'B') {
+        result = true;
+        wierszCN--;
+        kolumnaCN--;
+        checkRopeNW(wierszCN, kolumnaCN);
+    } else {
+        result = false;
+        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
     }
     return result;
 }
@@ -101,9 +182,10 @@ function checkRopeN(wierszCR, kolumnaCR) {
     }
     checkEnd(wierszCR, kolumnaCR);
 }
-function checkRopeS(wierszCR, kolumnaCR) {
-    while (wierszCR < 7 && plansza[wierszCR][kolumnaCR] === 'B') {
-        wierszCR++;
+function checkRopeNE(wierszCR, kolumnaCR) {
+    while (wierszCR > 0 && kolumnaCR < 7 && plansza[wierszCR][kolumnaCR] === 'B') {
+        wierszCR--;
+        kolumnaCR++;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
@@ -113,8 +195,35 @@ function checkRopeE(wierszCR, kolumnaCR) {
     }
     checkEnd(wierszCR, kolumnaCR);
 }
+function checkRopeSE(wierszCR, kolumnaCR) {
+    while ((wierszCR < 7 || kolumnaCR < 7 )&& plansza[wierszCR][kolumnaCR] === 'B') {
+        wierszCR++;
+        kolumnaCR++;
+    }
+    checkEnd(wierszCR, kolumnaCR);
+}
+function checkRopeS(wierszCR, kolumnaCR) {
+    while (wierszCR < 7 && plansza[wierszCR][kolumnaCR] === 'B') {
+        wierszCR++;
+    }
+    checkEnd(wierszCR, kolumnaCR);
+}
+function checkRopeSW(wierszCR, kolumnaCR) {
+    while (kolumnaCR > 0 && wierszCR < 7 && plansza[wierszCR][kolumnaCR] === 'B') {
+        wierszCR++;
+        kolumnaCR--;
+    }
+    checkEnd(wierszCR, kolumnaCR);
+}
 function checkRopeW(wierszCR, kolumnaCR) {
     while (kolumnaCR > 0 && plansza[wierszCR][kolumnaCR] === 'B') {
+        kolumnaCR--;
+    }
+    checkEnd(wierszCR, kolumnaCR);
+}
+function checkRopeNW(wierszCR, kolumnaCR) {
+    while ((kolumnaCR > 0 || wierszCR > 0 ) && plansza[wierszCR][kolumnaCR] === 'B') {
+        wierszCR--;
         kolumnaCR--;
     }
     checkEnd(wierszCR, kolumnaCR);
@@ -122,39 +231,108 @@ function checkRopeW(wierszCR, kolumnaCR) {
 
 function checkEnd(wierszCE, kolumnaCE) {
     if (plansza[wierszCE][kolumnaCE] === 'A') {
-        console.log('Mamy na koncu A i mozemy przewalutowac');
+        result = true;
+        //console.log('Mamy na koncu A i mozemy przewalutowac');
     } else {
         result = false;
-        console.log('Mamy na koncu B lub e i nie mozemy postawic pionka');
+        //console.log('Mamy na koncu B lub e i nie mozemy postawic pionka');
     }
     return result;
 }
 
+function replaceMarks(wiersz, kolumna) {
+    replaceDirections(wiersz,kolumna);
+    plansza[wiersz][kolumna] = 'A';
+}
+function replaceDirections(r,c) {
+    if (northDirection(r,c)) {
+        changeFieldsN(r,c);
+    }
+    if (northEastDirection(r,c)) {
+        changeFieldsNE(r,c);
+    }
+    if (eastDirection(r,c)) {
+        changeFieldsE(r,c);
+    }
+    if (southEastDirection(r,c)) {
+        changeFieldsSE(r,c);
+    }
+    if (southDirection(r,c)) {
+        changeFieldsS(r,c);
+    }
+    if (southWestDirection(r,c)) {
+        changeFieldsSW(r,c);
+    }
+    if (westDirection(r,c)) {
+        changeFieldsW(r,c);
+    }
+    if (northWestDirection(r,c)) {
+        changeFieldsNW(r,c);
+    }
+}
 
+function changeFieldsN(row,column) {
+    row--;
+    while (plansza[row][column] === 'B') {
+        plansza[row][column] = 'A';
+        row--;
+    }
+}
+function changeFieldsNE(row,column) {
+    row--;
+    column++;
+    while (plansza[row][column] === 'B') {
+        plansza[row][column] = 'A';
+        row--;
+        column++;
+    }
+}
+function changeFieldsE(row,column) {
+    column++;
+    while (plansza[row][column] === 'B') {
+        plansza[row][column] = 'A';
+        column++;
+    }
+}
+function changeFieldsSE(row,column) {
+    row++;
+    column++;
+    while (plansza[row][column] === 'B') {
+        plansza[row][column] = 'A';
+        row++;
+        column++;
+    }
+}
+function changeFieldsS(row,column) {
+    row++;
+    while (plansza[row][column] === 'B') {
+        plansza[row][column] = 'A';
+        row++;
+    }
+}
+function changeFieldsSW(row,column) {
+    row++;
+    column--;
+    while (plansza[row][column] === 'B') {
+        plansza[row][column] = 'A';
+        row++;
+        column--;
+    }
+}
+function changeFieldsW(row,column) {
+    column--;
+    while (plansza[row][column] === 'B') {
+        plansza[row][column] = 'A';
+        column--;
+    }
+}
+function changeFieldsNW(row,column) {
+    row--;
+    column--;
+    while (plansza[row][column] === 'B') {
+        plansza[row][column] = 'A';
+        row--;
+        column--;
+    }
+}
 
-
-//function setupGame(rozmiar) {
-//    document.getElementById('game').style.display = 'block';
-//    setSpace(rozmiar);
-//    addCoins();
-//}
-//
-//function setSpace(rozmiar) {
-//
-//    for (var i=0; i<rozmiar; i++ ) {
-//        for (var j=0; j<rozmiar; j++) {
-//            var wiersz=i+1;
-//            var kolumna=j+1;
-//            if ((i+j)%2==0) {
-//                appendMsg('<div class="euro" style="background-color: darkgreen;">A</div>');
-//            } else {
-//                appendMsg('<div class="dolar" style="background-color: forestgreen;">B</div>');
-//            }
-//        }
-//        appendMsg('<br>');
-//    }
-//}
-
-//function appendMsg(output) {
-//    document.getElementById('game').innerHTML += output;
-//}
