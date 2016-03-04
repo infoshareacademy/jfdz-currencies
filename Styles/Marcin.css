@@ -39,7 +39,7 @@
     font-weight: lighter;
 }
 
-.zdjecie {
+.funkcja .zdjecie {
     width: 250px;
     height: 250px;
     color: white;
@@ -69,7 +69,7 @@
     opacity: 1;
 }
 
-.tlo-funkcji p {padding-top: 100px;}
+.tlo-funkcji p {padding-top: 115px;}
 
 .kalkulator a {background-image: url('../Obrazy/Funkcje/KalkulatroSM.jpg');}
 
