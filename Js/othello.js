@@ -15,6 +15,32 @@ var plansza = [
     ['e', 'e', 'e', 'B', 'e', 'e', 'e', 'B'],
 ];
 
+var player1 = 'A';
+var player2 = 'B';
+var player;
+var enemy;
+
+function game() {
+    for (var round = 0; round < 30; round++) {
+        for (var i = 0; i < 2; i++) {
+            if (i === 0) {
+                player = player1;
+                enemy = player2;
+                //var r = podaj wartość wiersza;
+                //var c = podaj wartość kolumny;
+                play(r,c);
+            } else {
+                player = player2;
+                enemy = player1;
+                //var r = podaj wartość wiersza;
+                //var c = podaj wartość kolumny;
+                play(r,c);
+            }
+        }
+    }
+}
+
+
 function play(r,c) {
     checkField(r,c);
     if (result) {
@@ -73,156 +99,148 @@ function checkDirections(r, c) {
 
 function northDirection(wierszCN, kolumnaCN) {
     wierszCN--;
-    if (plansza[wierszCN][kolumnaCN] === 'B') {
+    if (plansza[wierszCN][kolumnaCN] === enemy) {
         result = true;
         wierszCN--;
         checkRopeN(wierszCN, kolumnaCN);
     } else {
         result = false
-        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
     }
     return result;
 }
 function northEastDirection(wierszCN, kolumnaCN) {
     wierszCN--;
     kolumnaCN++;
-    if (plansza[wierszCN][kolumnaCN] === 'B') {
+    if (plansza[wierszCN][kolumnaCN] === enemy) {
         result = true;
         wierszCN--;
         kolumnaCN++;
         checkRopeNE(wierszCN, kolumnaCN);
     } else {
         result = false
-        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
     }
     return result;
 }
 function eastDirection(wierszCN, kolumnaCN) {
     kolumnaCN++;
-    if (plansza[wierszCN][kolumnaCN] === 'B') {
+    if (plansza[wierszCN][kolumnaCN] === enemy) {
         result = true;
         kolumnaCN++;
         checkRopeE(wierszCN, kolumnaCN);
     } else {
         result = false;
-        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
     }
     return result;
 }
 function southEastDirection(wierszCN, kolumnaCN) {
     wierszCN++;
     kolumnaCN++;
-    if (plansza[wierszCN][kolumnaCN] === 'B') {
+    if (plansza[wierszCN][kolumnaCN] === enemy) {
         result = true;
         wierszCN++;
         kolumnaCN++;
         checkRopeSE(wierszCN, kolumnaCN);
     } else {
         result = false;
-        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
     }
     return result;
 }
 function southDirection(wierszCN, kolumnaCN) {
     wierszCN++;
-    if (plansza[wierszCN][kolumnaCN] === 'B') {
+    if (plansza[wierszCN][kolumnaCN] === enemy) {
         result = true;
         wierszCN++;
         checkRopeS(wierszCN, kolumnaCN);
     } else {
         result = false;
-        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
     }
     return result;
 }
 function southWestDirection(wierszCN, kolumnaCN) {
     wierszCN++;
     kolumnaCN--;
-    if (plansza[wierszCN][kolumnaCN] === 'B') {
+    if (plansza[wierszCN][kolumnaCN] === enemy) {
         result = true;
         wierszCN++;
         kolumnaCN--;
         checkRopeSW(wierszCN, kolumnaCN);
     } else {
         result = false;
-        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
     }
     return result;
 }
 function westDirection(wierszCN, kolumnaCN) {
     kolumnaCN--;
-    if (plansza[wierszCN][kolumnaCN] === 'B') {
+    if (plansza[wierszCN][kolumnaCN] === enemy) {
         result = true;
         kolumnaCN--;
         checkRopeW(wierszCN, kolumnaCN);
     } else {
         result = false;
-        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
     }
     return result;
 }
 function northWestDirection(wierszCN, kolumnaCN) {
     wierszCN--;
     kolumnaCN--;
-    if (plansza[wierszCN][kolumnaCN] === 'B') {
+    if (plansza[wierszCN][kolumnaCN] === enemy) {
         result = true;
         wierszCN--;
         kolumnaCN--;
         checkRopeNW(wierszCN, kolumnaCN);
     } else {
         result = false;
-        //console.log('Nie możesz postawić pionka bo Sasiad = A lub e');
     }
     return result;
 }
 
 function checkRopeN(wierszCR, kolumnaCR) {
-    while (wierszCR > 0 && plansza[wierszCR][kolumnaCR] === 'B') {
+    while (wierszCR > 0 && plansza[wierszCR][kolumnaCR] === enemy) {
         wierszCR--;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeNE(wierszCR, kolumnaCR) {
-    while (wierszCR > 0 && kolumnaCR < 7 && plansza[wierszCR][kolumnaCR] === 'B') {
+    while (wierszCR > 0 && kolumnaCR < 7 && plansza[wierszCR][kolumnaCR] === enemy) {
         wierszCR--;
         kolumnaCR++;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeE(wierszCR, kolumnaCR) {
-    while (kolumnaCR < 7 && plansza[wierszCR][kolumnaCR] === 'B') {
+    while (kolumnaCR < 7 && plansza[wierszCR][kolumnaCR] === enemy) {
         kolumnaCR++;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeSE(wierszCR, kolumnaCR) {
-    while ((wierszCR < 7 || kolumnaCR < 7 )&& plansza[wierszCR][kolumnaCR] === 'B') {
+    while ((wierszCR < 7 || kolumnaCR < 7 )&& plansza[wierszCR][kolumnaCR] === enemy) {
         wierszCR++;
         kolumnaCR++;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeS(wierszCR, kolumnaCR) {
-    while (wierszCR < 7 && plansza[wierszCR][kolumnaCR] === 'B') {
+    while (wierszCR < 7 && plansza[wierszCR][kolumnaCR] === enemy) {
         wierszCR++;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeSW(wierszCR, kolumnaCR) {
-    while (kolumnaCR > 0 && wierszCR < 7 && plansza[wierszCR][kolumnaCR] === 'B') {
+    while (kolumnaCR > 0 && wierszCR < 7 && plansza[wierszCR][kolumnaCR] === enemy) {
         wierszCR++;
         kolumnaCR--;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeW(wierszCR, kolumnaCR) {
-    while (kolumnaCR > 0 && plansza[wierszCR][kolumnaCR] === 'B') {
+    while (kolumnaCR > 0 && plansza[wierszCR][kolumnaCR] === enemy) {
         kolumnaCR--;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeNW(wierszCR, kolumnaCR) {
-    while ((kolumnaCR > 0 || wierszCR > 0 ) && plansza[wierszCR][kolumnaCR] === 'B') {
+    while ((kolumnaCR > 0 || wierszCR > 0 ) && plansza[wierszCR][kolumnaCR] === enemy) {
         wierszCR--;
         kolumnaCR--;
     }
@@ -230,19 +248,17 @@ function checkRopeNW(wierszCR, kolumnaCR) {
 }
 
 function checkEnd(wierszCE, kolumnaCE) {
-    if (plansza[wierszCE][kolumnaCE] === 'A') {
+    if (plansza[wierszCE][kolumnaCE] === player) {
         result = true;
-        //console.log('Mamy na koncu A i mozemy przewalutowac');
     } else {
         result = false;
-        //console.log('Mamy na koncu B lub e i nie mozemy postawic pionka');
     }
     return result;
 }
 
 function replaceMarks(wiersz, kolumna) {
     replaceDirections(wiersz,kolumna);
-    plansza[wiersz][kolumna] = 'A';
+    plansza[wiersz][kolumna] = player;
 }
 function replaceDirections(r,c) {
     if (northDirection(r,c)) {
@@ -273,64 +289,64 @@ function replaceDirections(r,c) {
 
 function changeFieldsN(row,column) {
     row--;
-    while (plansza[row][column] === 'B') {
-        plansza[row][column] = 'A';
+    while (plansza[row][column] === enemy) {
+        plansza[row][column] = player;
         row--;
     }
 }
 function changeFieldsNE(row,column) {
     row--;
     column++;
-    while (plansza[row][column] === 'B') {
-        plansza[row][column] = 'A';
+    while (plansza[row][column] === enemy) {
+        plansza[row][column] = player;
         row--;
         column++;
     }
 }
 function changeFieldsE(row,column) {
     column++;
-    while (plansza[row][column] === 'B') {
-        plansza[row][column] = 'A';
+    while (plansza[row][column] === enemy) {
+        plansza[row][column] = player;
         column++;
     }
 }
 function changeFieldsSE(row,column) {
     row++;
     column++;
-    while (plansza[row][column] === 'B') {
-        plansza[row][column] = 'A';
+    while (plansza[row][column] === enemy) {
+        plansza[row][column] = player;
         row++;
         column++;
     }
 }
 function changeFieldsS(row,column) {
     row++;
-    while (plansza[row][column] === 'B') {
-        plansza[row][column] = 'A';
+    while (plansza[row][column] === enemy) {
+        plansza[row][column] = player;
         row++;
     }
 }
 function changeFieldsSW(row,column) {
     row++;
     column--;
-    while (plansza[row][column] === 'B') {
-        plansza[row][column] = 'A';
+    while (plansza[row][column] === enemy) {
+        plansza[row][column] = player;
         row++;
         column--;
     }
 }
 function changeFieldsW(row,column) {
     column--;
-    while (plansza[row][column] === 'B') {
-        plansza[row][column] = 'A';
+    while (plansza[row][column] === enemy) {
+        plansza[row][column] = player;
         column--;
     }
 }
 function changeFieldsNW(row,column) {
     row--;
     column--;
-    while (plansza[row][column] === 'B') {
-        plansza[row][column] = 'A';
+    while (plansza[row][column] === enemy) {
+        plansza[row][column] = player;
         row--;
         column--;
     }
