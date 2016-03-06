@@ -42,6 +42,13 @@ footer a:hover {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+.kontakt h1 {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 .up {
     width: 200px;
     height: 200px;
@@ -52,6 +59,7 @@ footer a:hover {
     color: white;
     padding-top: 20px;
     padding-bottom: 10px;
+    height: 1000px;
 }
 .namiary {
     width: 333px;
@@ -67,7 +75,9 @@ footer a:hover {
 }
 
 
-
+.active {
+    border-bottom: 1px solid #fff;
+}
 
 
 

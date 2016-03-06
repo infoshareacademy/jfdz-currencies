@@ -38,7 +38,7 @@ header .NaviField {
 }
 .formularz {
     width: 310px;
-    margin-left:  40%;
+    margin-left:  35%;
     margin-top: 10px;
     background-color: #fff;
     border: 2px solid black;
@@ -123,16 +123,25 @@ header .NaviField {
     margin-right: 2px;
 }
 
-.wyslij{
-  position: absolute;
-  top: 350px;
-  left: 35%;
+.wyslij {
+    margin-top: 50px;
+    text-align: center;
 }
 
-.bwyslij{
-    height: 40px;
-    width: 400px;
-    border-radius: 5px;
-    background-color: #ff584c;
-    font-size: 16px;
+.bwyslij {
+    height: 80px;
+    width: 500px;
+    border-radius: 10px;
+    border: 5px solid red;
+    background-color: rgba(255,0,0,0.4);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: background-color 1s linear;
+ }
+
+.bwyslij:hover {
+    background-color: rgba(255,0,0,1);
 }

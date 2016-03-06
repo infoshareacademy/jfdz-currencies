@@ -1,15 +1,5 @@
 function MenuOnClick(p1) {
-    document.getElementById('call-to-action').style.display = 'none';
-    document.getElementById('onas').style.display = 'none';
-    switch (p1) {
-        case 1:
-            document.getElementById('call-to-action').style.display = 'block';
-            break;
-        case 2:
-            document.getElementById('onas').style.display = 'block';
-            break;
-
-    }
+    document.getElementById('call-to-action').style.display = 'block';
 }
 
 

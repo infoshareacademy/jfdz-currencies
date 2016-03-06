@@ -11,14 +11,14 @@
     <link href="Styles/Marcin.css" type="text/css" rel="stylesheet">
     <link href="Styles/Piotr.css" type="text/css" rel="stylesheet">
     <link href="Styles/Ola.css" type="text/css" rel="stylesheet">
-    <script src="http//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="Js/piotr.js" language=javascript type="text/javascript"></script>
-    <!--<script src="Js/Ola.js" language=javascript type="text/javascript"></script>-->
+    <script src="Js/othello.js"></script>
+    <script src="Js/Ola.js" language=javascript type="text/javascript"></script>
 </head>
 
 <body>
-<a id="gora"></a>
-<header class="content">
+<header id="menu" class="content">
     <div class="naglowekStrony">
         <div class="logo left">
             <img class="logo" src="Obrazy/logoKalkulator.png" alt="logo" align="left"/>
@@ -29,31 +29,35 @@
 
         <ul>
             <li class="NaviField right">
-                <label class="bhome" >Kontakt</label>
+                <a class="bhome" href="#contact">Kontakt</a>
             </li>
             <li class="NaviField right">
-                <label class="bhome" onclick="MenuOnClick(2)">O nas</label>
+                <a class="bhome" href="#about" onclick="MenuOnClick(2)">O nas</a>
             </li>
             <li class="NaviField right">
-                <a href="index.html">Produkty</a>
+                <a href="#products">Produkty</a>
             </li>
             <li class="NaviField right">
-                <a href="index.html">Menu</a>
-
+                <a href="#menu" class="active">Menu</a>
             </li>
         </ul>
     </div>
 
     <div class="podklad"></div>
-    <!--<div><p>Puls walut<br>Reagujemy na zmiany!</p></div>-->
+
     <div class="slajder left">
         <div class="szarfa">Puls walut<br>Reagujemy na zmiany!</div>
-    </div>
-    <div class="wyslij clear">
-        <button class="bwyslij" onclick="MenuOnClick(1)">Dowiedz się więcej</button>
+        <div class="wyslij clear">
+            <button class="bwyslij" onclick="MenuOnClick(1)">Dowiedz się więcej</button>
+        </div>
     </div>
 
+
 </header>
+
+<div id="game">
+
+</div>
 
 <main class="tresc-strony content">
 
@@ -67,20 +71,15 @@
                 <label for="fphone">Nr telefonu</label>
                 <input id="fphone" name="phone" type="text" placeholder="999-999-999">
                 <input type="hidden" name="receiver" value="pperetko@gmail.com">
-                <input id="submit" name="submit" type="submit" value="Wyślij"
-                       onclick="return  FormOnClick(document.forms[0])">
-
-
+                <input id="submit" name="submit" type="submit" value="Wyślij" onclick="return  ValidateFrom(document.forms[0])">
             </form>
         </div>
     </div>
-
-
     <div class="clear"></div>
 
     <div id="main_content">
 
-        <div class="bloki funkcje">
+        <div id="products" class="bloki funkcje">
             <div class="funkcja kalkulator left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
@@ -89,6 +88,7 @@
                 </a>
                 <p class="opis-funkcji">Kalkulator walutowy oparty na aktualnym średnim kursie walut obcych publikowanych przez Narodowy Bank Polski</p>
             </div>
+
             <div class="funkcja srednia left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
@@ -97,6 +97,7 @@
                 </a>
                 <p class="opis-funkcji">Sprawdź aktualne średnie kursy walut za ostatnie 30 dni oraz zobacz jak dany kurs się zmieniał.</p>
             </div>
+
             <div class="funkcja lokalizator left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
@@ -105,6 +106,7 @@
                 </a>
                 <p class="opis-funkcji">Znajdź najbliższy kantor lub Placówkę Banku, w której możesz dokonać wymiany waluty.</p>
             </div>
+
             <div class="funkcja nbp left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
@@ -113,39 +115,51 @@
                 </a>
                 <p class="opis-funkcji">Jeżeli interesują Ciebie bardziej ogólne informacje dotyczące polityki pienieżnej zapraszamy na strony NBP.</p>
             </div>
+
             <div class="clear"></div>
+
         </div>
 
         <div class="bloki dodatki">
+
             <a class="dodatek-komunikat">
                 <p>Komunikaty</p>
             </a>
+
             <a class="dodatek-z-ostatniej-chwili">
                 <p>Z ostatniej chwili</p>
             </a>
+
             <a class="dodatek-aplikacja-mobilna">
                 <p> Aplikacja mobilna</p>
             </a>
+
             <a class="dodatek-regulamin">
                 <p>Regulamin</p>
             </a>
+
             <a class="dodatek-powiadomienieSMS">
                 <p>Powiadomienia SMS</p>
             </a>
+
             <a class="dodatek-szukaj">
                 <p>Szukaj</p>
             </a>
+
             <a class="dodatek-zlecenia-stale">
                 <p>Zlecenia stałe</p>
             </a>
+
             <a class="dodatek-znajomi">
                 <p>Znajomi</p>
             </a>
+
             <div class="clear"></div>
+
         </div>
 
     </div>
-    <div id="onas">
+    <div id="about">
         <h1>MAPA TEAM</h1>
 
         <div class="poz_onas left">
@@ -199,11 +213,9 @@
 
 </main>
 
-<footer class="footer content">
+<footer id="contact" class="footer content">
     <div class="kontakt">
-        <div>
-            <img class="logo" src="Obrazy/logoKalkulator.png" alt="logo"/>
-        </div>
+        <h1>Kontakt</h1>
         <div class="namiary">
             <img src="Obrazy/Dodatki/mobilne.png"/>
             <div class="desc">
@@ -234,7 +246,7 @@
         </div>
 
         <br>
-        <a>&copy; InfoShare Academy // MAPA Team 2015</a>
+        <a href="#game" onclick="setupGame(8)">&copy; InfoShare Academy // MAPA Team 2015</a>
     </div>
 </footer>
 
