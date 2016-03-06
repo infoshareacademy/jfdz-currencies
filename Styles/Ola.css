@@ -7,11 +7,11 @@ footer a:hover {
 .gora {
     color: black;
 }
-.media {
-    margin-top: 20px;
-}
+
+
+
 .slajder {
-    background-image: url("../Obrazy/Zajawka/Kalkulator.jpg");
+    background: url("../Obrazy/Zajawka/Kalkulator.jpg") fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -57,14 +57,19 @@ footer a:hover {
 }
 .stopka {
     background-color: black;
-    color: white;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 10px;
-    height: 100px;
+    height: 180px;
+    margin-top: 20px;
+    text-align: center;
+}
+.stopka a {
+    color: white;
 }
 .namiary {
     width: 333px;
-    text-align: center;
+
+
     display: inline-block;
     padding-top: 5px;
     margin-top: 5px;
@@ -79,6 +84,28 @@ footer a:hover {
 .active {
     border-bottom: 1px solid #fff;
 }
+.hideme
+{
+    opacity:0;
+}
 
-
+.scrollToTop{
+    width:20px;
+    height:30px;
+    padding:10px;
+    text-align:center;
+    /*background: whiteSmoke;*/
+    /*font-weight: bold;*/
+    color: #444;
+    text-decoration: none;
+    position:fixed;
+    top:600px;
+    right:1px;
+    display:none;
+    background: url('../Obrazy/arrow.jpeg') no-repeat 0px 0px;
+    background-size: contain;
+}
+.scrollToTop:hover{
+    text-decoration:none;
+}
 
