@@ -88,4 +88,22 @@ footer a:hover {
     opacity:0;
 }
 
-
+.scrollToTop{
+    width:20px;
+    height:30px;
+    padding:10px;
+    text-align:center;
+    /*background: whiteSmoke;*/
+    /*font-weight: bold;*/
+    color: #444;
+    text-decoration: none;
+    position:fixed;
+    top:600px;
+    right:1px;
+    display:none;
+    background: url('../Obrazy/arrow.jpeg') no-repeat 0px 0px;
+    background-size: contain;
+}
+.scrollToTop:hover{
+    text-decoration:none;
+}
