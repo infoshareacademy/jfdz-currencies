@@ -11,7 +11,7 @@ footer a:hover {
 
 
 .slajder {
-    background-image: url("../Obrazy/Zajawka/Kalkulator.jpg");
+    background: url("../Obrazy/Zajawka/Kalkulator.jpg") fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
