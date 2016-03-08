@@ -1,3 +1,13 @@
+.interactive div {
+    position: relative;
+    text-align: center;
+}
+#othello {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .empty {
     background-size: 80px 80px;
     background-image: url('../Obrazy/Othello/Monety.png');

@@ -2,7 +2,44 @@
  * Created by Marcin on 2016-02-18.
  */
 
-var size = 8;
+var result = false;
+var board = [];
+function setupGame(size) {
+    for (var x = 0; x < size; x++) {
+        board[x] = [];
+        for (var y = 0; y < size; y++) {
+            board[x][y] = {};
+        }
+    }
+    board[3][3] = {counter: 'A'};
+    board[4][4] = {counter: 'A'};
+    board[3][4] = {counter: 'B'};
+    board[4][3] = {counter: 'B'};
+
+    var $game = $('#othello').append(createHtmlBoard(board));
+}
+
+function createHtmlBoard(backGroundBoard, styleBoard) {
+    $table = $('<table>');
+    var size = backGroundBoard.length;
+    for (var x = 0; x < size; x++) {
+        $row = $('<tr>');
+        for (var y = 0; y < size; y++) {
+            $cell = $('<td>');
+            $cell.css({
+                width: 40,
+                height: 40,
+                border: '1px solid #000'
+            });
+            $row.append($cell);
+        }
+        $table.append($row);
+    }
+    return $table;
+}
+
+
+
 var result = false;
 var plansza = [
     ['B', 'e', 'e', 'A', 'e', 'e', 'B', 'e'],
