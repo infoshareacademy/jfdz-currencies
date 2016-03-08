@@ -49,3 +49,46 @@ function onmouseoverboot(){
 
 
 }
+
+function getVar (name, url) {
+    if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&#]*)')).exec(url)) {
+        return decodeURIComponent(name[1]);
+    }
+}
+
+
+
+$(function() {
+
+       $("form").submit(function () {
+        return (ValidateFrom(this));
+       });
+
+});
+
+
+
+$(function(event) {
+
+    if ((getVar('mailerResult', location.search))==='sent') {
+        alert('mail został wysłany');
+
+    var uri = window.location.toString();
+    if (uri.indexOf("?") > 0) {
+        var clean_uri = uri.substring(0, uri.indexOf("?"));
+        window.history.replaceState({}, document.title, clean_uri);
+        window.location = clean_uri;
+    }
+
+    }
+});
+
+
+
+
+
+
+
+
+
+
