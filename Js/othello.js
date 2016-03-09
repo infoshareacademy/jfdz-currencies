@@ -1,10 +1,19 @@
 /**
  * Created by Marcin on 2016-02-18.
  */
-
-var result = false;
+//var result = false;
 var board = [];
+
 function setupGame(size) {
+    createBoard(size);
+    $(document).on('ready click', function () {
+        var board1 = getBoard();
+        var $table = createHtmlBoard(board1, setCounter, placeCounter);
+        $('#othello').empty().append($table);
+    });
+}
+
+function createBoard(size) {
     for (var x = 0; x < size; x++) {
         board[x] = [];
         for (var y = 0; y < size; y++) {
@@ -15,13 +24,13 @@ function setupGame(size) {
     board[4][4] = {counter: 'A'};
     board[3][4] = {counter: 'B'};
     board[4][3] = {counter: 'B'};
-
-    var $game = $('#othello').append(createHtmlBoard(board));
 }
-
-function createHtmlBoard(backGroundBoard, styleBoard) {
+function getBoard() {
+    return board;
+}
+function createHtmlBoard(supBoard, paintField, klikZawodnika) {
     $table = $('<table>');
-    var size = backGroundBoard.length;
+    var size = supBoard.length;
     for (var x = 0; x < size; x++) {
         $row = $('<tr>');
         for (var y = 0; y < size; y++) {
@@ -31,60 +40,32 @@ function createHtmlBoard(backGroundBoard, styleBoard) {
                 height: 40,
                 border: '1px solid #000'
             });
+            $cell.click({ posX: x, posY: y}, klikZawodnika);
+            paintField($cell, board[x][y]);
             $row.append($cell);
         }
         $table.append($row);
     }
     return $table;
 }
+function placeCounter(event) {
+    placePlayer(event.data.posX, event.data.posY);
+}
 
+function placePlayer(x, y) {
+    console.log('Klikniecie w pole' + x + y);
+    checkField(x,y);
+    if (result) {
+        replaceMarks(x,y);
+    }
+    //board[x][y] = {counter: 'A'};
+}
 
+function setCounter ($element, cell) {
+    $element.css('backgroundColor', cell.counter === 'A' ? 'lightblue' : cell.counter === 'B' ? 'blue' : '');
+}
 
 var result = false;
-var plansza = [
-    ['B', 'e', 'e', 'A', 'e', 'e', 'B', 'e'],
-    ['e', 'A', 'e', 'B', 'e', 'B', 'e', 'e'],
-    ['e', 'e', 'B', 'B', 'B', 'e', 'e', 'e'],
-    ['B', 'B', 'B', 'e', 'B', 'B', 'B', 'B'],
-    ['e', 'e', 'B', 'B', 'B', 'e', 'e', 'e'],
-    ['e', 'B', 'e', 'B', 'e', 'B', 'e', 'e'],
-    ['A', 'e', 'e', 'B', 'e', 'e', 'B', 'e'],
-    ['e', 'e', 'e', 'B', 'e', 'e', 'e', 'B'],
-];
-
-var player1 = 'A';
-var player2 = 'B';
-var player;
-var enemy;
-
-function game() {
-    for (var round = 0; round < 30; round++) {
-        for (var i = 0; i < 2; i++) {
-            if (i === 0) {
-                player = player1;
-                enemy = player2;
-                //var r = podaj wartość wiersza;
-                //var c = podaj wartość kolumny;
-                play(r,c);
-            } else {
-                player = player2;
-                enemy = player1;
-                //var r = podaj wartość wiersza;
-                //var c = podaj wartość kolumny;
-                play(r,c);
-            }
-        }
-    }
-}
-
-
-function play(r,c) {
-    checkField(r,c);
-    if (result) {
-        replaceMarks(r,c);
-    }
-    return plansza;
-}
 
 function checkField(row, column) {
     if (checkAvail(row, column)) {
@@ -95,7 +76,7 @@ function checkField(row, column) {
     return result;
 }
 function checkAvail(wierszCA, kolumnaCA) {
-    if (plansza[wierszCA][kolumnaCA] === 'e') {
+    if (board[wierszCA][kolumnaCA].counter === undefined) {
         result = true;
     } else {
         result = false;
@@ -136,7 +117,7 @@ function checkDirections(r, c) {
 
 function northDirection(wierszCN, kolumnaCN) {
     wierszCN--;
-    if (plansza[wierszCN][kolumnaCN] === enemy) {
+    if (board[wierszCN][kolumnaCN].counter === 'B') {
         result = true;
         wierszCN--;
         checkRopeN(wierszCN, kolumnaCN);
@@ -148,7 +129,7 @@ function northDirection(wierszCN, kolumnaCN) {
 function northEastDirection(wierszCN, kolumnaCN) {
     wierszCN--;
     kolumnaCN++;
-    if (plansza[wierszCN][kolumnaCN] === enemy) {
+    if (board[wierszCN][kolumnaCN].counter === 'B') {
         result = true;
         wierszCN--;
         kolumnaCN++;
@@ -160,7 +141,7 @@ function northEastDirection(wierszCN, kolumnaCN) {
 }
 function eastDirection(wierszCN, kolumnaCN) {
     kolumnaCN++;
-    if (plansza[wierszCN][kolumnaCN] === enemy) {
+    if (board[wierszCN][kolumnaCN].counter === 'B') {
         result = true;
         kolumnaCN++;
         checkRopeE(wierszCN, kolumnaCN);
@@ -172,7 +153,7 @@ function eastDirection(wierszCN, kolumnaCN) {
 function southEastDirection(wierszCN, kolumnaCN) {
     wierszCN++;
     kolumnaCN++;
-    if (plansza[wierszCN][kolumnaCN] === enemy) {
+    if (board[wierszCN][kolumnaCN].counter === 'B') {
         result = true;
         wierszCN++;
         kolumnaCN++;
@@ -184,7 +165,7 @@ function southEastDirection(wierszCN, kolumnaCN) {
 }
 function southDirection(wierszCN, kolumnaCN) {
     wierszCN++;
-    if (plansza[wierszCN][kolumnaCN] === enemy) {
+    if (board[wierszCN][kolumnaCN].counter === 'B') {
         result = true;
         wierszCN++;
         checkRopeS(wierszCN, kolumnaCN);
@@ -196,7 +177,7 @@ function southDirection(wierszCN, kolumnaCN) {
 function southWestDirection(wierszCN, kolumnaCN) {
     wierszCN++;
     kolumnaCN--;
-    if (plansza[wierszCN][kolumnaCN] === enemy) {
+    if (board[wierszCN][kolumnaCN].counter === 'B') {
         result = true;
         wierszCN++;
         kolumnaCN--;
@@ -208,7 +189,7 @@ function southWestDirection(wierszCN, kolumnaCN) {
 }
 function westDirection(wierszCN, kolumnaCN) {
     kolumnaCN--;
-    if (plansza[wierszCN][kolumnaCN] === enemy) {
+    if (board[wierszCN][kolumnaCN].counter === 'B') {
         result = true;
         kolumnaCN--;
         checkRopeW(wierszCN, kolumnaCN);
@@ -220,7 +201,7 @@ function westDirection(wierszCN, kolumnaCN) {
 function northWestDirection(wierszCN, kolumnaCN) {
     wierszCN--;
     kolumnaCN--;
-    if (plansza[wierszCN][kolumnaCN] === enemy) {
+    if (board[wierszCN][kolumnaCN].counter === 'B') {
         result = true;
         wierszCN--;
         kolumnaCN--;
@@ -232,52 +213,52 @@ function northWestDirection(wierszCN, kolumnaCN) {
 }
 
 function checkRopeN(wierszCR, kolumnaCR) {
-    while (wierszCR > 0 && plansza[wierszCR][kolumnaCR] === enemy) {
+    while (wierszCR > 0 && board[wierszCR][kolumnaCR].counter === 'B') {
         wierszCR--;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeNE(wierszCR, kolumnaCR) {
-    while (wierszCR > 0 && kolumnaCR < 7 && plansza[wierszCR][kolumnaCR] === enemy) {
+    while (wierszCR > 0 && kolumnaCR < 7 && board[wierszCR][kolumnaCR].counter === 'B') {
         wierszCR--;
         kolumnaCR++;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeE(wierszCR, kolumnaCR) {
-    while (kolumnaCR < 7 && plansza[wierszCR][kolumnaCR] === enemy) {
+    while (kolumnaCR < 7 && board[wierszCR][kolumnaCR].counter === 'B') {
         kolumnaCR++;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeSE(wierszCR, kolumnaCR) {
-    while ((wierszCR < 7 || kolumnaCR < 7 )&& plansza[wierszCR][kolumnaCR] === enemy) {
+    while ((wierszCR < 7 || kolumnaCR < 7 )&& board[wierszCR][kolumnaCR].counter === 'B') {
         wierszCR++;
         kolumnaCR++;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeS(wierszCR, kolumnaCR) {
-    while (wierszCR < 7 && plansza[wierszCR][kolumnaCR] === enemy) {
+    while (wierszCR < 7 && board[wierszCR][kolumnaCR] === 'B') {
         wierszCR++;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeSW(wierszCR, kolumnaCR) {
-    while (kolumnaCR > 0 && wierszCR < 7 && plansza[wierszCR][kolumnaCR] === enemy) {
+    while (kolumnaCR > 0 && wierszCR < 7 && board[wierszCR][kolumnaCR] === 'B') {
         wierszCR++;
         kolumnaCR--;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeW(wierszCR, kolumnaCR) {
-    while (kolumnaCR > 0 && plansza[wierszCR][kolumnaCR] === enemy) {
+    while (kolumnaCR > 0 && board[wierszCR][kolumnaCR] === 'B') {
         kolumnaCR--;
     }
     checkEnd(wierszCR, kolumnaCR);
 }
 function checkRopeNW(wierszCR, kolumnaCR) {
-    while ((kolumnaCR > 0 || wierszCR > 0 ) && plansza[wierszCR][kolumnaCR] === enemy) {
+    while ((kolumnaCR > 0 || wierszCR > 0 ) && board[wierszCR][kolumnaCR] === 'B') {
         wierszCR--;
         kolumnaCR--;
     }
@@ -285,7 +266,7 @@ function checkRopeNW(wierszCR, kolumnaCR) {
 }
 
 function checkEnd(wierszCE, kolumnaCE) {
-    if (plansza[wierszCE][kolumnaCE] === player) {
+    if (board[wierszCE][kolumnaCE].counter === 'A') {
         result = true;
     } else {
         result = false;
@@ -295,7 +276,7 @@ function checkEnd(wierszCE, kolumnaCE) {
 
 function replaceMarks(wiersz, kolumna) {
     replaceDirections(wiersz,kolumna);
-    plansza[wiersz][kolumna] = player;
+    board[wiersz][kolumna] = {counter: 'A'};
 }
 function replaceDirections(r,c) {
     if (northDirection(r,c)) {
@@ -326,64 +307,64 @@ function replaceDirections(r,c) {
 
 function changeFieldsN(row,column) {
     row--;
-    while (plansza[row][column] === enemy) {
-        plansza[row][column] = player;
+    while (board[row][column].counter === 'B') {
+        board[row][column] = {counter: 'A'};
         row--;
     }
 }
 function changeFieldsNE(row,column) {
     row--;
     column++;
-    while (plansza[row][column] === enemy) {
-        plansza[row][column] = player;
+    while (board[row][column].counter === 'B') {
+        board[row][column] = {counter: 'A'};
         row--;
         column++;
     }
 }
 function changeFieldsE(row,column) {
     column++;
-    while (plansza[row][column] === enemy) {
-        plansza[row][column] = player;
+    while (board[row][column].counter === 'B') {
+        board[row][column] = {counter: 'A'};
         column++;
     }
 }
 function changeFieldsSE(row,column) {
     row++;
     column++;
-    while (plansza[row][column] === enemy) {
-        plansza[row][column] = player;
+    while (board[row][column].counter === 'B') {
+        board[row][column] = {counter: 'A'};
         row++;
         column++;
     }
 }
 function changeFieldsS(row,column) {
     row++;
-    while (plansza[row][column] === enemy) {
-        plansza[row][column] = player;
+    while (board[row][column].counter === 'B') {
+        board[row][column] = {counter: 'A'};
         row++;
     }
 }
 function changeFieldsSW(row,column) {
     row++;
     column--;
-    while (plansza[row][column] === enemy) {
-        plansza[row][column] = player;
+    while (board[row][column].counter === 'B') {
+        board[row][column] = {counter: 'A'};
         row++;
         column--;
     }
 }
 function changeFieldsW(row,column) {
     column--;
-    while (plansza[row][column] === enemy) {
-        plansza[row][column] = player;
+    while (board[row][column].counter === 'B') {
+        board[row][column] = {counter: 'A'};
         column--;
     }
 }
 function changeFieldsNW(row,column) {
     row--;
     column--;
-    while (plansza[row][column] === enemy) {
-        plansza[row][column] = player;
+    while (board[row][column].counter === 'B') {
+        board[row][column] = {counter: 'A'};
         row--;
         column--;
     }
