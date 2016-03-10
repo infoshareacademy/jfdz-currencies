@@ -15,7 +15,6 @@ function setupGame(size) {
         $('#othello').empty().append($table);
     });
 }
-
 function createBoard(size) {
     for (var x = 0; x < size; x++) {
         board[x] = [];
@@ -54,7 +53,6 @@ function createHtmlBoard(supBoard, paintField, klikZawodnika) {
 function placeCounter(event) {
     placePlayer(event.data.posX, event.data.posY);
 }
-
 function placePlayer(x, y) {
     for (var m = 0; m < 2; m++) {
         var actPlayer;
@@ -73,13 +71,9 @@ function placePlayer(x, y) {
         }
     }
 }
-
 function setCounter ($element, cell) {
     $element.css('background-image', cell.counter === 'A' ? 'url("Obrazy/Othello/cirblue.png")' : cell.counter === 'B' ? 'url("Obrazy/Othello/cirred.png")' : '');
 }
-
-
-
 function checkField(row, column, player, enemy) {
     if (checkAvail(row, column)) {
         checkDirections(row, column, player, enemy);
