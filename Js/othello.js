@@ -6,13 +6,19 @@ var player = {p1 : 'B', p2: 'R'}
 var board = [];
 var result = false;
 var round = 0;
+var actPlayer;
+var enemy;
+var redResult;
+var blueResult;
 
 function setupGame(size) {
     createBoard(size);
     $(document).on('ready click', function () {
         var board1 = getBoard();
         var $table = createHtmlBoard(board1, setCounter, placeCounter);
-        $('#othello').empty().append($table);
+        var $playing = getPlayer();
+            $('#othello').empty().append($table);
+            $('.gracz').empty().append($playing);
     });
 }
 function createBoard(size) {
@@ -30,6 +36,10 @@ function createBoard(size) {
 function getBoard() {
     return board;
 }
+
+function getPlayer() {
+    return actPlayer;
+}
 function createHtmlBoard(supBoard, paintField, klikZawodnika) {
     $table = $('<table>');
     var size = supBoard.length;
@@ -42,6 +52,15 @@ function createHtmlBoard(supBoard, paintField, klikZawodnika) {
                 height: 48,
                 border: '1px solid #000'
             });
+            if ((x+y)%2 == 0) {
+                $cell.css({
+                    'background-color': 'greenyellow'
+                });
+            } else {
+                $cell.css({
+                    'background-color': 'yellow'
+                });
+            }
             $cell.click({ posX: x, posY: y}, klikZawodnika);
             paintField($cell, board[x][y]);
             $row.append($cell);
@@ -55,8 +74,6 @@ function placeCounter(event) {
 }
 function placePlayer(x, y) {
     for (var m = 0; m < 2; m++) {
-        var actPlayer;
-        var enemy;
         if (round%2 === 0) {
             actPlayer = player.p1;
             enemy = player.p2;
@@ -76,7 +93,7 @@ function setCounter ($element, cell) {
 }
 
 function checkField(row, column, player, enemy) {
-    if (checkAvail(row, column)) {
+    if (checkAvail(row, column, player, enemy)) {
         checkDirections(row, column, player, enemy);
     } else {
         result = false;
@@ -92,27 +109,7 @@ function checkAvail(wierszCA, kolumnaCA) {
     return result;
 }
 function checkDirections(r, c, player, enemy) {
-    var square = 0;
-    if ((r == 0 || r == 1) && (c == 0 || c == 1)) {
-        square = 1;
-    } else if ((r == 0 || r ==1) && (c == 6 || c ==7)) {
-        square = 2;
-    } else if ((r == 6 || r ==7) && (c == 6 || c ==7)) {
-        square = 3;
-    } else if ((r == 6 || r ==7) && (c == 0 || c ==1)) {
-        square = 4;
-    } else if ((r == 0 || r ==1) && (c >= 2 && c <=5)) {
-        square = 5;
-    } else if ((r >= 2 && r <=5) && (c == 0 || c ==1)) {
-        square = 6;
-    } else if ((r == 6 || r ==7) && (c >= 2 && c <=5)) {
-        square = 7;
-    } else if ((r >= 2 && r <=5) && (c == 0 || c ==1)) {
-        square = 8;
-    } else {
-        square = 0;
-    }
-
+    var square = checkEdges(r, c);
     switch (square) {
         case 1 :
             if (eastDirection(r,c, player, enemy)) {
@@ -270,7 +267,7 @@ function checkDirections(r, c, player, enemy) {
 function northDirection(wierszCN, kolumnaCN, player, enemy) {
     wierszCN--;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        result = true;
+        //result = true;
         wierszCN--;
         checkRopeN(wierszCN, kolumnaCN, player, enemy);
     } else {
@@ -282,7 +279,7 @@ function northEastDirection(wierszCN, kolumnaCN, player, enemy) {
     wierszCN--;
     kolumnaCN++;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        result = true;
+        //result = true;
         wierszCN--;
         kolumnaCN++;
         checkRopeNE(wierszCN, kolumnaCN, player, enemy);
@@ -294,7 +291,7 @@ function northEastDirection(wierszCN, kolumnaCN, player, enemy) {
 function eastDirection(wierszCN, kolumnaCN, player, enemy) {
     kolumnaCN++;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        result = true;
+        //result = true;
         kolumnaCN++;
         checkRopeE(wierszCN, kolumnaCN, player, enemy);
     } else {
@@ -306,7 +303,7 @@ function southEastDirection(wierszCN, kolumnaCN, player, enemy) {
     wierszCN++;
     kolumnaCN++;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        result = true;
+        //result = true;
         wierszCN++;
         kolumnaCN++;
         checkRopeSE(wierszCN, kolumnaCN, player, enemy);
@@ -318,7 +315,7 @@ function southEastDirection(wierszCN, kolumnaCN, player, enemy) {
 function southDirection(wierszCN, kolumnaCN, player, enemy) {
     wierszCN++;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        result = true;
+        //result = true;
         wierszCN++;
         checkRopeS(wierszCN, kolumnaCN, player, enemy);
     } else {
@@ -330,7 +327,7 @@ function southWestDirection(wierszCN, kolumnaCN, player, enemy) {
     wierszCN++;
     kolumnaCN--;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        result = true;
+        //result = true;
         wierszCN++;
         kolumnaCN--;
         checkRopeSW(wierszCN, kolumnaCN, player, enemy);
@@ -342,7 +339,7 @@ function southWestDirection(wierszCN, kolumnaCN, player, enemy) {
 function westDirection(wierszCN, kolumnaCN, player, enemy) {
     kolumnaCN--;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        result = true;
+        //result = true;
         kolumnaCN--;
         checkRopeW(wierszCN, kolumnaCN, player, enemy);
     } else {
@@ -354,7 +351,7 @@ function northWestDirection(wierszCN, kolumnaCN, player, enemy) {
     wierszCN--;
     kolumnaCN--;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        result = true;
+        //result = true;
         wierszCN--;
         kolumnaCN--;
         checkRopeNW(wierszCN, kolumnaCN, player, enemy);
@@ -429,165 +426,202 @@ function replaceMarks(wiersz, kolumna, player, enemy) {
     board[wiersz][kolumna] = {counter: player};
     replaceDirections(wiersz, kolumna, player, enemy);
 }
-function replaceDirections(r, c, player, enemy) {
-    var square = 0;
-    if ((r == 0 || r == 1) && (c == 0 || c == 1)) {
-        square = 1;
-    } else if ((r == 0 || r ==1) && (c == 6 || c ==7)) {
-        square = 2;
-    } else if ((r == 6 || r ==7) && (c == 6 || c ==7)) {
-        square = 3;
-    } else if ((r == 6 || r ==7) && (c == 0 || c ==1)) {
-        square = 4;
-    } else if ((r == 0 || r ==1) && (c >= 2 && c <=5)) {
-        square = 5;
-    } else if ((r >= 2 && r <=5) && (c == 0 || c ==1)) {
-        square = 6;
-    } else if ((r == 6 || r ==7) && (c >= 2 && c <=5)) {
-        square = 7;
-    } else if ((r >= 2 && r <=5) && (c == 0 || c ==1)) {
-        square = 8;
+function checkEdges (row, column) {
+    var result = 0;
+    if ((row == 0 || row == 1) && (column == 0 || column == 1)) {
+        result = 1;
+    } else if ((row == 0 || row ==1) && (column == 6 || column ==7)) {
+        result = 2;
+    } else if ((row == 6 || row ==7) && (column == 6 || column ==7)) {
+        result = 3;
+    } else if ((row == 6 || row ==7) && (column == 0 || column ==1)) {
+        result = 4;
+    } else if ((row == 0 || row ==1) && (column >= 2 && column <=5)) {
+        result = 5;
+    } else if ((row >= 2 && row <=5) && (column == 6 || column ==7)) {
+        result = 6;
+    } else if ((row == 6 || row ==7) && (column >= 2 && column <=5)) {
+        result = 7;
+    } else if ((row >= 2 && row <=5) && (column == 0 || column ==1)) {
+        result = 8;
     } else {
-        square = 0;
+        result = 0;
     }
+    return result;
+}
+
+function replaceUL(r, c, player, enemy) {
+    if (eastDirection(r,c, player, enemy)) {
+        changeFieldsE(r,c, player, enemy);
+    }
+    if (southEastDirection(r,c, player, enemy)) {
+        changeFieldsSE(r,c, player, enemy);
+    }
+    if (southDirection(r,c, player, enemy)) {
+        changeFieldsS(r,c, player, enemy);
+    }
+}
+
+function replaceUR(r, c, player, enemy) {
+    if (southDirection(r,c, player, enemy)) {
+        changeFieldsS(r,c, player, enemy);
+    }
+    if (southWestDirection(r,c, player, enemy)) {
+        changeFieldsSW(r,c, player, enemy);
+    }
+    if (westDirection(r,c, player, enemy)) {
+        changeFieldsW(r,c, player, enemy);
+    }
+}
+function replaceBR(r, c, player, enemy) {
+    if (northDirection(r,c, player, enemy)) {
+        changeFieldsN(r,c, player, enemy);
+    }
+    if (westDirection(r,c, player, enemy)) {
+        changeFieldsW(r,c, player, enemy);
+    }
+    if (northWestDirection(r,c, player, enemy)) {
+        changeFieldsNW(r,c, player, enemy);
+    }
+}
+function replaceBL(r, c, player, enemy) {
+    if (northDirection(r,c, player, enemy)) {
+        changeFieldsN(r,c, player, enemy);
+    }
+    if (northEastDirection(r,c, player, enemy)) {
+        changeFieldsNE(r,c, player, enemy);
+    }
+    if (eastDirection(r,c, player, enemy)) {
+        changeFieldsE(r,c, player, enemy);
+    }
+}
+function replaceU(r, c, player, enemy) {
+    if (eastDirection(r,c, player, enemy)) {
+        changeFieldsE(r,c, player, enemy);
+    }
+    if (southEastDirection(r,c, player, enemy)) {
+        changeFieldsSE(r,c, player, enemy);
+    }
+    if (southDirection(r,c, player, enemy)) {
+        changeFieldsS(r,c, player, enemy);
+    }
+    if (southWestDirection(r,c, player, enemy)) {
+        changeFieldsSW(r,c, player, enemy);
+    }
+    if (westDirection(r,c, player, enemy)) {
+        changeFieldsW(r,c, player, enemy);
+    }
+}
+function replaceR(r, c, player, enemy) {
+    if (northDirection(r,c, player, enemy)) {
+        changeFieldsN(r,c, player, enemy);
+    }
+    if (southDirection(r,c, player, enemy)) {
+        changeFieldsS(r,c, player, enemy);
+    }
+    if (southWestDirection(r,c, player, enemy)) {
+        changeFieldsSW(r,c, player, enemy);
+    }
+    if (westDirection(r,c, player, enemy)) {
+        changeFieldsW(r,c, player, enemy);
+    }
+    if (northWestDirection(r,c, player, enemy)) {
+        changeFieldsNW(r,c, player, enemy);
+    }
+}
+function replaceB(r, c, player, enemy) {
+    if (northDirection(r,c, player, enemy)) {
+        changeFieldsN(r,c, player, enemy);
+    }
+    if (northEastDirection(r,c, player, enemy)) {
+        changeFieldsNE(r,c, player, enemy);
+    }
+    if (eastDirection(r,c, player, enemy)) {
+        changeFieldsE(r,c, player, enemy);
+    }
+    if (westDirection(r,c, player, enemy)) {
+        changeFieldsW(r,c, player, enemy);
+    }
+    if (northWestDirection(r,c, player, enemy)) {
+        changeFieldsNW(r,c, player, enemy);
+    }
+}
+function replaceL(r, c, player, enemy) {
+    if (northDirection(r,c, player, enemy)) {
+        changeFieldsN(r,c, player, enemy);
+    }
+    if (northEastDirection(r,c, player, enemy)) {
+        changeFieldsNE(r,c, player, enemy);
+    }
+    if (eastDirection(r,c, player, enemy)) {
+        changeFieldsE(r,c, player, enemy);
+    }
+    if (southEastDirection(r,c, player, enemy)) {
+        changeFieldsSE(r,c, player, enemy);
+    }
+    if (southDirection(r,c, player, enemy)) {
+        changeFieldsS(r,c, player, enemy);
+    }
+}
+
+function replaceM(r, c, player, enemy) {
+    if (northDirection(r,c, player, enemy)) {
+        changeFieldsN(r,c, player, enemy);
+    }
+    if (northEastDirection(r,c, player, enemy)) {
+        changeFieldsNE(r,c, player, enemy);
+    }
+    if (eastDirection(r,c, player, enemy)) {
+        changeFieldsE(r,c, player, enemy);
+    }
+    if (southEastDirection(r,c, player, enemy)) {
+        changeFieldsSE(r,c, player, enemy);
+    }
+    if (southDirection(r,c, player, enemy)) {
+        changeFieldsS(r,c, player, enemy);
+    }
+    if (southWestDirection(r,c, player, enemy)) {
+        changeFieldsSW(r,c, player, enemy);
+    }
+    if (westDirection(r,c, player, enemy)) {
+        changeFieldsW(r,c, player, enemy);
+    }
+    if (northWestDirection(r,c, player, enemy)) {
+        changeFieldsNW(r,c, player, enemy);
+    }
+}
+
+
+
+function replaceDirections(r, c, player, enemy) {
+    var square = checkEdges(r, c);
     switch (square) {
         case 1 :
-            if (eastDirection(r,c, player, enemy)) {
-                changeFieldsE(r,c, player, enemy);
-            }
-            if (southEastDirection(r,c, player, enemy)) {
-                changeFieldsSE(r,c, player, enemy);
-            }
-            if (southDirection(r,c, player, enemy)) {
-                changeFieldsS(r,c, player, enemy);
-            }
+            replaceUL(r, c, player, enemy);
             break;
         case 2 :
-            if (southDirection(r,c, player, enemy)) {
-                changeFieldsS(r,c, player, enemy);
-            }
-            if (southWestDirection(r,c, player, enemy)) {
-                changeFieldsSW(r,c, player, enemy);
-            }
-            if (westDirection(r,c, player, enemy)) {
-                changeFieldsW(r,c, player, enemy);
-            }
+            replaceUR(r, c, player, enemy);
             break;
         case 3 :
-            if (northDirection(r,c, player, enemy)) {
-                changeFieldsN(r,c, player, enemy);
-            }
-            if (westDirection(r,c, player, enemy)) {
-                changeFieldsW(r,c, player, enemy);
-            }
-            if (northWestDirection(r,c, player, enemy)) {
-                changeFieldsNW(r,c, player, enemy);
-            }
+            replaceBR(r, c, player, enemy);
             break;
         case 4 :
-            if (northDirection(r,c, player, enemy)) {
-                changeFieldsN(r,c, player, enemy);
-            }
-            if (northEastDirection(r,c, player, enemy)) {
-                changeFieldsNE(r,c, player, enemy);
-            }
-            if (eastDirection(r,c, player, enemy)) {
-                changeFieldsE(r,c, player, enemy);
-            }
+            replaceBL(r, c, player, enemy);
             break;
         case 5 :
-            if (eastDirection(r,c, player, enemy)) {
-                changeFieldsE(r,c, player, enemy);
-            }
-            if (southEastDirection(r,c, player, enemy)) {
-                changeFieldsSE(r,c, player, enemy);
-            }
-            if (southDirection(r,c, player, enemy)) {
-                changeFieldsS(r,c, player, enemy);
-            }
-            if (southWestDirection(r,c, player, enemy)) {
-                changeFieldsSW(r,c, player, enemy);
-            }
-            if (westDirection(r,c, player, enemy)) {
-                changeFieldsW(r,c, player, enemy);
-            }
+            replaceU(r, c, player, enemy);
             break;
         case 6 :
-            if (northDirection(r,c, player, enemy)) {
-                changeFieldsN(r,c, player, enemy);
-            }
-            if (southDirection(r,c, player, enemy)) {
-                changeFieldsS(r,c, player, enemy);
-            }
-            if (southWestDirection(r,c, player, enemy)) {
-                changeFieldsSW(r,c, player, enemy);
-            }
-            if (westDirection(r,c, player, enemy)) {
-                changeFieldsW(r,c, player, enemy);
-            }
-            if (northWestDirection(r,c, player, enemy)) {
-                changeFieldsNW(r,c, player, enemy);
-            }
+            replaceR(r, c, player, enemy);
             break;
         case 7 :
-            if (northDirection(r,c, player, enemy)) {
-                changeFieldsN(r,c, player, enemy);
-            }
-            if (northEastDirection(r,c, player, enemy)) {
-                changeFieldsNE(r,c, player, enemy);
-            }
-            if (eastDirection(r,c, player, enemy)) {
-                changeFieldsE(r,c, player, enemy);
-            }
-            if (westDirection(r,c, player, enemy)) {
-                changeFieldsW(r,c, player, enemy);
-            }
-            if (northWestDirection(r,c, player, enemy)) {
-                changeFieldsNW(r,c, player, enemy);
-            }
+            replaceB(r, c, player, enemy);
             break;
         case 8 :
-            if (northDirection(r,c, player, enemy)) {
-                changeFieldsN(r,c, player, enemy);
-            }
-            if (northEastDirection(r,c, player, enemy)) {
-                changeFieldsNE(r,c, player, enemy);
-            }
-            if (eastDirection(r,c, player, enemy)) {
-                changeFieldsE(r,c, player, enemy);
-            }
-            if (southEastDirection(r,c, player, enemy)) {
-                changeFieldsSE(r,c, player, enemy);
-            }
-            if (southDirection(r,c, player, enemy)) {
-                changeFieldsS(r,c, player, enemy);
-            }
+            replaceL(r, c, player, enemy);
             break;
         default:
-            if (northDirection(r,c, player, enemy)) {
-                changeFieldsN(r,c, player, enemy);
-            }
-            if (northEastDirection(r,c, player, enemy)) {
-                changeFieldsNE(r,c, player, enemy);
-            }
-            if (eastDirection(r,c, player, enemy)) {
-                changeFieldsE(r,c, player, enemy);
-            }
-            if (southEastDirection(r,c, player, enemy)) {
-                changeFieldsSE(r,c, player, enemy);
-            }
-            if (southDirection(r,c, player, enemy)) {
-                changeFieldsS(r,c, player, enemy);
-            }
-            if (southWestDirection(r,c, player, enemy)) {
-                changeFieldsSW(r,c, player, enemy);
-            }
-            if (westDirection(r,c, player, enemy)) {
-                changeFieldsW(r,c, player, enemy);
-            }
-            if (northWestDirection(r,c, player, enemy)) {
-                changeFieldsNW(r,c, player, enemy);
-            }
+            replaceM(r, c, player, enemy);
             break;
     }
 }
