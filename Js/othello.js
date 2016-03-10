@@ -39,8 +39,8 @@ function createHtmlBoard(supBoard, paintField, klikZawodnika) {
         for (var y = 0; y < size; y++) {
             $cell = $('<td>');
             $cell.css({
-                width: 40,
-                height: 40,
+                width: 48,
+                height: 48,
                 border: '1px solid #000'
             });
             $cell.click({ posX: x, posY: y}, klikZawodnika);
@@ -75,7 +75,7 @@ function placePlayer(x, y) {
 }
 
 function setCounter ($element, cell) {
-    $element.css('backgroundColor', cell.counter === 'A' ? 'lightblue' : cell.counter === 'B' ? 'blue' : '');
+    $element.css('background-image', cell.counter === 'A' ? 'url("Obrazy/Othello/cirblue.png")' : cell.counter === 'B' ? 'url("Obrazy/Othello/cirred.png")' : '');
 }
 
 
