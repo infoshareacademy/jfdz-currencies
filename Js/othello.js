@@ -6,8 +6,8 @@ var player = {p1 : 'B', p2: 'R'}
 var board = [];
 var result = false;
 var round = 0;
-var actPlayer;
-var enemy;
+var actPlayer = player.p1;
+var enemy = player.p2;
 var redResult;
 var blueResult;
 
@@ -70,17 +70,19 @@ function createHtmlBoard(supBoard, paintField, klikZawodnika) {
     return $table;
 }
 function placeCounter(event) {
+
     placePlayer(event.data.posX, event.data.posY);
 }
 function placePlayer(x, y) {
     for (var m = 0; m < 2; m++) {
         if (round%2 === 0) {
-            actPlayer = player.p1;
-            enemy = player.p2;
-        } else {
             actPlayer = player.p2;
             enemy = player.p1;
+        } else {
+            actPlayer = player.p1;
+            enemy = player.p2;
         }
+        console.log("Actual Player: " + actPlayer + "Pozycja: " + x + " " + y);
         checkField(x, y, actPlayer, enemy);
         if (result) {
             replaceMarks(x, y, actPlayer, enemy);
@@ -263,11 +265,12 @@ function checkDirections(r, c, player, enemy) {
             }
             break;
     }
+    return result;
 }
 function northDirection(wierszCN, kolumnaCN, player, enemy) {
     wierszCN--;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        //result = true;
+        result = true;
         wierszCN--;
         checkRopeN(wierszCN, kolumnaCN, player, enemy);
     } else {
@@ -279,7 +282,7 @@ function northEastDirection(wierszCN, kolumnaCN, player, enemy) {
     wierszCN--;
     kolumnaCN++;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        //result = true;
+        result = true;
         wierszCN--;
         kolumnaCN++;
         checkRopeNE(wierszCN, kolumnaCN, player, enemy);
@@ -291,7 +294,7 @@ function northEastDirection(wierszCN, kolumnaCN, player, enemy) {
 function eastDirection(wierszCN, kolumnaCN, player, enemy) {
     kolumnaCN++;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        //result = true;
+        result = true;
         kolumnaCN++;
         checkRopeE(wierszCN, kolumnaCN, player, enemy);
     } else {
@@ -303,7 +306,7 @@ function southEastDirection(wierszCN, kolumnaCN, player, enemy) {
     wierszCN++;
     kolumnaCN++;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        //result = true;
+        result = true;
         wierszCN++;
         kolumnaCN++;
         checkRopeSE(wierszCN, kolumnaCN, player, enemy);
@@ -315,7 +318,7 @@ function southEastDirection(wierszCN, kolumnaCN, player, enemy) {
 function southDirection(wierszCN, kolumnaCN, player, enemy) {
     wierszCN++;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        //result = true;
+        result = true;
         wierszCN++;
         checkRopeS(wierszCN, kolumnaCN, player, enemy);
     } else {
@@ -327,7 +330,7 @@ function southWestDirection(wierszCN, kolumnaCN, player, enemy) {
     wierszCN++;
     kolumnaCN--;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        //result = true;
+        result = true;
         wierszCN++;
         kolumnaCN--;
         checkRopeSW(wierszCN, kolumnaCN, player, enemy);
@@ -339,7 +342,7 @@ function southWestDirection(wierszCN, kolumnaCN, player, enemy) {
 function westDirection(wierszCN, kolumnaCN, player, enemy) {
     kolumnaCN--;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        //result = true;
+        result = true;
         kolumnaCN--;
         checkRopeW(wierszCN, kolumnaCN, player, enemy);
     } else {
@@ -351,7 +354,7 @@ function northWestDirection(wierszCN, kolumnaCN, player, enemy) {
     wierszCN--;
     kolumnaCN--;
     if (board[wierszCN][kolumnaCN].counter === enemy) {
-        //result = true;
+        result = true;
         wierszCN--;
         kolumnaCN--;
         checkRopeNW(wierszCN, kolumnaCN, player, enemy);
@@ -380,33 +383,34 @@ function checkRopeE(wierszCR, kolumnaCR, player, enemy) {
     checkEnd(wierszCR, kolumnaCR, player, enemy);
 }
 function checkRopeSE(wierszCR, kolumnaCR, player, enemy) {
-    while ((wierszCR < 7 || kolumnaCR < 7 )&& board[wierszCR][kolumnaCR].counter === enemy) {
+    while ((wierszCR < 7 && kolumnaCR < 7 )&& board[wierszCR][kolumnaCR].counter === enemy) {
         wierszCR++;
         kolumnaCR++;
     }
     checkEnd(wierszCR, kolumnaCR, player, enemy);
 }
 function checkRopeS(wierszCR, kolumnaCR, player, enemy) {
-    while (wierszCR < 7 && board[wierszCR][kolumnaCR] === enemy) {
+    while (wierszCR < 7 && board[wierszCR][kolumnaCR].counter === enemy) {
         wierszCR++;
     }
     checkEnd(wierszCR, kolumnaCR, player, enemy);
+    return result;
 }
 function checkRopeSW(wierszCR, kolumnaCR, player, enemy) {
-    while (kolumnaCR > 0 && wierszCR < 7 && board[wierszCR][kolumnaCR] === enemy) {
+    while (kolumnaCR > 0 && wierszCR < 7 && board[wierszCR][kolumnaCR].counter === enemy) {
         wierszCR++;
         kolumnaCR--;
     }
     checkEnd(wierszCR, kolumnaCR, player, enemy);
 }
 function checkRopeW(wierszCR, kolumnaCR, player, enemy) {
-    while (kolumnaCR > 0 && board[wierszCR][kolumnaCR] === enemy) {
+    while (kolumnaCR > 0 && board[wierszCR][kolumnaCR].counter === enemy) {
         kolumnaCR--;
     }
     checkEnd(wierszCR, kolumnaCR, player, enemy);
 }
 function checkRopeNW(wierszCR, kolumnaCR, player, enemy) {
-    while ((kolumnaCR > 0 || wierszCR > 0 ) && board[wierszCR][kolumnaCR] === enemy) {
+    while ((kolumnaCR > 0 && wierszCR > 0 ) && board[wierszCR][kolumnaCR].counter === enemy) {
         wierszCR--;
         kolumnaCR--;
     }
@@ -420,7 +424,6 @@ function checkEnd(wierszCE, kolumnaCE, player, enemy) {
     }
     return result;
 }
-
 
 function replaceMarks(wiersz, kolumna, player, enemy) {
     board[wiersz][kolumna] = {counter: player};
@@ -461,7 +464,6 @@ function replaceUL(r, c, player, enemy) {
         changeFieldsS(r,c, player, enemy);
     }
 }
-
 function replaceUR(r, c, player, enemy) {
     if (southDirection(r,c, player, enemy)) {
         changeFieldsS(r,c, player, enemy);
@@ -563,7 +565,6 @@ function replaceL(r, c, player, enemy) {
         changeFieldsS(r,c, player, enemy);
     }
 }
-
 function replaceM(r, c, player, enemy) {
     if (northDirection(r,c, player, enemy)) {
         changeFieldsN(r,c, player, enemy);
@@ -590,8 +591,6 @@ function replaceM(r, c, player, enemy) {
         changeFieldsNW(r,c, player, enemy);
     }
 }
-
-
 
 function replaceDirections(r, c, player, enemy) {
     var square = checkEdges(r, c);
