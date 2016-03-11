@@ -8,8 +8,8 @@ var result = false;
 var round = 0;
 var actPlayer = player.p1;
 var enemy = player.p2;
-var redResult;
-var blueResult;
+var redResult = 0;
+var blueResult = 0;
 
 function setupGame(size) {
     createBoard(size);
@@ -17,8 +17,12 @@ function setupGame(size) {
         var board1 = getBoard();
         var $table = createHtmlBoard(board1, setCounter, placeCounter);
         var $playing = getPlayer();
+        var $red = getRed();
+        var $blue = getBlue();
             $('#othello').empty().append($table);
             $('.gracz').empty().append($playing);
+        $('.Czerwony').empty().append($red);
+        $('.Niebieski').empty().append($blue);
     });
 }
 function createBoard(size) {
@@ -35,6 +39,29 @@ function createBoard(size) {
 }
 function getBoard() {
     return board;
+}
+
+function getRed() {
+    redResult=0;
+    for (var i = 0; i<8; i++) {
+        for (var j = 0; j<8; j++) {
+            if (board[i][j].counter === 'R') {
+                redResult++;
+            }
+        }
+    }
+    return redResult;
+}
+function getBlue() {
+    blueResult=0;
+    for (var i = 0; i<8; i++) {
+        for (var j = 0; j<8; j++) {
+            if (board[i][j].counter === 'B') {
+                blueResult++;
+            }
+        }
+    }
+    return blueResult;
 }
 
 function getPlayer() {
