@@ -71,7 +71,7 @@ $(function() {
 $(function(event) {
 
     if ((getVar('mailerResult', location.search))==='sent') {
-        alert('mail został wysłany');
+        alert('Dziękujemy! Zapraszamy ponownie');
 
     var uri = window.location.toString();
     if (uri.indexOf("?") > 0) {
