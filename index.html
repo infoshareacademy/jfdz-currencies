@@ -11,7 +11,8 @@
     <link href="Styles/Marcin.css" type="text/css" rel="stylesheet">
     <link href="Styles/Piotr.css" type="text/css" rel="stylesheet">
     <link href="Styles/Ola.css" type="text/css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="Js/piotr.js" language=javascript type="text/javascript"></script>
     <script src="Js/othello.js"></script>
     <script src="Js/Ola.js" language=javascript type="text/javascript"></script>
@@ -33,7 +34,7 @@
                 <a class="bhome" href="#contact">Kontakt</a>
             </li>
             <li class="NaviField right">
-                <a class="bhome" href="#about" onclick="MenuOnClick(2)">O nas</a>
+                <a class="bhome" href="#about">O nas</a>
             </li>
             <li class="NaviField right">
                 <a href="#products">Produkty</a>
@@ -64,20 +65,18 @@
         <div class="Niebieski">Niebieskich</div>
     </div>
     <div id="call-to-action">
-
         <div class="formularz" onmouseover="onmouseoverboot()">
-            <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma"
-                  onsubmit="return ValidateFrom(this)">
+            <form  action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma">
                 <label for="femail">Email</label>
                 <input id="femail" name="email" type="text" placeholder="biuro@79level.pl">
                 <label for="fphone">Nr telefonu</label>
                 <input id="fphone" name="phone" type="text" placeholder="999-999-999">
                 <input type="hidden" name="receiver" value="pperetko@gmail.com">
-                <input id="submit" name="submit" type="submit" value="Wyślij"
-                       onclick="return  ValidateFrom(document.forms[0])">
+                <input id="submit" name="submit" type="submit" value="Wyślij">
             </form>
         </div>
     </div>
+    <div id="message"></div>
     <div class="clear"></div>
 
     <div id="main_content">
