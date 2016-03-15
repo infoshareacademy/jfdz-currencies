@@ -79,7 +79,10 @@ header .NaviField {
     animation-fill-mode: forwards;
 }
 
-
+#about {
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
 
 
 
@@ -90,14 +93,14 @@ header .NaviField {
 .poz_onas a {
     color: black;
 }
-#onas h1{
+#about h1{
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
-#onas p{
+#about p{
     font-size: 12px;
     padding: 10px;
 }
@@ -105,7 +108,7 @@ header .NaviField {
     display: inline-block;
     width: 300px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 100px;
     padding-bottom: 10px;
 }
 .poz_onas .zdjecie {
