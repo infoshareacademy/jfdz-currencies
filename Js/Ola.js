@@ -5,7 +5,7 @@ $(document).ready(function () {
         $('#menu .NaviField a').each(function () {
                 var currLink = $(this);
                 var refElement = $(currLink.attr("href"));
-                if (refElement.position().top-150 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                if (refElement.position().top-200 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                     $('#menu .NaviField a').removeClass("active");
                     currLink.addClass("active");
                 }
@@ -74,7 +74,7 @@ $(document).ready(function() {
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
 
-                $(this).animate({'margin-left':'0'},5000);
+                $(this).animate({'margin-left':'0'},2000);
 
             }
 
@@ -83,22 +83,6 @@ $(document).ready(function() {
     });
 
 });
-
-
-$(function () {
-    //sticky menu
-    var headHeight = $('header').outerHeight();
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > headHeight) {
-            $('naglowekStrony').addClass('stick2top');
-        } else {
-            $('naglowekStrony').removeClass('stick2top');
-        }
-    })
-});
-
-
-
 
 
 
