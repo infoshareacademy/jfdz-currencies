@@ -120,7 +120,7 @@ footer a:hover {
     font-size: 55%;
 }
 .small-menu img.logo{
-    display:none;
+    height: 20px;
 }
 .small-menu .NaviField a{
     font-size:55%;
@@ -128,6 +128,6 @@ footer a:hover {
 .small-menu li{
     margin-top: 10px;
 }
-header *{
-    transition: all 1s ease-in;
-}
+/*header *{*/
+    /*transition: all 1s ease-in;*/
+/*}*/
