@@ -11,7 +11,7 @@ footer a:hover {
 
 
 .slajder {
-    background-image: url("../Obrazy/Zajawka/Kalkulator.jpg");
+    background: url("../Obrazy/Zajawka/Kalkulator.jpg") fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -20,6 +20,7 @@ footer a:hover {
     animation-duration: 10s;
     animation-iteration-count: infinite;
     width: 1200px;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -88,23 +89,45 @@ footer a:hover {
     opacity:0;
 }
 
+.ukryte {
+    display:none;
+}
 .scrollToTop{
     width:20px;
     height:30px;
     padding:10px;
     text-align:center;
-    /*background: whiteSmoke;*/
-    /*font-weight: bold;*/
     color: #444;
     text-decoration: none;
     position:fixed;
     top:600px;
     right:1px;
     display:none;
-    background: url('../Obrazy/arrow.jpeg') no-repeat 0px 0px;
+    background: url('../Obrazy/arrow.png') no-repeat 0px 0px;
     background-size: contain;
 }
 .scrollToTop:hover{
     text-decoration:none;
 }
 
+.small-menu {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    height: 50px;
+    font-size: 55%;
+}
+.small-menu img.logo{
+    display:none;
+}
+.small-menu .NaviField a{
+    font-size:55%;
+}
+.small-menu li{
+    margin-top: 10px;
+}
+header *{
+    transition: all 1s ease-in;
+}

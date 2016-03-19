@@ -11,12 +11,17 @@
     <link href="Styles/Marcin.css" type="text/css" rel="stylesheet">
     <link href="Styles/Piotr.css" type="text/css" rel="stylesheet">
     <link href="Styles/Ola.css" type="text/css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="Js/piotr.js" language=javascript type="text/javascript"></script>
     <script src="Js/othello.js"></script>
     <script src="Js/Ola.js" language=javascript type="text/javascript"></script>
+    <script src="Js/Agnieszka.js" language=javascript type="text/javascript"></script>
 </head>
-
+<img class="ukryte" src="Obrazy/Zajawka/Ludzie.jpg" alt="Ludzie" />
+<img class="ukryte" src="Obrazy/Zajawka/Lokalizator.jpg" alt="Lokalizator" />
+<img class="ukryte" src="Obrazy/Zajawka/Srednia.jpg" alt="Srednia" />
+<img class="ukryte" src="Obrazy/Zajawka/Kalkulator.jpg" alt="Kalkulator" />
 <body>
 <header id="menu" class="content">
     <div class="naglowekStrony">
@@ -32,7 +37,7 @@
                 <a class="bhome" href="#contact">Kontakt</a>
             </li>
             <li class="NaviField right">
-                <a class="bhome" href="#about" onclick="MenuOnClick(2)">O nas</a>
+                <a class="bhome" href="#about">O nas</a>
             </li>
             <li class="NaviField right">
                 <a href="#products">Produkty</a>
@@ -42,8 +47,6 @@
             </li>
         </ul>
     </div>
-
-    <div class="podklad"></div>
 
     <div class="slajder left">
         <div class="szarfa">Puls walut<br>Reagujemy na zmiany!</div>
@@ -55,34 +58,35 @@
 
 </header>
 
-<div id="game">
 
-</div>
 
 <main class="tresc-strony content">
-
+    <div class="interactive">
+        <div id="othello"></div>
+        <div class="gracz"></div>
+        <div class="Czerwony">Czerwonych</div>
+        <div class="Niebieski">Niebieskich</div>
+    </div>
     <div id="call-to-action">
-
         <div class="formularz" onmouseover="onmouseoverboot()">
-            <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma"
-                  onsubmit="return ValidateFrom(this)">
+            <form  action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma">
                 <label for="femail">Email</label>
                 <input id="femail" name="email" type="text" placeholder="biuro@79level.pl">
                 <label for="fphone">Nr telefonu</label>
                 <input id="fphone" name="phone" type="text" placeholder="999-999-999">
                 <input type="hidden" name="receiver" value="pperetko@gmail.com">
-                <input id="submit" name="submit" type="submit" value="Wyślij"
-                       onclick="return  ValidateFrom(document.forms[0])">
+                <input id="submit" name="submit" type="submit" value="Wyślij">
             </form>
         </div>
     </div>
+    <div id="message"></div>
     <div class="clear"></div>
 
     <div id="main_content">
 
         <div id="products" class="hideme bloki funkcje">
             <div class="funkcja kalkulator left">
-                <a class="zdjecie">
+                <a href="Kalkulator/index.html" class="zdjecie">
                     <div class="tlo-funkcji">
                         <p class="nazwa-funkcji">Kalkulator walut</p>
                     </div>
@@ -179,8 +183,7 @@
                 <h1>Agnieszka</h1>
                 <a href="akwolek@gmail.com">akwolek@gmail.com</a>
 
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas neque sed porttitor sagittis.
-                    Pellentesque quis risus dolor."</p>
+                <p>"Do uzupełnienia na ostatnim zjezdzie"</p>
             </div>
         </div>
         <div class="poz_onas left">
@@ -190,8 +193,7 @@
                 <h1>Aleksandra</h1>
                 <a href="aleksandra-gorna@o2.pl">aleksandra-gorna@o2.pl</a>
 
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas neque sed porttitor sagittis.
-                    Pellentesque quis risus dolor."</p>
+                <p>"Do uzupełnienia na ostatnim zjezdzie"</p>
             </div>
         </div>
         <div class="poz_onas right">
@@ -201,8 +203,7 @@
                 <h1>Piotr</h1>
                 <a href="pperetko@gmail.com">pperetko@gmail.com</a>
 
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas neque sed porttitor sagittis.
-                    Pellentesque quis risus dolor."</p>
+                <p>"Do uzupełnienia na ostatnim zjezdzie"</p>
             </div>
         </div>
         <div class="poz_onas right">

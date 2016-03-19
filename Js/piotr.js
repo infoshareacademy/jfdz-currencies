@@ -1,15 +1,5 @@
 function MenuOnClick(p1) {
-    document.getElementById('call-to-action').style.display = 'none';
-    document.getElementById('onas').style.display = 'none';
-    switch (p1) {
-        case 1:
-            document.getElementById('call-to-action').style.display = 'block';
-            break;
-        case 2:
-            document.getElementById('onas').style.display = 'block';
-            break;
-
-    }
+    document.getElementById('call-to-action').style.display = 'block';
 }
 
 
@@ -59,3 +49,46 @@ function onmouseoverboot(){
 
 
 }
+
+function getVar (name, url) {
+    if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&#]*)')).exec(url)) {
+        return decodeURIComponent(name[1]);
+    }
+}
+
+
+
+$(function() {
+
+       $("form").submit(function () {
+        return (ValidateFrom(this));
+       });
+
+});
+
+
+
+$(function(event) {
+
+    if ((getVar('mailerResult', location.search))==='sent') {
+        alert('Dziękujemy! Zapraszamy ponownie');
+
+    var uri = window.location.toString();
+    if (uri.indexOf("?") > 0) {
+        var clean_uri = uri.substring(0, uri.indexOf("?"));
+        window.history.replaceState({}, document.title, clean_uri);
+        window.location = clean_uri;
+    }
+
+    }
+});
+
+
+
+
+
+
+
+
+
+

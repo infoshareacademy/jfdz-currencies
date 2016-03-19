@@ -1,16 +1,13 @@
 .bloki {
     padding-top: 25px;
     padding-bottom: 25px;
-
 }
 
 .szarfa {
     position: relative;
     margin-top: 150px;
-    /*margin-bottom: 150px;*/
     background-color: rgba(204,204,204,0.6);
     -webkit-box-shadow: 0px 0px 50px 50px rgba(204,204,204,0.6);
-    /*height: 300px;*/
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -20,7 +17,9 @@
     letter-spacing: 0.3em;
 }
 
-.funkcje {width: 100%;}
+.funkcje {
+    width: 100%;
+}
 
 .funkcja {
     width: 300px;
@@ -40,7 +39,7 @@
     font-weight: lighter;
 }
 
-.zdjecie {
+.funkcja .zdjecie {
     width: 250px;
     height: 250px;
     color: white;
@@ -70,7 +69,7 @@
     opacity: 1;
 }
 
-.tlo-funkcji p {padding-top: 100px;}
+.tlo-funkcji p {padding-top: 115px;}
 
 .kalkulator a {background-image: url('../Obrazy/Funkcje/KalkulatroSM.jpg');}
 

@@ -31,7 +31,7 @@ $(document).ready(function() {
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
 
-                $(this).animate({'opacity':'1'},500);
+                $(this).animate({'opacity':'1'},1000);
 
             }
 
@@ -46,8 +46,10 @@ $(document).ready(function(){
     $(window).scroll(function(){
         if ($(this).scrollTop() > 100) {
             $('.scrollToTop').fadeIn();
+            $('.naglowekStrony').addClass('small-menu');
         } else {
             $('.scrollToTop').fadeOut();
+            $('.naglowekStrony').removeClass('small-menu');
         }
     });
     $('.scrollToTop').click(function(){
@@ -83,8 +85,17 @@ $(document).ready(function() {
 });
 
 
-
-
+$(function () {
+    //sticky menu
+    var headHeight = $('header').outerHeight();
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > headHeight) {
+            $('naglowekStrony').addClass('stick2top');
+        } else {
+            $('naglowekStrony').removeClass('stick2top');
+        }
+    })
+});
 
 
 
