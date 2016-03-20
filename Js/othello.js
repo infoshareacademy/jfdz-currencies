@@ -103,11 +103,11 @@ function placeCounter(event) {
 function placePlayer(x, y) {
     for (var m = 0; m < 2; m++) {
         if (round%2 === 0) {
-            actPlayer = player.p2;
-            enemy = player.p1;
-        } else {
             actPlayer = player.p1;
             enemy = player.p2;
+        } else {
+            actPlayer = player.p2;
+            enemy = player.p1;
         }
         console.log("Actual Player: " + actPlayer + "Pozycja: " + x + " " + y);
         checkField(x, y, actPlayer, enemy);
