@@ -21,8 +21,8 @@ function setupGame(size) {
         var $blue = getBlue();
             $('#board').empty().append($table);
             $('.gracz').empty().append($playing);
-        $('.Czerwony').empty().append($red);
-        $('.Niebieski').empty().append($blue);
+        $('.Czerwony').empty().append("Czerwonych: " + $red);
+        $('.Niebieski').empty().append("Niebieskich: " + $blue);
     });
 }
 function createBoard(size) {
