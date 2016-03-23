@@ -19,7 +19,7 @@ function setupGame(size) {
         var $playing = getPlayer();
         var $red = getRed();
         var $blue = getBlue();
-            $('#othello').empty().append($table);
+            $('#board').empty().append($table);
             $('.gracz').empty().append($playing);
         $('.Czerwony').empty().append($red);
         $('.Niebieski').empty().append($blue);
