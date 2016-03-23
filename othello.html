@@ -6,16 +6,35 @@
     <link href="Styles/Othello.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="Js/othello.js"></script>
-
 </head>
 <body>
     <div id="othelloBG">
-        <div id="welcome">Witamy w grze othello</div>
-        <div id="board">Plansza</div>
+        <div id="welcome">Zapraszamy na kilka minut relaksu. Othello Game</div>
+        <div id="pole">
+            <div id="board" class="left">Plansza</div>
+            <div id="rules" class="right">
+                <h1>Cel gry to zabieranie monet przeciwnikowi.</h1>
+                <ol>Rozgrywka:
+                    <li>Monety przeciwnika zdobywa się, otaczając je w jednej linii.</li>
+                    <li>Zdobyte piony zmieniają kolor i przynależność.</li>
+                    <li>Otaczanie monet dozwolone w ramach linii prostych: poziomych, pionowych i ukośnych.</li>
+                    <li>W każdym ruchu należy zdobyć co najmniej jedną monetę.</li>
+                    <li>Jeśli gracz nie może wykonać żadnego dozwolonego ruchu, traci kolejkę i wykonuje go drugi gracz.</li>
+                </ol>
+                <ol>Koniec gry następuje gdy:
+                    <li>Gracze zapełnią planszę.</li>
+                    <li>Żaden z graczy nie może wykonać ruchu.</li>
+                    <li>Jeden z graczy straci wszystkie swoje monety.</li>
+                </ol>
+            </div>
+            <div class="clear"></div>
+            <button onclick="setupGame(8)">Uruchom gre</button>
+        </div>
+
         <div class="gracz"></div>
         <div class="Czerwony"></div>
         <div class="Niebieski"></div>
-        <button onclick="setupGame(8)">Uruchom gre</button>
+
     </div>
     <script src="Js/othello.js"></script>
 </body>
