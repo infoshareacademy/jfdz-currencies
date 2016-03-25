@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Othello</title>
+    <!--<link href="Styles/resetcss.css" type="text/css" rel="stylesheet">-->
     <link href="Styles/Othello.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="Js/othello.js"></script>
@@ -12,50 +13,60 @@
         <a href="index.html" id="koniec" class="right">X</a>
         <div class="clear"></div>
 
-        <div id="rulesScreen">
-            <h1>m<span>O</span>ney<span>THELLO</span></h1>
-            <h2>Celem gry jest przejmowanie monet przeciwnika</h2>
-            <ol><span>Rozgrywka:</span>
-                <li>Monety przeciwnika zdobywa się, otaczając je w jednej linii.</li>
-                <li>Zdobyte piony zmieniają kolor i przynależność.</li>
-                <li>Otaczanie monet dozwolone w ramach linii prostych: poziomych, pionowych i ukośnych.</li>
-                <li>W każdym ruchu należy zdobyć co najmniej jedną monetę.</li>
-                <li>Jeśli gracz nie może wykonać żadnego dozwolonego ruchu, traci kolejkę i wykonuje go drugi gracz.</li>
-            </ol>
-            <ol><span>Koniec gry następuje gdy:</span>
-                <li>Gracze zapełnią planszę.</li>
-                <li>Żaden z graczy nie może wykonać ruchu.</li>
-                <li>Jeden z graczy straci wszystkie swoje monety.</li>
-            </ol>
-            <button id="fire" onclick="setupGame(8)">Dalej</button>
-        </div>
+        <!--<div id="rulesScreen">-->
+            <!--<h1>m<span>O</span>ney<span>THELLO</span></h1>-->
+            <!--<h2>Celem gry jest przejmowanie monet przeciwnika</h2>-->
+            <!--<ol><span>Rozgrywka:</span>-->
+                <!--<li>Monety przeciwnika zdobywa się, otaczając je w jednej linii.</li>-->
+                <!--<li>Zdobyte piony zmieniają kolor i przynależność.</li>-->
+                <!--<li>Otaczanie monet dozwolone w ramach linii prostych: poziomych, pionowych i ukośnych.</li>-->
+                <!--<li>W każdym ruchu należy zdobyć co najmniej jedną monetę.</li>-->
+                <!--<li>Jeśli gracz nie może wykonać żadnego dozwolonego ruchu, traci kolejkę i wykonuje go drugi gracz.</li>-->
+            <!--</ol>-->
+            <!--<ol><span>Koniec gry następuje gdy:</span>-->
+                <!--<li>Gracze zapełnią planszę.</li>-->
+                <!--<li>Żaden z graczy nie może wykonać ruchu.</li>-->
+                <!--<li>Jeden z graczy straci wszystkie swoje monety.</li>-->
+            <!--</ol>-->
+            <!--<button id="fire" onclick="setupGame(8)">Dalej</button>-->
+        <!--</div>-->
 
         <div id="setupScreen">
 
-        </div>
-
-        <div id="gameScreen">
-
-        </div>
-
-        <div id="endScreen">
-
-        </div>
-
-
-        <div id="pole">
-
-            <div id="rules" class="right">
-
+            <div id="playerChoice">
+                <div id="player1" class="players">
+                    <h2>PLAYER #1</h2>
+                    <h1></h1>
+                </div>
+                <div id="player2" class="players">
+                    <h2>PLAYER #2</h2>
+                    <h1></h1>
+                </div>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
+
+            <div id="euro" class="currencies"></div>
+            <div id="dollar" class="currencies"></div>
+            <div id="pounds" class="currencies"></div>
+            <div id="yen" class="currencies"></div>
+            <div>
+                <button id="fire" onclick="setupGame(8)">Start Gry</button>
+            </div>
+
 
         </div>
 
-        <div id="board" class="left">Plansza</div>
-        <div class="gracz"></div>
-        <div class="Czerwony">Czerwonych</div>
-        <div class="Niebieski">Niebieskich</div>
+        <!--<div id="gameScreen">-->
+
+        <!--</div>-->
+
+        <!--<div id="endScreen">-->
+
+        <!--</div>-->
+        <!--<div id="board" class="left">Plansza</div>-->
+        <!--<div class="gracz"></div>-->
+        <!--<div class="Czerwony">Czerwonych</div>-->
+        <!--<div class="Niebieski">Niebieskich</div>-->
 
     </div>
     <script src="Js/othello.js"></script>

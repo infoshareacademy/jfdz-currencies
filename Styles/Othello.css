@@ -6,30 +6,6 @@ body {
     color: white;
     font-weight: 500;
 }
-.left {float: left;}
-
-.right {float: right;}
-
-.clear {clear: both;}
-
-span {
-    font-weight: 900;
-    color: red;
-}
-#koniec {
-    width: 30px;
-    height: 30px;
-    background-color: #444444;
-    color: red;
-    font-size: large;
-    text-align: center;
-    margin-right: 50px;
-    margin-top: 50px;
-    text-decoration: none;
-    padding-top: 10px;
-    border-radius: 5px;
-}
-
 #monethello {
     width: 60%;
     margin: auto;
@@ -38,18 +14,55 @@ span {
     border: 10px solid black;
     border-radius: 100px;
 }
-
 #monethello h1, h2 {
     text-align: center;
 }
-
 #monethello ol {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
 }
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+#koniec {
+    width: 20px;
+    height: 20px;
+    background-color: #444444;
+    color: red;
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+span {
+    font-weight: 900;
+    color: red;
+}
+#setupScreen {
+    text-align: center;
+}
+#playerChoice div.players {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 300px;
+}
 
+.players h2 {
+    border: 5px solid black;
+    border-radius: 20px;
+    height: 50px;
+    padding-top: 8%;
+}
+
+.players h1 {
+    height: 128px;
+    background-image: url('../Obrazy/Othello/cirask.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
 #pole div {
     width: 550px;
     display: inline-block;
@@ -66,5 +79,29 @@ span {
     color: red;
     font-size: 20px;
     font-weight: 900;
+}
+.currencies {
+    width: 96px;
+    display: inline-block;
+    height: 96px;
+    border: 1px solid red;
+    background-color: #2d528b;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#euro {
+    background-image: url('../Obrazy/Othello/cireuro.png');
+}
+#dollar {
+    background-image: url('../Obrazy/Othello/cirdollar.png');
+}
+#pounds {
+    background-image: url('../Obrazy/Othello/cirpound.png');
+}
+#yen {
+    background-image: url('../Obrazy/Othello/ciryen.png');
 }
 
