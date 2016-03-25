@@ -717,3 +717,4 @@ function changeFieldsNW(row,column, player, enemy) {
     }
 }
 
+
