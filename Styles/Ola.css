@@ -58,9 +58,8 @@ footer a:hover {
 .stopka {
     background-color: black;
     padding-top: 50px;
-    padding-bottom: 10px;
-    height: 180px;
-    margin-top: 20px;
+    /*padding-bottom: 10px;*/
+    height: 100px;
     text-align: center;
 }
 .stopka a {
