@@ -8,27 +8,48 @@
     <script src="Js/othello.js"></script>
 </head>
 <body>
-    <div id="othelloBG">
-        <div id="welcome">Zapraszamy na kilka minut relaksu. Othello Game</div>
+    <div id="monethello">
+        <a href="index.html" id="koniec" class="right">X</a>
+        <div class="clear"></div>
+
+        <div id="rulesScreen">
+            <h1>m<span>O</span>ney<span>THELLO</span></h1>
+            <h2>Celem gry jest przejmowanie monet przeciwnika</h2>
+            <ol><span>Rozgrywka:</span>
+                <li>Monety przeciwnika zdobywa się, otaczając je w jednej linii.</li>
+                <li>Zdobyte piony zmieniają kolor i przynależność.</li>
+                <li>Otaczanie monet dozwolone w ramach linii prostych: poziomych, pionowych i ukośnych.</li>
+                <li>W każdym ruchu należy zdobyć co najmniej jedną monetę.</li>
+                <li>Jeśli gracz nie może wykonać żadnego dozwolonego ruchu, traci kolejkę i wykonuje go drugi gracz.</li>
+            </ol>
+            <ol><span>Koniec gry następuje gdy:</span>
+                <li>Gracze zapełnią planszę.</li>
+                <li>Żaden z graczy nie może wykonać ruchu.</li>
+                <li>Jeden z graczy straci wszystkie swoje monety.</li>
+            </ol>
+            <button id="fire" onclick="setupGame(8)">Dalej</button>
+        </div>
+
+        <div id="setupScreen">
+
+        </div>
+
+        <div id="gameScreen">
+
+        </div>
+
+        <div id="endScreen">
+
+        </div>
+
+
         <div id="pole">
 
             <div id="rules" class="right">
-                <h2>Cel gry to zabieranie monet przeciwnikowi.</h2>
-                <ol>Rozgrywka:
-                    <li>Monety przeciwnika zdobywa się, otaczając je w jednej linii.</li>
-                    <li>Zdobyte piony zmieniają kolor i przynależność.</li>
-                    <li>Otaczanie monet dozwolone w ramach linii prostych: poziomych, pionowych i ukośnych.</li>
-                    <li>W każdym ruchu należy zdobyć co najmniej jedną monetę.</li>
-                    <li>Jeśli gracz nie może wykonać żadnego dozwolonego ruchu, traci kolejkę i wykonuje go drugi gracz.</li>
-                </ol>
-                <ol>Koniec gry następuje gdy:
-                    <li>Gracze zapełnią planszę.</li>
-                    <li>Żaden z graczy nie może wykonać ruchu.</li>
-                    <li>Jeden z graczy straci wszystkie swoje monety.</li>
-                </ol>
+
             </div>
             <div class="clear"></div>
-            <button id="fire" onclick="setupGame(8)">Start OthellO</button>
+
         </div>
 
         <div id="board" class="left">Plansza</div>

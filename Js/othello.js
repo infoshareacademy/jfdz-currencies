@@ -20,7 +20,7 @@ function setupGame(size) {
         var $red = getRed();
         var $blue = getBlue();
             $('#board').empty().append($table);
-            $('.gracz').empty().append($playing);
+            $('.gracz').empty().append("aktualnie grasz kolorem: " + $playing);
         $('.Czerwony').empty().append("Czerwonych: " + $red);
         $('.Niebieski').empty().append("Niebieskich: " + $blue);
     });

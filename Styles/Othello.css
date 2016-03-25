@@ -1,5 +1,5 @@
 body {
-    background-color: aquamarine;
+    background-color: rgba(127, 255, 212, 0.5);
     background-position: center;
     font-family: 'Lato', sans-serif;
     letter-spacing: 0.1em;
@@ -11,18 +11,52 @@ body {
 .right {float: right;}
 
 .clear {clear: both;}
-#othelloBG {
-    width: 1200px;
+
+span {
+    font-weight: 900;
+    color: red;
+}
+#koniec {
+    width: 30px;
+    height: 30px;
+    background-color: #444444;
+    color: red;
+    font-size: large;
+    text-align: center;
+    margin-right: 50px;
+    margin-top: 50px;
+    text-decoration: none;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+
+#monethello {
+    width: 60%;
     margin: auto;
     height: 700px;
-    background-color: darkblue;
+    background-color: #2d528b;
+    border: 10px solid black;
+    border-radius: 100px;
+}
+
+#monethello h1, h2 {
+    text-align: center;
+}
+
+#monethello ol {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 #pole div {
     width: 550px;
     display: inline-block;
 }
-
+#rulesScreen {
+    text-align: center;
+}
 #fire {
     height: 100px;
     width: 120px;
