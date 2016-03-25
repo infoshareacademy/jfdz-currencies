@@ -2,7 +2,7 @@
  * Created by Marcin on 2016-02-18.
  */
 //var result = false;
-var player = {p1 : 'B', p2: 'R'}
+var player = {p1 : 'D', p2: 'P'}
 var board = [];
 var result = false;
 var round = 0;
@@ -32,10 +32,10 @@ function createBoard(size) {
             board[x][y] = {};
         }
     }
-    board[3][3] = {counter: 'B'};
-    board[4][4] = {counter: 'B'};
-    board[3][4] = {counter: 'R'};
-    board[4][3] = {counter: 'R'};
+    board[3][3] = {counter: 'D'};
+    board[4][4] = {counter: 'D'};
+    board[3][4] = {counter: 'P'};
+    board[4][3] = {counter: 'P'};
 }
 function getBoard() {
     return board;
@@ -45,7 +45,7 @@ function getRed() {
     redResult=0;
     for (var i = 0; i<8; i++) {
         for (var j = 0; j<8; j++) {
-            if (board[i][j].counter === 'R') {
+            if (board[i][j].counter === 'P') {
                 redResult++;
             }
         }
@@ -56,7 +56,7 @@ function getBlue() {
     blueResult=0;
     for (var i = 0; i<8; i++) {
         for (var j = 0; j<8; j++) {
-            if (board[i][j].counter === 'B') {
+            if (board[i][j].counter === 'D') {
                 blueResult++;
             }
         }
@@ -118,7 +118,7 @@ function placePlayer(x, y) {
     }
 }
 function setCounter ($element, cell) {
-    $element.css('background-image', cell.counter === 'B' ? 'url("Obrazy/Othello/cirblue.png")' : cell.counter === 'R' ? 'url("Obrazy/Othello/cirred.png")' : '');
+    $element.css('background-image', cell.counter === 'D' ? 'url("Obrazy/Othello/cirdollar.png")' : cell.counter === 'P' ? 'url("Obrazy/Othello/cirpound.png")' : '');
 }
 
 function checkField(row, column, player, enemy) {
