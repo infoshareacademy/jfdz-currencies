@@ -6,26 +6,17 @@ body {
     color: white;
     font-weight: 500;
 }
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
 #monethello {
-    width: 60%;
+    width: 70%;
     margin: auto;
     height: 700px;
     background-color: #2d528b;
     border: 10px solid black;
     border-radius: 100px;
 }
-#monethello h1, h2 {
-    text-align: center;
-}
-#monethello ol {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-}
-.left {float: left;}
-.right {float: right;}
-.clear {clear: both;}
 #koniec {
     width: 20px;
     height: 20px;
@@ -36,9 +27,28 @@ body {
     text-decoration: none;
     border-radius: 5px;
 }
-span {
+.unvisible {
+    display: none;
+}
+#rulesScreen {
+    text-align: center;
+}
+#rulesScreen h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#rulesScreen span {
     font-weight: 900;
     color: red;
+}
+#rulesScreen ol {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: left;
 }
 #setupScreen {
     text-align: center;
@@ -50,14 +60,12 @@ span {
     margin-right: 50px;
     width: 300px;
 }
-
 .players h2 {
     border: 5px solid black;
     border-radius: 20px;
     height: 50px;
     padding-top: 8%;
 }
-
 .players h1 {
     height: 128px;
     background-image: url('../Obrazy/Othello/cirask.png');
@@ -68,9 +76,7 @@ span {
     width: 550px;
     display: inline-block;
 }
-#rulesScreen {
-    text-align: center;
-}
+
 .fire {
     height: 100px;
     width: 120px;
@@ -80,15 +86,16 @@ span {
     color: red;
     font-size: 20px;
     font-weight: 900;
+    margin-top: 30px;
 }
 .currencies {
-    width: 96px;
+    width: 48px;
     display: inline-block;
-    height: 96px;
+    height: 48px;
     border: 1px solid red;
     background-color: #2d528b;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -107,9 +114,7 @@ span {
 }
 
 #parametryGry {
-    width: 450px;
     border: 1px solid black;
-    display: inline-block;
 }
 #board {
     width: 420px;
@@ -118,19 +123,24 @@ span {
 
 .playerMark {
     display: inline-block;
-    height: 80px;
     border: 1px solid red;
 }
 .sign {
-    width: 100px;
+    width: 48px;
+    height: 48px;
 }
 .pionkow {
-    width: 160px;
+    width: 96px;
+    height: 48px;
 }
-
+#gameScreen {
+    text-align: center;
+}
 .wartosc {
     width: 130px;
 }
-
+#p1Sign, #p2Sign{
+    background-image: url('../Obrazy/Othello/cirblue.png');
+}
 
 

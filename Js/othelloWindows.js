@@ -3,8 +3,7 @@
  */
 function setupScreen() {
     $(document).ready( function () {
-        $('#rulesScreen').remove();
-        $('#gameScreen').remove();
+        $('#rulesScreen').addClass('unvisible');
+        $('#setupScreen').removeClass('unvisible');
     });
-
 }
