@@ -43,6 +43,7 @@ span {
 #setupScreen {
     text-align: center;
 }
+
 #playerChoice div.players {
     display: inline-block;
     margin-left: 50px;
@@ -70,7 +71,7 @@ span {
 #rulesScreen {
     text-align: center;
 }
-#fire {
+.fire {
     height: 100px;
     width: 120px;
     border-radius: 50%;
@@ -104,4 +105,32 @@ span {
 #yen {
     background-image: url('../Obrazy/Othello/ciryen.png');
 }
+
+#parametryGry {
+    width: 450px;
+    border: 1px solid black;
+    display: inline-block;
+}
+#board {
+    width: 420px;
+    display: inline-block;
+}
+
+.playerMark {
+    display: inline-block;
+    height: 80px;
+    border: 1px solid red;
+}
+.sign {
+    width: 100px;
+}
+.pionkow {
+    width: 160px;
+}
+
+.wartosc {
+    width: 130px;
+}
+
+
 

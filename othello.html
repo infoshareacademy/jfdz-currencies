@@ -7,6 +7,7 @@
     <link href="Styles/Othello.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="Js/othello.js"></script>
+    <script src="Js/othelloWindows.js"></script>
 </head>
 <body>
     <div id="monethello">
@@ -28,7 +29,7 @@
                 <li>Żaden z graczy nie może wykonać ruchu.</li>
                 <li>Jeden z graczy straci wszystkie swoje monety.</li>
             </ol>
-            <button id="fire" onclick="setupGame(8)">Dalej</button>
+            <button id="setupScreenButton" class="fire" onclick="setupScreen()">Dalej</button>
         </div>
 
         <div id="setupScreen">
@@ -54,23 +55,35 @@
         </div>
 
         <div id="gameScreen">
+            <div id="board" class="xxx"></div>
+            <div id="parametryGry" class="xxx">
+                <div id="actPlay">Teraz kolej na gracza</div>
+                <div id="currencyExchange">Aktualny kurs wymiany</div>
+                <div id="tabelaWynikow">
+                    <div id="p1" class="players">
+                        <div id="p1Sign" class="sign playerMark">Symbol zawodnika 1</div>
+                        <div id="p1Score" class="pionkow playerMark">Ilosc pionkow zawodnika 1 na planszy</div>
+                        <div id="p1Money" class="wartosc playerMark">Wartosc pionkow zawodnika 1</div>
+                    </div>
+                    <div id="p2" class="players">
+                        <div id="p2Sign" class="sign playerMark">Symbol zawodnika 2</div>
+                        <div id="p2Score" class="pionkow playerMark">Ilosc pionkow zawodnika 2 na planszy</div>
+                        <div id="p2Money" class="wartosc playerMark">Wartosc pionkow zawodnika 2</div>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
         <div id="endScreen">
 
         </div>
-        <div id="board" class="left">Plansza</div>
         <!--<div class="gracz"></div>-->
         <!--<div class="Czerwony">Czerwonych</div>-->
         <!--<div class="Niebieski">Niebieskich</div>-->
 
     </div>
     <script src="Js/othello.js"></script>
-<script>
-    $('.coin').animate({
-        width: "0px",
-    }, 3000);
-</script>
+<script></script>
 </body>
 </html>
