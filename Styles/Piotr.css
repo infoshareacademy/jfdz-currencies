@@ -11,40 +11,39 @@ header .NaviField {
     margin-left: 25px;
     margin-right: 25px;
 }
-.nawigacja div {
-    position: relative;
-    border-radius: 5px;
-    padding: 10px;
-    display: block;
-    font-size: 20px;
-}
+
+
+
 .home {
     margin-left: 20px;
     border-radius: 5px;
 }
-.NaviField a{
+
+.NaviField a {
     color: white;
     text-decoration: none;
 }
+
 .bhome:hover, .NaviField a:hover {
     color: red;
 }
-
 
 #call-to-action {
     display: none;
     float: left;
     width: 100%;
 }
+
 .formularz {
     width: 310px;
-    margin-left:  35%;
+    margin-left: 35%;
     margin-top: 10px;
     background-color: #fff;
     border: 2px solid black;
     border-radius: 10px;
     padding: 20px;
 }
+
 .forma label {
     display: block;
     margin-bottom: 5px;
@@ -54,6 +53,7 @@ header .NaviField {
     color: #555555;
     margin-left: 10px;
 }
+
 .formularz input {
     padding: 5px;
     border-radius: 3px;
@@ -63,17 +63,21 @@ header .NaviField {
     margin-bottom: 10px;
 }
 
-.formularz #submit{
+.formularz #submit {
     width: 287px;
     background-color: #777777;
 }
 
 @keyframes example {
-    0% {background-color: #777777;}
-    100% {background-color: #ff584c;}
+    0% {
+        background-color: #777777;
+    }
+    100% {
+        background-color: #ff584c;
+    }
 }
 
-.animation-button{
+.animation-button {
     animation-name: example;
     animation-duration: 4s;
     animation-fill-mode: forwards;
@@ -84,26 +88,27 @@ header .NaviField {
     padding-bottom: 125px;
 }
 
-
-
-
 #onas {
     display: none;
 }
+
 .poz_onas a {
     color: black;
 }
-#about h1{
+
+#about h1 {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
-#about p{
+
+#about p {
     font-size: 12px;
     padding: 10px;
 }
+
 .poz_onas {
     display: inline-block;
     width: 300px;
@@ -111,6 +116,7 @@ header .NaviField {
     padding-top: 100px;
     padding-bottom: 10px;
 }
+
 .poz_onas .zdjecie {
     width: 100px;
     height: 100px;
@@ -120,6 +126,7 @@ header .NaviField {
     border-radius: 50%;
     padding: 15px;
 }
+
 .opisOsoby {
     background-color: beige;
     margin-left: 2px;
@@ -136,15 +143,43 @@ header .NaviField {
     width: 500px;
     border-radius: 10px;
     border: 5px solid red;
-    background-color: rgba(255,0,0,0.4);
+    background-color: rgba(255, 0, 0, 0.4);
     color: white;
     font-size: 25px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     transition: background-color 1s linear;
- }
+}
 
 .bwyslij:hover {
-    background-color: rgba(255,0,0,1);
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.language{
+    width:100px;
+    height: 20px;
+
+
+    font-size: 5px;
+    color: white;
+    opacity: 1;
+
+}
+.language ul li{
+ width: 50px;
+
+}
+
+#plclick {
+
+
+
+
+}
+
+#enclick {
+    /*font-size: 5px;*/
+
+
 }

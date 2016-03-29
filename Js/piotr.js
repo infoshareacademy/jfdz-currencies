@@ -86,6 +86,42 @@ $(function(event) {
 
 
 
+function  onClickLanguage(alanguage){
+    var json = $.getJSON("Js//package.json");
+    var data = eval("(" +json.responseText + ")");
+    console.log(data);
+
+
+
+
+}
+
+$(document).ready(function () {
+    $('#plclick').click(function () {
+        $.getJSON('Js/package.json', function (data) {
+            $.each(data, function(idx, obj) {
+                document.getElementById(obj.id).innerHTML=obj.pl;
+
+            });
+        });
+    });
+});
+
+$(document).ready(function () {
+    $('#enclick').click(function () {
+        $.getJSON('Js/package.json', function (data) {
+            $.each(data, function(idx, obj) {
+                document.getElementById(obj.id).innerHTML=obj.en;
+
+            });
+        });
+    });
+});
+
+
+
+
+
 
 
 
