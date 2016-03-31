@@ -13,5 +13,87 @@
     "en":"About",
     "pl":"O nas"
 
+  },
+  {
+    "id":"p",
+    "en":"Products",
+    "pl":"Produkty"
+
+  },
+  {
+    "id":"idszarfa",
+    "en":"Pulse rates<br>react to changes!",
+    "pl":"Puls walut<br>Reagujemy na zmiany!"
+
+  },
+  {
+    "id":"idbwyslij",
+    "en":"Find out more",
+    "pl":"Dowiedz się więcej"
+
+  },
+  {
+    "id":"submit",
+    "en":"Send",
+    "pl":"Wyślij"
+
+  },
+  {
+    "id":"idnazwa-funkcji",
+    "en":"Currency calculator",
+    "pl":"Kalkulator walut"
+  },
+  {
+    "id":"idopis-funkcji",
+    "en":"Currency calculator based on the current average exchange rate of foreign currencies published by the National Polish Bank",
+    "pl":"Kalkulator walutowy oparty na aktualnym średnim kursie walut obcych publikowanych przez Narodowy Bank Polski"
+
+  },
+  {
+    "id":"sredniekursywalut",
+    "en":"The average exchange rates",
+    "pl":"Średnie kursy walut"
+
+  },
+  {
+    "id":"opissredniekursywalut",
+    "en":"Check the current average exchange rates for the last 30 days and see how the course is changed.",
+    "pl":"Sprawdź aktualne średnie kursy walut za ostatnie 30 dni oraz zobacz jak dany kurs się zmieniał."
+
+  },
+  {
+    "id":"lokalizatorpunktwym",
+    "en":"Locator Exchange",
+    "pl":"Lokalizator punktów wymiany walut"
+  },
+  {
+    "id":"opislokalizatorpunktwym",
+    "en":"Find the nearest exchange office or Outpost Bank, in which you can make the changeover.",
+    "pl":"Znajdź najbliższy kantor lub Placówkę Banku, w której możesz dokonać wymiany waluty."
+
+  },
+  {
+    "id":"narodowybankpolski",
+    "en":"Polish National Bank",
+    "pl":"Narodowy Bank Polski"
+  },
+  {
+    "id":"opisnarodowybankpolski",
+    "en":"If you are interested in more general information on monetary policy, visit the NBP.",
+    "pl":"Jeżeli interesują Ciebie bardziej ogólne informacje dotyczące polityki pienieżnej zapraszamy na strony NBP."
+
+  },
+  {
+    "id":"zostatniejchwili",
+    "en":"Breaking news",
+    "pl":"Z ostatniej chwili"
+
+  },
+  {
+    "id":"idkomunikaty",
+    "en":"Announcements",
+    "pl":"Komunikaty"
+
   }
+
 ]
