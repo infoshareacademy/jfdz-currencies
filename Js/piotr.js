@@ -90,6 +90,7 @@ $(function(event) {
 function  onClickLanguage(alanguage){
 
     $.getJSON('Js/package.json', function (data) {
+        console.log(data);
         $.each(data, function(idx, obj) {
             if (alanguage===1) {
                 document.getElementById(obj.id).innerHTML = obj.en;
