@@ -99,11 +99,14 @@ function  onClickLanguage(alanguage){
             }
         });
         if (alanguage===1) {
-
             setCookie("lan", "en", 10);
+            document.getElementById('plclick').classList.add('activelan');
+
         }else{
 
             setCookie("lan","pl",10);
+            $('#enclick').removeClass("activelan");
+            $(this).addClass("activelan");
         }
     });
 }

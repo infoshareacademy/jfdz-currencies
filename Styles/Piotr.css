@@ -175,11 +175,9 @@ header .NaviField {
 
 
 
+.activelan{
+    text-decoration: overline;
+    border: 5px solid red;
 
 }
 
-#enclick {
-    /*font-size: 5px;*/
-
-
-}

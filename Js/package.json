@@ -149,6 +149,34 @@
   { "id":"idmarcinopis",
     "en":"A graduate of Warsaw University of Technology. Most professional experience to negotiations. Hobbies: playing tennis",
     "pl":"Absolwent Politechniki Warszawskiej. Większość doświadczenia zawodowego to negocjacje. Hobby: gra w tenisa ziemnego"
-  }
+  },
+  {
+    "id":"idlogowanie",
+    "en":"Log in",
+    "pl":"Zaloguj"
+
+  },
+  {
+    "id":"idAgaimie",
+    "en":"Agnes",
+    "pl":"Agnieszka"
+
+  },
+  {
+    "id":"idOlaimie",
+    "en":"Ola",
+    "pl":"Ola"
+
+  },
+  {
+    "id":"idPiotrimie",
+    "en":"Peter",
+    "pl":"Piotr"
+
+  },{
+   "id":"idMarcinimie",
+   "en":"Marcin",
+   "pl":"Marcin"
+}
 
 ]
