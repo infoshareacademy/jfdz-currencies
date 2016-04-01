@@ -86,6 +86,50 @@ $(function(event) {
 
 
 
+function  onClickLanguage(alanguage){
+
+    $.getJSON('Js/package.json', function (data) {
+        $.each(data, function(idx, obj) {
+            if (alanguage===1) {
+                document.getElementById(obj.id).innerHTML = obj.en;
+            } else{
+                document.getElementById(obj.id).innerHTML = obj.pl;
+
+            }
+
+        });
+    });
+
+
+}
+
+//$(document).ready(function () {
+//    $('#plclick').click(function () {
+//
+//        $.getJSON('Js/package.json', function (data) {
+//            $.each(data, function(idx, obj) {
+//                document.getElementById(obj.id).innerHTML=obj.pl;
+//
+//            });
+//        });
+//    });
+//});
+//
+//$(document).ready(function () {
+//    $('#enclick').click(function () {
+//        $.getJSON('Js/package.json', function (data) {
+//            $.each(data, function(idx, obj) {
+//                document.getElementById(obj.id).innerHTML=obj.en;
+//
+//            });
+//        });
+//    });
+//});
+
+
+
+
+
 
 
 

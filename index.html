@@ -24,40 +24,63 @@
 <body>
 <header id="menu" class="content">
     <div class="naglowekStrony">
+
+
         <div class="logo left">
             <img class="logo" src="Obrazy/logoKalkulator.png" alt="logo" align="left"/>
         </div>
         <div class="nazwa left">
-            <a>kalkulator walutowy</a>
+            <a id="kw">kalkulator walutowy</a>
         </div>
-
         <ul>
             <li class="NaviField right">
-                <a class="bhome" href="#contact">Kontakt</a>
+                <a id="k" class="bhome" href="#contact">Kontakt</a>
             </li>
             <li class="NaviField right">
-                <a class="bhome" href="#about">O nas</a>
+                <a id="a" class="bhome" href="#about">O nas</a>
             </li>
             <li class="NaviField right">
-                <a href="#products">Produkty</a>
+                <a id="p" href="#products">Produkty</a>
             </li>
             <li class="NaviField right">
                 <a href="index.html" class="active">Home</a>
             </li>
+            <li class="NaviField right">
+                <a href="http://currencies.jfdz.infoshareaca.nazwa.pl/app" class="logowanie">
+                    Zaloguj
+                </a>
+            </li>
+
         </ul>
     </div>
+    <div class="clear"></div>
+
+
+
 
     <div class="slajder left">
-        <div class="szarfa">Puls walut<br>Reagujemy na zmiany!</div>
+        <div id="idszarfa" class="szarfa">Puls walut<br>Reagujemy na zmiany!</div>
         <div class="wyslij clear">
-            <button class="bwyslij" onclick="MenuOnClick(1)">Dowiedz się więcej</button>
+            <button id="idbwyslij" class="bwyslij" onclick="MenuOnClick(1)">Dowiedz się więcej</button>
         </div>
+        <div class="language right">
+           <button id="plclick left" onclick="onClickLanguage(0)">PL</button>
+           <button id="enclick left" onclick="onClickLanguage(1)">EN</button>
+        </div>
+        <div class="clear"></div>
     </div>
 
 </header>
 
 <main class="tresc-strony content">
 
+
+    <div class="interactive">
+        <div id="othello"></div>
+        <div class="gracz"></div>
+        <div class="Czerwony"></div>
+        <div class="Niebieski"></div>
+    </div>
     <div id="call-to-action">
         <div class="formularz" onmouseover="onmouseoverboot()">
             <form  action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST" class="forma">
@@ -79,44 +102,44 @@
             <div class="funkcja kalkulator left">
                 <a href="Kalkulator/index.html" class="zdjecie">
                     <div class="tlo-funkcji">
-                        <p class="nazwa-funkcji">Kalkulator walut</p>
+                        <p id="idnazwa-funkcji" class="nazwa-funkcji">Kalkulator walut</p>
                     </div>
                 </a>
 
-                <p class="opis-funkcji">Kalkulator walutowy oparty na aktualnym średnim kursie walut obcych
+                <p id="idopis-funkcji" class="opis-funkcji">Kalkulator walutowy oparty na aktualnym średnim kursie walut obcych
                     publikowanych przez Narodowy Bank Polski</p>
             </div>
 
             <div class="funkcja srednia left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
-                        <p class="nazwa-funkcji">Średnie kursy walut</p>
+                        <p id="sredniekursywalut" class="nazwa-funkcji">Średnie kursy walut</p>
                     </div>
                 </a>
 
-                <p class="opis-funkcji">Sprawdź aktualne średnie kursy walut za ostatnie 30 dni oraz zobacz jak dany
+                <p id="opissredniekursywalut" class="opis-funkcji">Sprawdź aktualne średnie kursy walut za ostatnie 30 dni oraz zobacz jak dany
                     kurs się zmieniał.</p>
             </div>
 
             <div class="funkcja lokalizator left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
-                        <p class="nazwa-funkcji">Lokalizator punktów wymiany walut</p>
+                        <p id="lokalizatorpunktwym" class="nazwa-funkcji">Lokalizator punktów wymiany walut</p>
                     </div>
                 </a>
 
-                <p class="opis-funkcji">Znajdź najbliższy kantor lub Placówkę Banku, w której możesz dokonać wymiany
+                <p id="opislokalizatorpunktwym" class="opis-funkcji">Znajdź najbliższy kantor lub Placówkę Banku, w której możesz dokonać wymiany
                     waluty.</p>
             </div>
 
             <div class="funkcja nbp left">
                 <a class="zdjecie">
                     <div class="tlo-funkcji">
-                        <p class="nazwa-funkcji">Narodowy Bank Polski</p>
+                        <p id="narodowybankpolski" class="nazwa-funkcji">Narodowy Bank Polski</p>
                     </div>
                 </a>
 
-                <p class="opis-funkcji">Jeżeli interesują Ciebie bardziej ogólne informacje dotyczące polityki
+                <p id="opisnarodowybankpolski" class="opis-funkcji">Jeżeli interesują Ciebie bardziej ogólne informacje dotyczące polityki
                     pienieżnej zapraszamy na strony NBP.</p>
             </div>
 
@@ -127,11 +150,11 @@
         <div class="bloki dodatki">
 
             <a class="dodatek-komunikat">
-                <p>Komunikaty</p>
+                <p id="idkomunikaty">Komunikaty</p>
             </a>
 
             <a class="dodatek-z-ostatniej-chwili">
-                <p>Z ostatniej chwili</p>
+                <p id="zostatniejchwili">Z ostatniej chwili</p>
             </a>
 
             <a class="dodatek-aplikacja-mobilna">

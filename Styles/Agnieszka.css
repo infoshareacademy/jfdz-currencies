@@ -12,6 +12,14 @@
     z-index: 500;
 }
 
+.logowanie {
+    text-align: center;
+    background-color: blue;
+    border: 3px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+    vertical-align: baseline;
+}
 .naglowekStrony .logo img {
     padding: 14px;
 }
