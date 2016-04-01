@@ -12,10 +12,8 @@ var redResult = 0;
 var blueResult = 0;
 
 function setupGame(size) {
-    $(document).ready( function() {
-        $('#setupScreen').addClass('unvisible');
-        $('#gameScreen').removeClass('unvisible');
-    });
+    $('#setupScreen').addClass('unvisible');
+    $('#gameScreen').removeClass('unvisible');
     createBoard(size);
     $(document).on('ready click', function () {
         var board1 = getBoard();
