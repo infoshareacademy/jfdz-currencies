@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Othello</title>
+    <!--<link href="Styles/resetcss.css" type="text/css" rel="stylesheet">-->
+    <link href="Styles/Othello.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="Js/othello.js"></script>
+    <script src="Js/othelloWindows.js"></script>
+</head>
+<body>
+    <div id="monethello">
+        <a href="index.html" id="koniec" class="right">X</a>
+        <div class="clear"></div>
+
+        <div id="rulesScreen">
+            <h1>m<span>O</span>ney<span>THELLO</span></h1>
+            <h2>Celem gry jest przejmowanie monet przeciwnika</h2>
+            <ol><span>Rozgrywka:</span>
+                <li>Monety przeciwnika zdobywa się, otaczając je w jednej linii.</li>
+                <li>Zdobyte piony zmieniają kolor i przynależność.</li>
+                <li>Otaczanie monet dozwolone w ramach linii prostych: poziomych, pionowych i ukośnych.</li>
+                <li>W każdym ruchu należy zdobyć co najmniej jedną monetę.</li>
+                <li>Jeśli gracz nie może wykonać żadnego dozwolonego ruchu, traci kolejkę i wykonuje go drugi gracz.</li>
+            </ol>
+            <ol><span>Koniec gry następuje gdy:</span>
+                <li>Gracze zapełnią planszę.</li>
+                <li>Żaden z graczy nie może wykonać ruchu.</li>
+                <li>Jeden z graczy straci wszystkie swoje monety.</li>
+            </ol>
+            <button id="setupScreenButton" class="fire" onclick="setupScreen()">Dalej</button>
+        </div>
+
+        <div id="setupScreen" class="unvisible">
+            <div id="playerChoice">
+                <div id="player1" class="players">
+                    <h2>PLAYER #1</h2>
+                    <h1 class="coin"></h1>
+                </div>
+                <div id="player2" class="players">
+                    <h2>PLAYER #2</h2>
+                    <h1 class="coin"></h1>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <h3>Wybierz walutę dla graczy klikając na wybrane monety</h3>
+            <div id="euro" class="currencies"></div>
+            <div id="dollar" class="currencies"></div>
+            <div id="pounds" class="currencies"></div>
+            <div id="yen" class="currencies"></div>
+            <div>
+                <button id="gameScreenButton" class="fire" onclick="setupGame(8)">Start Gry</button>
+            </div>
+        </div>
+
+        <div id="gameScreen" class="unvisible">
+            <div id="parametryGry" class="xxx">
+                <div id="tabelaWynikow">
+                    <div id="p1" class="players">
+                        <div id="p1Sign" class="sign playerMark left"></div>
+                        <div id="p1Score" class="pionkow playerMark left"></div>
+                        <div id="p1Money" class="wartosc playerMark left">34</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div id="p2" class="players">
+                        <div id="p2Sign" class="sign playerMark left"></div>
+                        <div id="p2Score" class="pionkow playerMark left"></div>
+                        <div id="p2Money" class="wartosc playerMark left">43</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div id="currencyExchange">Aktualny kurs wymiany</div>
+                <div id="actPlay">Teraz kolej na gracza</div>
+            </div>
+            <div id="board" class="xxx"></div>
+
+
+        </div>
+
+        <div id="endScreen" class="unvisible">
+
+        </div>
+        <!--<div class="gracz"></div>-->
+        <!--<div class="Czerwony">Czerwonych</div>-->
+        <!--<div class="Niebieski">Niebieskich</div>-->
+
+    </div>
+    <script src="Js/othello.js"></script>
+<script></script>
+</body>
+</html>

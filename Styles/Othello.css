@@ -1,12 +1,146 @@
-.empty {
-    background-size: 80px 80px;
-    background-image: url('../Obrazy/Othello/Monety.png');
+body {
+    background-color: rgba(127, 255, 212, 0.5);
+    background-position: center;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.1em;
+    color: white;
+    font-weight: 500;
 }
-.dolar {
-    background-size: 80px 80px;
-    background-image: url('../Obrazy/Othello/Dollar.png');
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+#monethello {
+    width: 70%;
+    margin: auto;
+    height: 700px;
+    background-color: #2d528b;
+    border: 10px solid black;
+    border-radius: 100px;
 }
-.euro {
-    background-size: 80px 80px;
-    background-image: url('../Obrazy/Othello/Euro.png');
+#koniec {
+    width: 20px;
+    height: 20px;
+    background-color: #444444;
+    color: red;
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
 }
+.unvisible {
+    display: none;
+}
+#rulesScreen {
+    text-align: center;
+}
+#rulesScreen h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#rulesScreen span {
+    font-weight: 900;
+    color: red;
+}
+#rulesScreen ol {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+#setupScreen {
+    text-align: center;
+}
+
+#playerChoice div.players {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 300px;
+}
+.players h2 {
+    border: 5px solid black;
+    border-radius: 20px;
+    height: 50px;
+    padding-top: 8%;
+}
+.players h1 {
+    height: 128px;
+    background-image: url('../Obrazy/Othello/cirask.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#pole div {
+    width: 550px;
+    display: inline-block;
+}
+
+.fire {
+    height: 100px;
+    width: 120px;
+    border-radius: 50%;
+    border: 3px solid red;
+    background-color: black;
+    color: red;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 30px;
+}
+.currencies {
+    width: 48px;
+    display: inline-block;
+    height: 48px;
+    border: 1px solid red;
+    background-color: #2d528b;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#euro {
+    background-image: url('../Obrazy/Othello/cireuro.png');
+}
+#dollar {
+    background-image: url('../Obrazy/Othello/cirdollar.png');
+}
+#pounds {
+    background-image: url('../Obrazy/Othello/cirpound.png');
+}
+#yen {
+    background-image: url('../Obrazy/Othello/ciryen.png');
+}
+
+#parametryGry {
+    border: 1px solid black;
+}
+#board {
+    width: 420px;
+    display: inline-block;
+}
+
+.playerMark {
+    display: inline-block;
+    border: 1px solid red;
+}
+.sign {
+    width: 48px;
+    height: 48px;
+}
+.pionkow {
+    width: 96px;
+    height: 48px;
+}
+#gameScreen {
+    text-align: center;
+}
+.wartosc {
+    width: 130px;
+}
+#p1Sign, #p2Sign{
+    background-image: url('../Obrazy/Othello/cirblue.png');
+}
+
+

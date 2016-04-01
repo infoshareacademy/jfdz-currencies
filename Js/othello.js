@@ -12,6 +12,8 @@ var redResult = 0;
 var blueResult = 0;
 
 function setupGame(size) {
+    $('#setupScreen').addClass('unvisible');
+    $('#gameScreen').removeClass('unvisible');
     createBoard(size);
     $(document).on('ready click', function () {
         var board1 = getBoard();
@@ -19,10 +21,10 @@ function setupGame(size) {
         var $playing = getPlayer();
         var $red = getRed();
         var $blue = getBlue();
-            $('#othello').empty().append($table);
-            $('.gracz').empty().append($playing);
-        $('.Czerwony').empty().append($red);
-        $('.Niebieski').empty().append($blue);
+            $('#board').empty().append($table);
+            $('.gracz').empty().append("aktualnie grasz kolorem: " + $playing);
+        $('#p1Score').empty().append($red);
+        $('#p2Score').empty().append($blue);
     });
 }
 function createBoard(size) {
@@ -716,4 +718,5 @@ function changeFieldsNW(row,column, player, enemy) {
         column--;
     }
 }
+
 
