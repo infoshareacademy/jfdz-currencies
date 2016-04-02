@@ -86,53 +86,60 @@ $(function(event) {
 
 
 
+
 function  onClickLanguage(alanguage){
 
     $.getJSON('Js/package.json', function (data) {
+        console.log(data);
         $.each(data, function(idx, obj) {
             if (alanguage===1) {
                 document.getElementById(obj.id).innerHTML = obj.en;
             } else{
                 document.getElementById(obj.id).innerHTML = obj.pl;
-
             }
-
         });
+        if (alanguage===1) {
+            setCookie("lan", "en", 10);
+            document.getElementById('plclick').classList.add('activelan');
+
+        }else{
+
+            setCookie("lan","pl",10);
+            $('#enclick').removeClass("activelan");
+            $(this).addClass("activelan");
+        }
     });
-
-
 }
 
-//$(document).ready(function () {
-//    $('#plclick').click(function () {
-//
-//        $.getJSON('Js/package.json', function (data) {
-//            $.each(data, function(idx, obj) {
-//                document.getElementById(obj.id).innerHTML=obj.pl;
-//
-//            });
-//        });
-//    });
-//});
-//
-//$(document).ready(function () {
-//    $('#enclick').click(function () {
-//        $.getJSON('Js/package.json', function (data) {
-//            $.each(data, function(idx, obj) {
-//                document.getElementById(obj.id).innerHTML=obj.en;
-//
-//            });
-//        });
-//    });
-//});
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
 
 
 
+$( document ).ready(function() {
+    x=   getCookie("lan");
+    if (x==="en") {
+        onClickLanguage(1);
 
+    } else {
+        onClickLanguage(0);
 
-
-
-
-
-
+    }
+});
 

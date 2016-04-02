@@ -84,7 +84,7 @@
 
   },
   {
-    "id":"zostatniejchwili",
+    "id":"idzostatniejchwili",
     "en":"Breaking news",
     "pl":"Z ostatniej chwili"
 
@@ -94,6 +94,89 @@
     "en":"Announcements",
     "pl":"Komunikaty"
 
-  }
+  },
+  {
+    "id":"idaplikacjemobilne",
+    "en":"Mobile application",
+    "pl":"Aplikacja mobilna"
+  },
+  { "id":"idRegulamin",
+    "en":"Rules",
+    "pl":"Regulamin"
+
+  },
+  {
+    "id":"idpowiadomieniaSms",
+    "en":"SMS notifications",
+    "pl":"Powiadomienia SMS"
+
+  },
+  {
+    "id":"idZleceniaStale",
+    "en":"Standing orders",
+    "pl":"Zlecenia stałe"
+  },
+
+  { "id":"idszukaj",
+    "en":"Search",
+    "pl":"Szukaj"
+  },
+
+  {
+    "id":"idZnajomi",
+    "en":"Friends",
+    "pl":"Znajomi"
+
+  },
+  {
+    "id":"idagaopis",
+    "en":"A graduate of the AR of Poznań and PG - teacher.",
+    "pl":"Absolwentka AR w Poznaniu i PG - nauczyciel."
+
+  },
+  {
+    "id":"idolaopis",
+    "en":"Working in the IT industry inspired her to learn programming. The biggest hobby sailing.",
+    "pl":"Praca w branży IT zainspirowała ją do nauki programowania. Największe hobby żeglarstwo."
+
+  },
+  {
+    "id":"idpiotropis",
+    "en":"A graduate of the Technical University of Koszalin. Fan of good cinema and automotive.",
+    "pl":"Absolwent Politechniki Koszalińskiej. Fan dobrego kina i motoryzacji."
+
+  },
+  { "id":"idmarcinopis",
+    "en":"A graduate of Warsaw University of Technology. Most professional experience to negotiations. Hobbies: playing tennis",
+    "pl":"Absolwent Politechniki Warszawskiej. Większość doświadczenia zawodowego to negocjacje. Hobby: gra w tenisa ziemnego"
+  },
+  {
+    "id":"idlogowanie",
+    "en":"Log in",
+    "pl":"Zaloguj"
+
+  },
+  {
+    "id":"idAgaimie",
+    "en":"Agnes",
+    "pl":"Agnieszka"
+
+  },
+  {
+    "id":"idOlaimie",
+    "en":"Ola",
+    "pl":"Ola"
+
+  },
+  {
+    "id":"idPiotrimie",
+    "en":"Peter",
+    "pl":"Piotr"
+
+  },{
+   "id":"idMarcinimie",
+   "en":"Marcin",
+   "pl":"Marcin"
+}
 
 ]
